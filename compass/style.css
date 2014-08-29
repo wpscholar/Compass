@@ -376,7 +376,7 @@ Defaults
 body {
 	background-color: whitesmoke;
 	color: #777879;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-weight: 300;
 	line-height: 1.625;
@@ -556,7 +556,7 @@ h4,
 h5,
 h6 {
 	color: #1c1e1f;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	line-height: 1.25;
 	margin: 0 0 10px;
@@ -1286,83 +1286,86 @@ Common Classes
 /* line 75, assets/scss/partials/_common-classes.scss */
 .archive-title {
 	font-size: 20px;
+	font-weight: 600;
 }
 
-/* line 79, assets/scss/partials/_common-classes.scss */
+/* line 80, assets/scss/partials/_common-classes.scss */
 .entry-title {
 	font-size: 36px;
+	font-weight: 600;
 }
 
-/* line 83, assets/scss/partials/_common-classes.scss */
+/* line 85, assets/scss/partials/_common-classes.scss */
 .entry-title a,
 .sidebar .widget-title a {
 	color: #494b4c;
 }
 
-/* line 88, assets/scss/partials/_common-classes.scss */
+/* line 90, assets/scss/partials/_common-classes.scss */
 .entry-title a:hover {
 	color: #777879;
 }
 
-/* line 92, assets/scss/partials/_common-classes.scss */
+/* line 94, assets/scss/partials/_common-classes.scss */
 .widget-title {
 	font-size: 18px;
+	font-weight: 600;
 	margin-bottom: 20px;
 }
 
-/* line 97, assets/scss/partials/_common-classes.scss */
+/* line 100, assets/scss/partials/_common-classes.scss */
 .footer-widgets .widget-title {
 	color: #fff;
 }
 
 /* WordPress
 --------------------------------------------- */
-/* line 104, assets/scss/partials/_common-classes.scss */
+/* line 107, assets/scss/partials/_common-classes.scss */
 .alignleft {
 	float: left;
 	text-align: left;
 }
 
-/* line 109, assets/scss/partials/_common-classes.scss */
+/* line 112, assets/scss/partials/_common-classes.scss */
 .alignright {
 	float: right;
 	text-align: right;
 }
 
-/* line 114, assets/scss/partials/_common-classes.scss */
+/* line 117, assets/scss/partials/_common-classes.scss */
 a.alignleft,
 a.alignright {
 	max-width: 100%;
 }
 
-/* line 119, assets/scss/partials/_common-classes.scss */
+/* line 122, assets/scss/partials/_common-classes.scss */
 img.centered,
 .aligncenter {
 	display: block;
 	margin: 0 auto 24px;
 }
 
-/* line 125, assets/scss/partials/_common-classes.scss */
+/* line 128, assets/scss/partials/_common-classes.scss */
 img.alignnone,
 .alignnone {
 	margin-bottom: 12px;
 }
 
-/* line 130, assets/scss/partials/_common-classes.scss */
+/* line 133, assets/scss/partials/_common-classes.scss */
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
 	margin: 0 24px 24px 0;
 }
 
-/* line 136, assets/scss/partials/_common-classes.scss */
+/* line 139, assets/scss/partials/_common-classes.scss */
 a.alignright,
 img.alignright,
 .wp-caption.alignright {
 	margin: 0 0 24px 24px;
 }
 
-/* line 142, assets/scss/partials/_common-classes.scss */
+/* line 145, assets/scss/partials/_common-classes.scss */
 .wp-caption {
 	border: 1px solid #e0e0e0;
 	padding: 2%;
@@ -1370,26 +1373,26 @@ img.alignright,
 	max-width: 100%;
 }
 
-/* line 149, assets/scss/partials/_common-classes.scss */
+/* line 152, assets/scss/partials/_common-classes.scss */
 .wp-caption.aligncenter,
 .wp-caption.alignleft,
 .wp-caption.alignright {
 	margin-bottom: 2%;
 }
 
-/* line 155, assets/scss/partials/_common-classes.scss */
+/* line 158, assets/scss/partials/_common-classes.scss */
 .wp-caption img {
 	display: block;
 	margin: 0 auto 0;
 	max-width: 98%;
 }
 
-/* line 161, assets/scss/partials/_common-classes.scss */
+/* line 164, assets/scss/partials/_common-classes.scss */
 .wp-caption-text {
 	text-align: center;
 }
 
-/* line 168, assets/scss/partials/_common-classes.scss */
+/* line 171, assets/scss/partials/_common-classes.scss */
 .off-screen,
 .screen-reader-text {
 	position: absolute;
@@ -1458,7 +1461,7 @@ Site Header
 /* line 43, assets/scss/partials/_site-header.scss */
 .site-title {
 	font-size: 32px;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 1.2;
 }
 /* line 48, assets/scss/partials/_site-header.scss */
@@ -1667,16 +1670,21 @@ Site Navigation
 	border: 1px solid #e0e0e0;
 	color: #777879;
 }
-/* line 175, assets/scss/partials/_site-navigation.scss */
+/* line 174, assets/scss/partials/_site-navigation.scss */
+.pagination a {
+	color: #777879;
+	border: 1px solid whitesmoke;
+}
+/* line 178, assets/scss/partials/_site-navigation.scss */
 .pagination a:hover,
 .pagination a:focus {
 	background: white;
-	color: #33b787;
+	border: 1px solid #e0e0e0;
 }
 
 /* Single Entry Pagination
 --------------------------------------------- */
-/* line 186, assets/scss/partials/_site-navigation.scss */
+/* line 189, assets/scss/partials/_site-navigation.scss */
 .nav-single {
 	display: block;
 	clear: both;
@@ -1687,15 +1695,15 @@ Site Navigation
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
-/* line 201, assets/scss/partials/_site-navigation.scss */
+/* line 204, assets/scss/partials/_site-navigation.scss */
 .nav-single .nav-previous {
 	float: left;
 }
-/* line 205, assets/scss/partials/_site-navigation.scss */
+/* line 208, assets/scss/partials/_site-navigation.scss */
 .nav-single .nav-next {
 	float: right;
 }
-/* line 209, assets/scss/partials/_site-navigation.scss */
+/* line 212, assets/scss/partials/_site-navigation.scss */
 .nav-single .nav-next a,
 .nav-single .nav-previous a {
 	background: #fafafa;
@@ -1705,7 +1713,7 @@ Site Navigation
 	display: inline-block;
 	padding: 16px 20px 14px;
 }
-/* line 219, assets/scss/partials/_site-navigation.scss */
+/* line 222, assets/scss/partials/_site-navigation.scss */
 .nav-single .nav-next a:hover,
 .nav-single .nav-previous a:hover {
 	background: white;
@@ -1714,12 +1722,12 @@ Site Navigation
 
 /* Page Links
 --------------------------------------------- */
-/* line 229, assets/scss/partials/_site-navigation.scss */
+/* line 232, assets/scss/partials/_site-navigation.scss */
 .page-links {
 	margin: 30px 0;
 	display: block;
 }
-/* line 238, assets/scss/partials/_site-navigation.scss */
+/* line 241, assets/scss/partials/_site-navigation.scss */
 .page-links span,
 .page-links a {
 	-webkit-transition: all 0.2s ease-in-out;
@@ -1732,7 +1740,7 @@ Site Navigation
 	border: 1px solid #e0e0e0;
 	color: #777879;
 }
-/* line 250, assets/scss/partials/_site-navigation.scss */
+/* line 253, assets/scss/partials/_site-navigation.scss */
 .page-links a:hover,
 .page-links a:focus {
 	background: white;
@@ -1757,47 +1765,52 @@ Content Area
 	border: 1px solid #e0e0e0;
 }
 
-/* line 16, assets/scss/partials/_content-area.scss */
+/* line 15, assets/scss/partials/_content-area.scss */
+.plural .content .sticky {
+	border: 1px solid #a4a5a5;
+}
+
+/* line 20, assets/scss/partials/_content-area.scss */
 .entry-content p,
 .entry-content ol,
 .entry-content ul,
 .entry-content dl {
 	margin-bottom: 24px;
 }
-/* line 23, assets/scss/partials/_content-area.scss */
+/* line 27, assets/scss/partials/_content-area.scss */
 .entry-content ol,
 .entry-content ul {
 	margin-left: 40px;
 }
-/* line 28, assets/scss/partials/_content-area.scss */
+/* line 32, assets/scss/partials/_content-area.scss */
 .entry-content li {
 	margin-bottom: 2%;
 }
-/* line 32, assets/scss/partials/_content-area.scss */
+/* line 36, assets/scss/partials/_content-area.scss */
 .entry-content ol > li {
 	list-style-type: decimal;
 }
-/* line 36, assets/scss/partials/_content-area.scss */
+/* line 40, assets/scss/partials/_content-area.scss */
 .entry-content ul > li {
 	list-style-type: disc;
 }
-/* line 40, assets/scss/partials/_content-area.scss */
+/* line 44, assets/scss/partials/_content-area.scss */
 .entry-content ol ol,
 .entry-content ul ul {
 	margin-bottom: 0;
 }
-/* line 45, assets/scss/partials/_content-area.scss */
+/* line 49, assets/scss/partials/_content-area.scss */
 .entry-content blockquote {
 	border-left: 7px solid #f5f5f5;
 	margin: 30px 0 30px 5%;
 	padding: 0 5%;
 }
-/* line 51, assets/scss/partials/_content-area.scss */
+/* line 55, assets/scss/partials/_content-area.scss */
 .entry-content code {
 	background: #f7f7f7;
 	padding: 0 4px;
 }
-/* line 56, assets/scss/partials/_content-area.scss */
+/* line 60, assets/scss/partials/_content-area.scss */
 .entry-content .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
 	font-size: 14px;
@@ -1808,40 +1821,40 @@ Content Area
 
 /* Entry Meta
 --------------------------------------------- */
-/* line 69, assets/scss/partials/_content-area.scss */
+/* line 73, assets/scss/partials/_content-area.scss */
 .entry-meta {
 	color: #a4a5a5;
 	font-size: 16px;
 	margin-bottom: 0;
 }
-/* line 74, assets/scss/partials/_content-area.scss */
+/* line 78, assets/scss/partials/_content-area.scss */
 .entry-meta a {
 	border-bottom: 1px solid #c7efe1;
 	color: #a4a5a5;
 }
-/* line 78, assets/scss/partials/_content-area.scss */
+/* line 82, assets/scss/partials/_content-area.scss */
 .entry-meta a:hover {
 	color: #33b787;
 }
 
-/* line 84, assets/scss/partials/_content-area.scss */
+/* line 88, assets/scss/partials/_content-area.scss */
 .entry-header .entry-meta {
 	margin-bottom: 24px;
 }
 
-/* line 88, assets/scss/partials/_content-area.scss */
+/* line 92, assets/scss/partials/_content-area.scss */
 .entry-footer .entry-meta {
 	margin: 0;
 	padding: 0 0 20px;
 }
 
-/* line 93, assets/scss/partials/_content-area.scss */
+/* line 97, assets/scss/partials/_content-area.scss */
 .entry-categories,
 .entry-tags {
 	display: block;
 }
 
-/* line 98, assets/scss/partials/_content-area.scss */
+/* line 102, assets/scss/partials/_content-area.scss */
 .entry-comments-link::before {
 	content: '\2014';
 	margin: 0 6px 0 2px;
@@ -1849,7 +1862,7 @@ Content Area
 
 /* Comments
 --------------------------------------------- */
-/* line 106, assets/scss/partials/_content-area.scss */
+/* line 110, assets/scss/partials/_content-area.scss */
 .comment-respond,
 .entry-comments,
 .entry-pings {
@@ -1858,68 +1871,68 @@ Content Area
 	margin-bottom: 40px;
 }
 
-/* line 114, assets/scss/partials/_content-area.scss */
+/* line 118, assets/scss/partials/_content-area.scss */
 .comment-respond,
 .entry-pings {
 	padding: 40px 40px 16px;
 }
 
-/* line 119, assets/scss/partials/_content-area.scss */
+/* line 123, assets/scss/partials/_content-area.scss */
 .entry-comments {
 	padding: 40px;
 }
 
-/* line 123, assets/scss/partials/_content-area.scss */
+/* line 127, assets/scss/partials/_content-area.scss */
 .comment-header {
 	font-size: 16px;
 }
 
-/* line 127, assets/scss/partials/_content-area.scss */
+/* line 131, assets/scss/partials/_content-area.scss */
 li.comment {
 	background-color: #f5f5f5;
 	border: 2px solid #fff;
 	border-right: none;
 }
 
-/* line 133, assets/scss/partials/_content-area.scss */
+/* line 137, assets/scss/partials/_content-area.scss */
 .comment-content {
 	clear: both;
 }
 
-/* line 138, assets/scss/partials/_content-area.scss */
+/* line 142, assets/scss/partials/_content-area.scss */
 .comment-list li {
 	margin-top: 24px;
 	padding: 32px;
 }
-/* line 143, assets/scss/partials/_content-area.scss */
+/* line 147, assets/scss/partials/_content-area.scss */
 .comment-list li li {
 	margin-right: -32px;
 }
 
-/* line 148, assets/scss/partials/_content-area.scss */
+/* line 152, assets/scss/partials/_content-area.scss */
 .comment-respond input[type='email'],
 .comment-respond input[type='text'],
 .comment-respond input[type='url'] {
 	width: 50%;
 }
 
-/* line 154, assets/scss/partials/_content-area.scss */
+/* line 158, assets/scss/partials/_content-area.scss */
 .comment-respond label {
 	display: block;
 	margin-right: 12px;
 }
 
-/* line 159, assets/scss/partials/_content-area.scss */
+/* line 163, assets/scss/partials/_content-area.scss */
 .entry-comments .comment-author {
 	margin-bottom: 0;
 }
 
-/* line 163, assets/scss/partials/_content-area.scss */
+/* line 167, assets/scss/partials/_content-area.scss */
 .entry-pings .reply {
 	display: none;
 }
 
-/* line 170, assets/scss/partials/_content-area.scss */
+/* line 174, assets/scss/partials/_content-area.scss */
 .form-allowed-tags {
 	background-color: #f5f5f5;
 	font-size: 16px;

@@ -5,7 +5,7 @@
 		color: $light-gray;
 
 		&:hover {
-			color: $seafoam;
+			color: $base-link-color;
 		}
 	}
 
@@ -22,7 +22,7 @@
 
 	.widget {
 		background-color: #fff;
-		border: 1px solid $medium-fog;
+		border: 1px solid $base-border-color;
 		margin-bottom: 30px;
 		padding: 40px;
 	}

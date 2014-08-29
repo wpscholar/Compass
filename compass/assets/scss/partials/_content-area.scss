@@ -9,7 +9,11 @@
 
 .content .entry {
 	background-color: #fff;
-	border: 1px solid $medium-fog;
+	border: 1px solid $base-border-color;
+}
+
+.plural .content .sticky {
+    border: 1px solid $light-gray;
 }
 
 .entry-content {
@@ -72,11 +76,11 @@
 	margin-bottom: 0;
 
 	a {
-		border-bottom: 1px solid lighten($seafoam, 40);
+		border-bottom: 1px solid lighten($base-link-color, 40);
 	    color: $light-gray;
 
 	    &:hover {
-	    	color: $seafoam;
+	    	color: $base-link-color;
 	    }
 	}
 }

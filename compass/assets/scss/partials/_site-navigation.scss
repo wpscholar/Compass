@@ -19,7 +19,7 @@
 	li a:hover,
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover {
-		color: $seafoam;
+		color: $base-link-color;
 	}
 
 	.sub-menu {
@@ -36,7 +36,7 @@
 
 		a {
 			background-color: #fff;
-			border: 1px solid $medium-fog;
+			border: 1px solid $base-border-color;
 			border-top: none;
 			color: $medium-gray;
 			font-size: 14px;
@@ -102,7 +102,7 @@
 	}
 
 	.sub-menu {
-		border-top: 1px solid $medium-fog;
+		border-top: 1px solid $base-border-color;
 
 		.sub-menu {
 			margin-top: -56px;
@@ -130,7 +130,7 @@
 
 .menu-after-header {
 	background-color: #fff;
-	border-bottom: 1px solid $medium-fog;
+	border-bottom: 1px solid $base-border-color;
 
 	li a {
 		color: $light-gray;
@@ -139,7 +139,7 @@
 	li a:hover,
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover {
-		color: $seafoam;
+		color: $base-link-color;
 	}
 }
 
@@ -172,10 +172,13 @@
 	}
 
 	a {
+		color: $pagination-color;
+		border: 1px solid $base-background-color;
+
 		&:hover,
 		&:focus {
 			background: $pagination-hover-background;
-			color: $base-link-color;
+			border: $pagination-border;
 		}
 	}
 }

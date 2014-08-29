@@ -74,10 +74,12 @@
 
 .archive-title {
 	font-size: 20px;
+	font-weight: 600;
 }
 
 .entry-title {
 	font-size: 36px;
+	font-weight: 600;
 }
 
 .entry-title a,
@@ -91,6 +93,7 @@
 
 .widget-title {
 	font-size: 18px;
+	font-weight: 600;
 	margin-bottom: 20px;
 }
 
@@ -140,7 +143,7 @@ img.alignright,
 }
 
 .wp-caption {
-	border: 1px solid $medium-fog;
+	border: 1px solid $base-border-color;
 	padding: 2%;
 	padding-bottom: 0;
 	max-width: 100%;
