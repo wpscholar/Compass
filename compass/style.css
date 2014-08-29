@@ -1513,13 +1513,13 @@ Site Navigation
 	text-align: left;
 }
 /* line 13, assets/scss/partials/_site-navigation.scss */
-.nav-menu a {
+.nav-menu li a {
 	color: #777879;
 	display: block;
 	padding: 25px 20px;
 }
 /* line 19, assets/scss/partials/_site-navigation.scss */
-.nav-menu a:hover,
+.nav-menu li a:hover,
 .nav-menu .current-menu-item > a,
 .nav-menu .sub-menu .current-menu-item > a:hover {
 	color: #33b787;
@@ -1596,7 +1596,7 @@ Site Navigation
 /* Header Navigation
 --------------------------------------------- */
 /* line 99, assets/scss/partials/_site-navigation.scss */
-.menu-header .menu-item a {
+.menu-header li a {
 	color: #a4a5a5;
 	padding: 33px 20px;
 }
@@ -1632,11 +1632,11 @@ Site Navigation
 	border-bottom: 1px solid #e0e0e0;
 }
 /* line 135, assets/scss/partials/_site-navigation.scss */
-.menu-after-header .menu-item a {
+.menu-after-header li a {
 	color: #a4a5a5;
 }
 /* line 139, assets/scss/partials/_site-navigation.scss */
-.menu-after-header .menu-item a:hover,
+.menu-after-header li a:hover,
 .menu-after-header .current-menu-item > a,
 .menu-after-header .sub-menu .current-menu-item > a:hover {
 	color: #33b787;

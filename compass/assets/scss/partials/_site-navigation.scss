@@ -10,13 +10,13 @@
 		text-align: left;
 	}
 
-	a {
+	li a {
 		color: $medium-gray;
 		display: block;
 		padding: 25px 20px;
 	}
 
-	a:hover,
+	li a:hover,
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover {
 		color: $seafoam;
@@ -96,7 +96,7 @@
 
 .menu-header {
 
-	.menu-item a {
+	li a {
 		color: $light-gray;
 		padding: 33px 20px;
 	}
@@ -132,11 +132,11 @@
 	background-color: #fff;
 	border-bottom: 1px solid $medium-fog;
 
-	.menu-item a {
+	li a {
 		color: $light-gray;
 	}
 
-	.menu-item a:hover,
+	li a:hover,
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover {
 		color: $seafoam;
