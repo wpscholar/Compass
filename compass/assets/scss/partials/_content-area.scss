@@ -1,0 +1,174 @@
+/* Entries
+--------------------------------------------- */
+
+.entry {
+	font-size: 18px;
+	margin-bottom: 30px;
+	padding: 40px 40px 24px;
+}
+
+.content .entry {
+	background-color: #fff;
+	border: 1px solid $medium-fog;
+}
+
+.entry-content {
+	p,
+	ol,
+	ul,
+	dl {
+		margin-bottom: 24px;
+	}
+
+	ol,
+	ul {
+		margin-left: 40px;
+	}
+
+	li {
+		margin-bottom: 2%;
+	}
+
+	ol > li {
+		list-style-type: decimal;
+	}
+
+	ul > li {
+		list-style-type: disc;
+	}
+
+	ol ol,
+	ul ul {
+		margin-bottom: 0;
+	}
+
+	blockquote{
+		border-left: 7px solid #f5f5f5;
+		margin: 30px 0 30px 5%;
+		padding: 0 5%;
+	}
+
+	code {
+		background: #f7f7f7;
+		padding: 0 4px;
+	}
+
+	.wp-caption .wp-caption-text {
+		margin: 0.8075em 0;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		line-height: 18px;
+	}
+
+}
+
+/* Entry Meta
+--------------------------------------------- */
+
+.entry-meta {
+	color: $light-gray;
+	font-size: 16px;
+	margin-bottom: 0;
+
+	a {
+		border-bottom: 1px solid lighten($seafoam, 40);
+	    color: $light-gray;
+
+	    &:hover {
+	    	color: $seafoam;
+	    }
+	}
+}
+
+.entry-header .entry-meta {
+	margin-bottom: 24px;
+}
+
+.entry-footer .entry-meta {
+	margin: 0;
+	padding: 0 0 20px;
+}
+
+.entry-categories,
+.entry-tags {
+	display: block;
+}
+
+.entry-comments-link::before {
+	content: "\2014";
+	margin: 0 6px 0 2px;
+}
+
+/* Comments
+--------------------------------------------- */
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+	background-color: #fff;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+	margin-bottom: 40px;
+}
+
+.comment-respond,
+.entry-pings {
+	padding: 40px 40px 16px;
+}
+
+.entry-comments {
+	padding: 40px;
+}
+
+.comment-header {
+	font-size: 16px;
+}
+
+li.comment {
+	background-color: #f5f5f5;
+	border: 2px solid #fff;
+	border-right: none;
+}
+
+.comment-content {
+	clear: both;
+}
+
+.comment-list {
+	li {
+		margin-top: 24px;
+		padding: 32px;
+	}
+
+	li li {
+		margin-right: -32px;
+	}
+}
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+	width: 50%;
+}
+
+.comment-respond label {
+	display: block;
+	margin-right: 12px;
+}
+
+.entry-comments .comment-author {
+	margin-bottom: 0;
+}
+
+.entry-pings .reply {
+	display: none;
+}
+
+.bypostauthor {
+}
+
+.form-allowed-tags {
+	background-color: #f5f5f5;
+	font-size: 16px;
+	padding: 24px;
+}

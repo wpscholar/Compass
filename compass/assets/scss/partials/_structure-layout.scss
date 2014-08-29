@@ -1,0 +1,115 @@
+/* Site Containers
+--------------------------------------------- */
+
+.site-inner,
+.wrap {
+	@include outer-container;
+}
+
+.site-inner {
+	clear: both;
+	padding-top: 30px;
+}
+
+/* Column Widths and Positions
+--------------------------------------------- */
+
+/* Content
+-------------------- */
+.content {
+	@include span-columns(8);
+}
+
+.layout-2c-r .content {
+	float: right;
+	@include omega();
+}
+
+.layout-1c .content {
+	width: 100%;
+}
+
+.layout-1c-narrow .content {
+	@include span-columns(12);
+	@include pad(0 15%)
+}
+
+/* Primary Sidebar
+-------------------- */
+.sidebar {
+	@include span-columns(4);
+}
+
+.layout-2c-l .sidebar {
+	float: right;
+	@include omega();
+}
+
+.layout-1c .sidebar,
+.layout-1c-narrow .sidebar {
+	display: none;
+}
+
+/* Secondary Sidebar
+-------------------- */
+.sidebar-secondary {
+	@include span-columns(2);
+}
+
+.content-sidebar-sidebar .sidebar-secondary {
+	float: right;
+	@include omega();
+}
+
+/* Column Classes
+--------------------------------------------- */
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+	float: left;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+	@include span-columns(6);
+}
+
+.one-third,
+.two-sixths {
+	@include span-columns(4);
+}
+
+.four-sixths,
+.two-thirds {
+	@include span-columns(8);
+}
+
+.one-fourth {
+	@include span-columns(3);
+}
+
+.three-fourths {
+	@include span-columns(9);
+}
+
+.one-sixth {
+	@include span-columns(2);
+}
+
+.five-sixths {
+	@include span-columns(10);
+}
+
+.last {
+	clear: right;
+	@include omega();
+}

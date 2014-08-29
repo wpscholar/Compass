@@ -1,0 +1,38 @@
+.sidebar {
+	font-size: 16px;
+
+	a {
+		color: $light-gray;
+
+		&:hover {
+			color: $seafoam;
+		}
+	}
+
+	li {
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		position: relative;
+	}
+
+	p:last-child,
+	ul > li:last-child {
+		margin-bottom: 0;
+	}
+
+	.widget {
+		background-color: #fff;
+		border: 1px solid $medium-fog;
+		margin-bottom: 30px;
+		padding: 40px;
+	}
+
+	.widget_search {
+		padding: 10px;
+
+		 .widget-title {
+			margin: 0;
+			padding: 15px 15px 0;
+		}
+	}
+}

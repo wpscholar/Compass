@@ -1,0 +1,39 @@
+input,
+select,
+textarea {
+	background-color: #fff;
+	border: 1px solid $medium-fog;
+	color: $dark-gray;
+	font-size: 18px;
+	font-weight: 300;
+	padding: 10px;
+	width: 100%;
+}
+
+input:focus,
+textarea:focus {
+	border: 1px solid #999;
+	outline: none;
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	width: auto;
+}
+
+::-moz-placeholder {
+	color: $medium-gray;
+	opacity: 1;
+	font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+	color: $medium-gray;
+	font-weight: 300;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+	display: none;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Compass",
+  "version": "1.0.0",
+  "description": "A Starter Theme built using Hybrid Core, Bourbon, and Neat.",
+  "copyright": "2014",
+  "author": "Robert Neu",
+  "license": "GPL-2.0+",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-bowercopy": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-csscomb": "latest",
+    "grunt-regex-replace": "latest",
+    "matchdep": "latest"
+  }
+}

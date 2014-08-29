@@ -1,0 +1,19 @@
+
+// Adding a Visual Grid while you develop. Set to 'true.'
+$visual-grid: false;
+$visual-grid-color: #ccc;
+$visual-grid-index: back;
+$visual-grid-opacity: 0.2;
+
+$border-box-sizing: false;
+
+// Change the grid settings
+
+$max-width: 1140px;
+
+// Breakpoints
+$tiny:      new-breakpoint(max-width 320 4);
+$iphone:    new-breakpoint(max-width 480px 4);
+$ipad-tall: new-breakpoint(max-width 768px 4);
+$ipad-wide: new-breakpoint(max-width 1023px 6);
+$desktop:   new-breakpoint(max-width 1180px 12);
