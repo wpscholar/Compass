@@ -1,9 +1,10 @@
 // Typography
-$sans-serif: 'Source Sans Pro', sans-serif;
-$serif: Georgia, Times, "Times New Roman", serif;
-$monospace: Consolas, Monaco, "Andale Mono", "DejaVu Sans Mono", monospace;
+$sans-serif: 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$sans-serif-alt: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif: Georgia, Times, 'Times New Roman', serif;
+$monospace: Consolas, Monaco, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 $base-font-family: $sans-serif;
-$header-font-family: $sans-serif;
+$header-font-family: $sans-serif-alt;
 
 // Sizes
 $base-font-size: 18px;
