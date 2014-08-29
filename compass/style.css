@@ -1596,7 +1596,7 @@ Site Navigation
 /* Header Navigation
 --------------------------------------------- */
 /* line 99, assets/scss/partials/_site-navigation.scss */
-.menu-header a {
+.menu-header .menu-item a {
 	color: #a4a5a5;
 	padding: 33px 20px;
 }
@@ -1632,11 +1632,11 @@ Site Navigation
 	border-bottom: 1px solid #e0e0e0;
 }
 /* line 135, assets/scss/partials/_site-navigation.scss */
-.menu-after-header a {
+.menu-after-header .menu-item a {
 	color: #a4a5a5;
 }
 /* line 139, assets/scss/partials/_site-navigation.scss */
-.menu-after-header a:hover,
+.menu-after-header .menu-item a:hover,
 .menu-after-header .current-menu-item > a,
 .menu-after-header .sub-menu .current-menu-item > a:hover {
 	color: #33b787;

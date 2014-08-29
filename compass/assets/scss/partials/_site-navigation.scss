@@ -96,7 +96,7 @@
 
 .menu-header {
 
-	a {
+	.menu-item a {
 		color: $light-gray;
 		padding: 33px 20px;
 	}
@@ -132,11 +132,11 @@
 	background-color: #fff;
 	border-bottom: 1px solid $medium-fog;
 
-	a {
+	.menu-item a {
 		color: $light-gray;
 	}
 
-	a:hover,
+	.menu-item a:hover,
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover {
 		color: $seafoam;
