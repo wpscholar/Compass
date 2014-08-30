@@ -367,6 +367,12 @@ input[type='search'] {
 	display: table;
 }
 
+/* line 55, assets/scss/partials/_reset.scss */
+html,
+body {
+	overflow-x: hidden;
+}
+
 /*
 Defaults
 ----------------------------------------------------------------------------- */
@@ -565,7 +571,7 @@ h6 {
 
 /* line 156, assets/scss/partials/defaults/_typography.scss */
 h1 {
-	font-size: 38px;
+	font-size: 36px;
 }
 
 /* line 160, assets/scss/partials/defaults/_typography.scss */
@@ -575,22 +581,22 @@ h2 {
 
 /* line 164, assets/scss/partials/defaults/_typography.scss */
 h3 {
-	font-size: 26px;
+	font-size: 28px;
 }
 
 /* line 168, assets/scss/partials/defaults/_typography.scss */
 h4 {
-	font-size: 22px;
+	font-size: 25px;
 }
 
 /* line 172, assets/scss/partials/defaults/_typography.scss */
 h5 {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 /* line 176, assets/scss/partials/defaults/_typography.scss */
 h6 {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 /* Media Objects
@@ -828,46 +834,169 @@ img {
 /* Forms
 --------------------------------------------- */
 /* line 1, assets/scss/partials/defaults/_forms.scss */
-input,
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
 select,
 textarea {
 	background-color: #fff;
 	border: 1px solid #e0e0e0;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
 	color: #494b4c;
 	font-size: 18px;
 	font-weight: 300;
 	padding: 10px;
 	width: 100%;
 }
+/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
+input[type='email']::-webkit-input-placeholder,
+input[type='number']::-webkit-input-placeholder,
+input[type='password']::-webkit-input-placeholder,
+input[type='search']::-webkit-input-placeholder,
+input[type='tel']::-webkit-input-placeholder,
+input[type='text']::-webkit-input-placeholder,
+input[type='url']::-webkit-input-placeholder,
+input[type='color']::-webkit-input-placeholder,
+input[type='date']::-webkit-input-placeholder,
+input[type='datetime']::-webkit-input-placeholder,
+input[type='datetime-local']::-webkit-input-placeholder,
+input[type='month']::-webkit-input-placeholder,
+input[type='time']::-webkit-input-placeholder,
+input[type='week']::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #c7c7c7;
+}
+/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
+input[type='email']::-moz-placeholder,
+input[type='number']::-moz-placeholder,
+input[type='password']::-moz-placeholder,
+input[type='search']::-moz-placeholder,
+input[type='tel']::-moz-placeholder,
+input[type='text']::-moz-placeholder,
+input[type='url']::-moz-placeholder,
+input[type='color']::-moz-placeholder,
+input[type='date']::-moz-placeholder,
+input[type='datetime']::-moz-placeholder,
+input[type='datetime-local']::-moz-placeholder,
+input[type='month']::-moz-placeholder,
+input[type='time']::-moz-placeholder,
+input[type='week']::-moz-placeholder,
+select::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #c7c7c7;
+}
+/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
+input[type='email']:-moz-placeholder,
+input[type='number']:-moz-placeholder,
+input[type='password']:-moz-placeholder,
+input[type='search']:-moz-placeholder,
+input[type='tel']:-moz-placeholder,
+input[type='text']:-moz-placeholder,
+input[type='url']:-moz-placeholder,
+input[type='color']:-moz-placeholder,
+input[type='date']:-moz-placeholder,
+input[type='datetime']:-moz-placeholder,
+input[type='datetime-local']:-moz-placeholder,
+input[type='month']:-moz-placeholder,
+input[type='time']:-moz-placeholder,
+input[type='week']:-moz-placeholder,
+select:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #c7c7c7;
+}
+/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
+input[type='email']:-ms-input-placeholder,
+input[type='number']:-ms-input-placeholder,
+input[type='password']:-ms-input-placeholder,
+input[type='search']:-ms-input-placeholder,
+input[type='tel']:-ms-input-placeholder,
+input[type='text']:-ms-input-placeholder,
+input[type='url']:-ms-input-placeholder,
+input[type='color']:-ms-input-placeholder,
+input[type='date']:-ms-input-placeholder,
+input[type='datetime']:-ms-input-placeholder,
+input[type='datetime-local']:-ms-input-placeholder,
+input[type='month']:-ms-input-placeholder,
+input[type='time']:-ms-input-placeholder,
+input[type='week']:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #c7c7c7;
+}
 
-/* line 13, assets/scss/partials/defaults/_forms.scss */
-input:focus,
+/* line 17, assets/scss/partials/defaults/_forms.scss */
+input[type='email']:hover,
+input[type='number']:hover,
+input[type='password']:hover,
+input[type='search']:hover,
+input[type='tel']:hover,
+input[type='text']:hover,
+input[type='url']:hover,
+input[type='color']:hover,
+input[type='date']:hover,
+input[type='datetime']:hover,
+input[type='datetime-local']:hover,
+input[type='month']:hover,
+input[type='time']:hover,
+input[type='week']:hover,
+textarea:hover {
+	border: 1px solid lightgray;
+}
+
+/* line 22, assets/scss/partials/defaults/_forms.scss */
+input[type='email']:focus,
+input[type='number']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='text']:focus,
+input[type='url']:focus,
+input[type='color']:focus,
+input[type='date']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='month']:focus,
+input[type='time']:focus,
+input[type='week']:focus,
 textarea:focus {
-	border: 1px solid #999;
+	border: 1px solid #adadad;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(160, 160, 160, 0.7);
 	outline: none;
 }
 
-/* line 19, assets/scss/partials/defaults/_forms.scss */
+/* line 29, assets/scss/partials/defaults/_forms.scss */
 input[type='checkbox'],
 input[type='image'],
 input[type='radio'] {
 	width: auto;
 }
 
-/* line 25, assets/scss/partials/defaults/_forms.scss */
+/* line 35, assets/scss/partials/defaults/_forms.scss */
 ::-moz-placeholder {
-	color: #777879;
+	color: #c7c7c7;
 	opacity: 1;
 	font-weight: 300;
 }
 
-/* line 31, assets/scss/partials/defaults/_forms.scss */
+/* line 41, assets/scss/partials/defaults/_forms.scss */
 ::-webkit-input-placeholder {
-	color: #777879;
+	color: #c7c7c7;
 	font-weight: 300;
 }
 
-/* line 36, assets/scss/partials/defaults/_forms.scss */
+/* line 46, assets/scss/partials/defaults/_forms.scss */
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button {
 	display: none;
@@ -977,6 +1106,11 @@ Structure and Layout
 /* Site Containers
 --------------------------------------------- */
 /* line 4, assets/scss/partials/_structure-layout.scss */
+.site-container {
+	position: relative;
+}
+
+/* line 8, assets/scss/partials/_structure-layout.scss */
 .site-inner,
 .wrap {
 	max-width: 1140px;
@@ -991,7 +1125,7 @@ Structure and Layout
 	clear: both;
 }
 
-/* line 9, assets/scss/partials/_structure-layout.scss */
+/* line 13, assets/scss/partials/_structure-layout.scss */
 .site-inner {
 	clear: both;
 	padding-top: 30px;
@@ -1001,7 +1135,7 @@ Structure and Layout
 --------------------------------------------- */
 /* Content
 -------------------- */
-/* line 19, assets/scss/partials/_structure-layout.scss */
+/* line 23, assets/scss/partials/_structure-layout.scss */
 .content {
 	float: left;
 	display: block;
@@ -1013,18 +1147,18 @@ Structure and Layout
 	margin-right: 0;
 }
 
-/* line 23, assets/scss/partials/_structure-layout.scss */
+/* line 27, assets/scss/partials/_structure-layout.scss */
 .layout-2c-r .content {
 	float: right;
 	margin-right: 0;
 }
 
-/* line 28, assets/scss/partials/_structure-layout.scss */
+/* line 32, assets/scss/partials/_structure-layout.scss */
 .layout-1c .content {
 	width: 100%;
 }
 
-/* line 32, assets/scss/partials/_structure-layout.scss */
+/* line 36, assets/scss/partials/_structure-layout.scss */
 .layout-1c-narrow .content {
 	float: left;
 	display: block;
@@ -1039,7 +1173,7 @@ Structure and Layout
 
 /* Primary Sidebar
 -------------------- */
-/* line 39, assets/scss/partials/_structure-layout.scss */
+/* line 43, assets/scss/partials/_structure-layout.scss */
 .sidebar {
 	float: left;
 	display: block;
@@ -1051,13 +1185,13 @@ Structure and Layout
 	margin-right: 0;
 }
 
-/* line 43, assets/scss/partials/_structure-layout.scss */
+/* line 47, assets/scss/partials/_structure-layout.scss */
 .layout-2c-l .sidebar {
 	float: right;
 	margin-right: 0;
 }
 
-/* line 48, assets/scss/partials/_structure-layout.scss */
+/* line 52, assets/scss/partials/_structure-layout.scss */
 .layout-1c .sidebar,
 .layout-1c-narrow .sidebar {
 	display: none;
@@ -1065,7 +1199,7 @@ Structure and Layout
 
 /* Secondary Sidebar
 -------------------- */
-/* line 55, assets/scss/partials/_structure-layout.scss */
+/* line 59, assets/scss/partials/_structure-layout.scss */
 .sidebar-secondary {
 	float: left;
 	display: block;
@@ -1077,7 +1211,7 @@ Structure and Layout
 	margin-right: 0;
 }
 
-/* line 59, assets/scss/partials/_structure-layout.scss */
+/* line 63, assets/scss/partials/_structure-layout.scss */
 .content-sidebar-sidebar .sidebar-secondary {
 	float: right;
 	margin-right: 0;
@@ -1085,7 +1219,7 @@ Structure and Layout
 
 /* Column Classes
 --------------------------------------------- */
-/* line 66, assets/scss/partials/_structure-layout.scss */
+/* line 70, assets/scss/partials/_structure-layout.scss */
 .five-sixths,
 .four-sixths,
 .one-fourth,
@@ -1100,7 +1234,7 @@ Structure and Layout
 	float: left;
 }
 
-/* line 80, assets/scss/partials/_structure-layout.scss */
+/* line 84, assets/scss/partials/_structure-layout.scss */
 .one-half,
 .three-sixths,
 .two-fourths {
@@ -1116,7 +1250,7 @@ Structure and Layout
 	margin-right: 0;
 }
 
-/* line 86, assets/scss/partials/_structure-layout.scss */
+/* line 90, assets/scss/partials/_structure-layout.scss */
 .one-third,
 .two-sixths {
 	float: left;
@@ -1130,7 +1264,7 @@ Structure and Layout
 	margin-right: 0;
 }
 
-/* line 91, assets/scss/partials/_structure-layout.scss */
+/* line 95, assets/scss/partials/_structure-layout.scss */
 .four-sixths,
 .two-thirds {
 	float: left;
@@ -1144,7 +1278,7 @@ Structure and Layout
 	margin-right: 0;
 }
 
-/* line 96, assets/scss/partials/_structure-layout.scss */
+/* line 100, assets/scss/partials/_structure-layout.scss */
 .one-fourth {
 	float: left;
 	display: block;
@@ -1156,7 +1290,7 @@ Structure and Layout
 	margin-right: 0;
 }
 
-/* line 100, assets/scss/partials/_structure-layout.scss */
+/* line 104, assets/scss/partials/_structure-layout.scss */
 .three-fourths {
 	float: left;
 	display: block;
@@ -1168,7 +1302,7 @@ Structure and Layout
 	margin-right: 0;
 }
 
-/* line 104, assets/scss/partials/_structure-layout.scss */
+/* line 108, assets/scss/partials/_structure-layout.scss */
 .one-sixth {
 	float: left;
 	display: block;
@@ -1180,7 +1314,7 @@ Structure and Layout
 	margin-right: 0;
 }
 
-/* line 108, assets/scss/partials/_structure-layout.scss */
+/* line 112, assets/scss/partials/_structure-layout.scss */
 .five-sixths {
 	float: left;
 	display: block;
@@ -1192,7 +1326,7 @@ Structure and Layout
 	margin-right: 0;
 }
 
-/* line 112, assets/scss/partials/_structure-layout.scss */
+/* line 116, assets/scss/partials/_structure-layout.scss */
 .last {
 	clear: right;
 	margin-right: 0;
@@ -1285,30 +1419,30 @@ Common Classes
 --------------------------------------------- */
 /* line 75, assets/scss/partials/_common-classes.scss */
 .archive-title {
-	font-size: 20px;
+	font-size: 22px;
 	font-weight: 600;
 }
 
 /* line 80, assets/scss/partials/_common-classes.scss */
 .entry-title {
-	font-size: 36px;
 	font-weight: 600;
 }
 
-/* line 85, assets/scss/partials/_common-classes.scss */
+/* line 84, assets/scss/partials/_common-classes.scss */
 .entry-title a,
 .sidebar .widget-title a {
-	color: #494b4c;
+	color: #1c1e1f;
 }
 
-/* line 90, assets/scss/partials/_common-classes.scss */
+/* line 89, assets/scss/partials/_common-classes.scss */
 .entry-title a:hover {
-	color: #777879;
+	color: #656c6f;
 }
 
-/* line 94, assets/scss/partials/_common-classes.scss */
+/* line 93, assets/scss/partials/_common-classes.scss */
 .widget-title {
-	font-size: 18px;
+	color: #777879;
+	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 20px;
 }
