@@ -2,8 +2,6 @@
 /**
  * The Header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="site-inner">
- *
  * @package     Compass
  * @subpackage  HybridCore
  * @copyright   Copyright (c) 2014, Flagship, LLC

@@ -2,7 +2,7 @@
 /**
  * Tweaks and Adjustments for the Hybrid Core Framework.
  *
- * @package     Compass
+ * @package     FlagshipLibrary
  * @subpackage  HybridCore
  * @copyright   Copyright (c) 2014, Flagship, LLC
  * @license     GPL-2.0+
@@ -32,7 +32,7 @@ add_filter( 'hybrid_content_template_hierarchy', 'flagship_content_template_hier
  *
  * By default, the content template heirarchy forces you to add logic for single
  * and archive content within the templates themsleves. This makes the templates
- * overly complex and I would prefer to seperate them into individual templates.
+ * overly complex and I would prefer to seperate them into individual files.
  *
  * @since  1.0.0
  * @access public
@@ -50,7 +50,8 @@ function flagship_content_template_hierarchy( $templates ) {
 
 add_filter( 'hybrid_site_title', 'flagship_seo_site_title' );
 /**
- * Returns the linked site title wrapped in a `<p>` tag.
+ * Returns the linked site title wrapped in a `<p>` tag unless on the home page
+ * or the main blog page where no other H1 exists.
  *
  * @since  2.0.0
  * @access public
