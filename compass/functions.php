@@ -51,6 +51,21 @@ function compass_setup() {
 	register_nav_menu( 'header',   _x( 'Header Menu',   'nav menu location', 'compass' ) );
 	register_nav_menu( 'after-header', _x( 'After Header Menu', 'nav menu location', 'compass' ) );
 
+	$formats = 	array(
+		'aside',
+		'gallery',
+		'link',
+		'image',
+		'quote',
+		'status',
+		'video',
+		'audio',
+		'chat'
+	);
+
+	//* Enable support for Post Formats.
+	add_theme_support( 'post-formats', $formats );
+
 	//add_theme_support( 'breadcrumb-trail' );
 
 	//* Enable support for Post Thumbnails on posts and pages.
