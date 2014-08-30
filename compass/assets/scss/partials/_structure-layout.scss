@@ -1,6 +1,10 @@
 /* Site Containers
 --------------------------------------------- */
 
+.site-container {
+	position: relative;
+}
+
 .site-inner,
 .wrap {
 	@include outer-container;
