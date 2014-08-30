@@ -38,8 +38,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'compass' ) ) ); ?>
-		<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', 'compass' ), ) ); ?>
+		<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => '<span class="genericon genericon-category"></span> %s' ) ); ?>
+		<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => '<span class="genericon genericon-tag"></span> %s', ) ); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php tha_entry_bottom(); ?>
