@@ -72,7 +72,7 @@
 
 .entry-meta {
 	color: $light-gray;
-	font-size: 16px;
+	font-size: $secondary-font-size;
 	margin-bottom: 0;
 
 	a {
@@ -125,7 +125,7 @@
 }
 
 .comment-header {
-	font-size: 16px;
+	font-size: $secondary-font-size;
 }
 
 li.comment {
@@ -173,6 +173,6 @@ li.comment {
 
 .form-allowed-tags {
 	background-color: #f5f5f5;
-	font-size: 16px;
+	font-size: $secondary-font-size;
 	padding: 24px;
 }
