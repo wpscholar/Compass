@@ -102,18 +102,18 @@ add_filter( 'current_theme_supports-tha_hooks', 'tha_current_theme_supports', 10
  * $tha_supports[] = 'html;
  */
  function tha_html_before() {
-	 do_action( 'tha_html_before' );
+	do_action( 'tha_html_before' );
  }
 /**
  * HTML <body> hooks
  * $tha_supports[] = 'body';
  */
  function tha_body_top() {
-	 do_action( 'tha_body_top' );
+	do_action( 'tha_body_top' );
  }
 
  function tha_body_bottom() {
-	 do_action( 'tha_body_bottom' );
+	do_action( 'tha_body_bottom' );
  }
 
 /**
