@@ -1530,25 +1530,28 @@ Site Header
 
 /* line 43, assets/scss/partials/_site-header.scss */
 .site-title {
+	font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 32px;
 	font-weight: 600;
 	line-height: 1.2;
+	text-rendering: optimizeLegibility;
 }
-/* line 48, assets/scss/partials/_site-header.scss */
+/* line 50, assets/scss/partials/_site-header.scss */
 .site-title a,
 .site-title a:hover {
 	color: #fff;
 }
 
-/* line 54, assets/scss/partials/_site-header.scss */
+/* line 56, assets/scss/partials/_site-header.scss */
 .site-description {
 	color: #cacccb;
+	font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.5;
 }
 
-/* line 61, assets/scss/partials/_site-header.scss */
+/* line 64, assets/scss/partials/_site-header.scss */
 .site-description,
 .site-title {
 	margin-bottom: 0;
@@ -1556,7 +1559,7 @@ Site Header
 
 /* Header Right
 --------------------------------------------- */
-/* line 69, assets/scss/partials/_site-header.scss */
+/* line 72, assets/scss/partials/_site-header.scss */
 .header-right {
 	float: right;
 	text-align: right;
@@ -1912,19 +1915,26 @@ Content Area
 	margin-bottom: 24px;
 }
 
-/* line 92, assets/scss/partials/_content-area.scss */
+/* line 94, assets/scss/partials/_content-area.scss */
 .entry-footer .entry-meta {
 	margin: 0;
 	padding: 0 0 20px;
 }
-
-/* line 97, assets/scss/partials/_content-area.scss */
-.entry-categories,
-.entry-tags {
+/* line 99, assets/scss/partials/_content-area.scss */
+.entry-footer .entry-terms {
 	display: block;
 }
+/* line 103, assets/scss/partials/_content-area.scss */
+.entry-footer .category {
+	padding-bottom: 5px;
+}
+/* line 107, assets/scss/partials/_content-area.scss */
+.entry-footer .genericon {
+	font-size: 18px;
+	line-height: 26px;
+}
 
-/* line 102, assets/scss/partials/_content-area.scss */
+/* line 113, assets/scss/partials/_content-area.scss */
 .entry-comments-link::before {
 	content: '\2014';
 	margin: 0 6px 0 2px;
@@ -1932,7 +1942,7 @@ Content Area
 
 /* Comments
 --------------------------------------------- */
-/* line 110, assets/scss/partials/_content-area.scss */
+/* line 121, assets/scss/partials/_content-area.scss */
 .comment-respond,
 .entry-comments,
 .entry-pings {
@@ -1941,68 +1951,68 @@ Content Area
 	margin-bottom: 40px;
 }
 
-/* line 118, assets/scss/partials/_content-area.scss */
+/* line 129, assets/scss/partials/_content-area.scss */
 .comment-respond,
 .entry-pings {
 	padding: 40px 40px 16px;
 }
 
-/* line 123, assets/scss/partials/_content-area.scss */
+/* line 134, assets/scss/partials/_content-area.scss */
 .entry-comments {
 	padding: 40px;
 }
 
-/* line 127, assets/scss/partials/_content-area.scss */
+/* line 138, assets/scss/partials/_content-area.scss */
 .comment-header {
 	font-size: 16px;
 }
 
-/* line 131, assets/scss/partials/_content-area.scss */
+/* line 142, assets/scss/partials/_content-area.scss */
 li.comment {
 	background-color: #f5f5f5;
 	border: 2px solid #fff;
 	border-right: none;
 }
 
-/* line 137, assets/scss/partials/_content-area.scss */
+/* line 148, assets/scss/partials/_content-area.scss */
 .comment-content {
 	clear: both;
 }
 
-/* line 142, assets/scss/partials/_content-area.scss */
+/* line 153, assets/scss/partials/_content-area.scss */
 .comment-list li {
 	margin-top: 24px;
 	padding: 32px;
 }
-/* line 147, assets/scss/partials/_content-area.scss */
+/* line 158, assets/scss/partials/_content-area.scss */
 .comment-list li li {
 	margin-right: -32px;
 }
 
-/* line 152, assets/scss/partials/_content-area.scss */
+/* line 163, assets/scss/partials/_content-area.scss */
 .comment-respond input[type='email'],
 .comment-respond input[type='text'],
 .comment-respond input[type='url'] {
 	width: 50%;
 }
 
-/* line 158, assets/scss/partials/_content-area.scss */
+/* line 169, assets/scss/partials/_content-area.scss */
 .comment-respond label {
 	display: block;
 	margin-right: 12px;
 }
 
-/* line 163, assets/scss/partials/_content-area.scss */
+/* line 174, assets/scss/partials/_content-area.scss */
 .entry-comments .comment-author {
 	margin-bottom: 0;
 }
 
-/* line 167, assets/scss/partials/_content-area.scss */
+/* line 178, assets/scss/partials/_content-area.scss */
 .entry-pings .reply {
 	display: none;
 }
 
-/* line 174, assets/scss/partials/_content-area.scss */
+/* line 185, assets/scss/partials/_content-area.scss */
 .form-allowed-tags {
 	background-color: #f5f5f5;
 	font-size: 16px;
