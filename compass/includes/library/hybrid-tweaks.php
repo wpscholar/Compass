@@ -10,8 +10,10 @@
  * @since       1.0.0
  */
 
-//* Remove the default Hybrid doctitle.
-remove_action( 'wp_head', 'hybrid_doctitle', 0 );
+//* Remove the default Hybrid head elements.
+remove_action( 'wp_head', 'hybrid_meta_template', 1 );
+remove_action( 'wp_head', 'hybrid_doctitle',      0 );
+
 add_action( 'wp_head', 'flagship_doctitle',  0 );
 /**
  * Add the title to the header with a more SEO-friendly seperator.
@@ -44,6 +46,37 @@ function flagship_content_template_hierarchy( $templates ) {
 		$templates = str_replace( 'content/', 'content/archive/', $templates );
 	}
 	return $templates;
+}
+
+add_filter( 'hybrid_site_title', 'flagship_seo_site_title' );
+/**
+ * Returns the linked site title wrapped in a `<p>` tag.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  $title
+ * @return string
+ */
+function flagship_seo_site_title( $title ) {
+	if ( is_front_page() || is_home() ) {
+		return $title;
+	}
+	$title = str_replace( 'h1', 'p', $title );
+	return $title;
+}
+
+add_filter( 'hybrid_site_description', 'flagship_seo_site_description' );
+/**
+ * Returns the site description wrapped in a `<p>` tag.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  $desc
+ * @return string
+ */
+function flagship_seo_site_description( $desc ) {
+	$desc = str_replace( 'h2', 'p', $desc );
+	return $desc;
 }
 
 add_action( 'widgets_init', 'flagship_register_footer_widget_areas' );
