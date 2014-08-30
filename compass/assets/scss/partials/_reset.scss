@@ -51,3 +51,8 @@ input[type="search"] {
 	content: " ";
 	display: table;
 }
+
+html,
+body {
+	overflow-x: hidden;
+}
