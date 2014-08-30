@@ -29,13 +29,13 @@
 .author-box {
 	background-color: #fff;
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-	font-size: 16px;
+	font-size: $secondary-font-size;
 	margin-bottom: 30px;
 	padding: 40px;
 }
 
 .author-box-title {
-	font-size: 16px;
+	font-size: $secondary-font-size;
 	margin-bottom: 4px;
 }
 
@@ -73,26 +73,26 @@
 --------------------------------------------- */
 
 .archive-title {
-	font-size: 20px;
+	font-size: $h5-font-size;
 	font-weight: 600;
 }
 
 .entry-title {
-	font-size: 36px;
 	font-weight: 600;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: $dark-gray;
+	color: $base-heading-color;
 }
 
 .entry-title a:hover {
-	color: $medium-gray;
+	color: lighten($base-heading-color, 30);
 }
 
 .widget-title {
-	font-size: 18px;
+	color: $base-font-color;
+	font-size: $h6-font-size;
 	font-weight: 600;
 	margin-bottom: 20px;
 }
