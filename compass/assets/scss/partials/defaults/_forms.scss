@@ -9,9 +9,6 @@ textarea {
 	font-weight: 300;
 	padding: 10px;
 	width: 100%;
-	@include placeholder {
-		color: $form-placeholder-color;
-	}
 }
 
 #{$all-text-inputs-hover},
@@ -32,18 +29,15 @@ input[type="radio"] {
 	width: auto;
 }
 
-::-moz-placeholder {
-	color: $form-placeholder-color;
-	opacity: 1;
-	font-weight: 300;
-}
-
-::-webkit-input-placeholder {
-	color: $form-placeholder-color;
-	font-weight: 300;
-}
-
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button {
 	display: none;
+}
+
+input {
+	@include placeholder {
+		color: $form-placeholder-color;
+		opacity: 1;
+		font-weight: 300;
+	}
 }

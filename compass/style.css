@@ -859,84 +859,8 @@ textarea {
 	padding: 10px;
 	width: 100%;
 }
-/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
-input[type='email']::-webkit-input-placeholder,
-input[type='number']::-webkit-input-placeholder,
-input[type='password']::-webkit-input-placeholder,
-input[type='search']::-webkit-input-placeholder,
-input[type='tel']::-webkit-input-placeholder,
-input[type='text']::-webkit-input-placeholder,
-input[type='url']::-webkit-input-placeholder,
-input[type='color']::-webkit-input-placeholder,
-input[type='date']::-webkit-input-placeholder,
-input[type='datetime']::-webkit-input-placeholder,
-input[type='datetime-local']::-webkit-input-placeholder,
-input[type='month']::-webkit-input-placeholder,
-input[type='time']::-webkit-input-placeholder,
-input[type='week']::-webkit-input-placeholder,
-select::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-	color: #c7c7c7;
-}
-/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
-input[type='email']::-moz-placeholder,
-input[type='number']::-moz-placeholder,
-input[type='password']::-moz-placeholder,
-input[type='search']::-moz-placeholder,
-input[type='tel']::-moz-placeholder,
-input[type='text']::-moz-placeholder,
-input[type='url']::-moz-placeholder,
-input[type='color']::-moz-placeholder,
-input[type='date']::-moz-placeholder,
-input[type='datetime']::-moz-placeholder,
-input[type='datetime-local']::-moz-placeholder,
-input[type='month']::-moz-placeholder,
-input[type='time']::-moz-placeholder,
-input[type='week']::-moz-placeholder,
-select::-moz-placeholder,
-textarea::-moz-placeholder {
-	color: #c7c7c7;
-}
-/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
-input[type='email']:-moz-placeholder,
-input[type='number']:-moz-placeholder,
-input[type='password']:-moz-placeholder,
-input[type='search']:-moz-placeholder,
-input[type='tel']:-moz-placeholder,
-input[type='text']:-moz-placeholder,
-input[type='url']:-moz-placeholder,
-input[type='color']:-moz-placeholder,
-input[type='date']:-moz-placeholder,
-input[type='datetime']:-moz-placeholder,
-input[type='datetime-local']:-moz-placeholder,
-input[type='month']:-moz-placeholder,
-input[type='time']:-moz-placeholder,
-input[type='week']:-moz-placeholder,
-select:-moz-placeholder,
-textarea:-moz-placeholder {
-	color: #c7c7c7;
-}
-/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
-input[type='email']:-ms-input-placeholder,
-input[type='number']:-ms-input-placeholder,
-input[type='password']:-ms-input-placeholder,
-input[type='search']:-ms-input-placeholder,
-input[type='tel']:-ms-input-placeholder,
-input[type='text']:-ms-input-placeholder,
-input[type='url']:-ms-input-placeholder,
-input[type='color']:-ms-input-placeholder,
-input[type='date']:-ms-input-placeholder,
-input[type='datetime']:-ms-input-placeholder,
-input[type='datetime-local']:-ms-input-placeholder,
-input[type='month']:-ms-input-placeholder,
-input[type='time']:-ms-input-placeholder,
-input[type='week']:-ms-input-placeholder,
-select:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-	color: #c7c7c7;
-}
 
-/* line 17, assets/scss/partials/defaults/_forms.scss */
+/* line 14, assets/scss/partials/defaults/_forms.scss */
 input[type='email']:hover,
 input[type='number']:hover,
 input[type='password']:hover,
@@ -955,7 +879,7 @@ textarea:hover {
 	border: 1px solid lightgray;
 }
 
-/* line 22, assets/scss/partials/defaults/_forms.scss */
+/* line 19, assets/scss/partials/defaults/_forms.scss */
 input[type='email']:focus,
 input[type='number']:focus,
 input[type='password']:focus,
@@ -976,30 +900,42 @@ textarea:focus {
 	outline: none;
 }
 
-/* line 29, assets/scss/partials/defaults/_forms.scss */
+/* line 26, assets/scss/partials/defaults/_forms.scss */
 input[type='checkbox'],
 input[type='image'],
 input[type='radio'] {
 	width: auto;
 }
 
-/* line 35, assets/scss/partials/defaults/_forms.scss */
-::-moz-placeholder {
+/* line 32, assets/scss/partials/defaults/_forms.scss */
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button {
+	display: none;
+}
+
+/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
+input::-webkit-input-placeholder {
 	color: #c7c7c7;
 	opacity: 1;
 	font-weight: 300;
 }
-
-/* line 41, assets/scss/partials/defaults/_forms.scss */
-::-webkit-input-placeholder {
+/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
+input::-moz-placeholder {
 	color: #c7c7c7;
+	opacity: 1;
 	font-weight: 300;
 }
-
-/* line 46, assets/scss/partials/defaults/_forms.scss */
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-results-button {
-	display: none;
+/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
+input:-moz-placeholder {
+	color: #c7c7c7;
+	opacity: 1;
+	font-weight: 300;
+}
+/* line 4, assets/scss/vendor/bourbon/css3/_placeholder.scss */
+input:-ms-input-placeholder {
+	color: #c7c7c7;
+	opacity: 1;
+	font-weight: 300;
 }
 
 /* Tables
