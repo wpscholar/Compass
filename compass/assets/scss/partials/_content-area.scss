@@ -13,7 +13,7 @@
 }
 
 .plural .content .sticky {
-    border: 1px solid $light-gray;
+	border: 1px solid $light-gray;
 }
 
 .entry-content {
@@ -77,11 +77,11 @@
 
 	a {
 		border-bottom: 1px solid lighten($base-link-color, 40);
-	    color: $light-gray;
+		color: $light-gray;
 
-	    &:hover {
-	    	color: $base-link-color;
-	    }
+		&:hover {
+			color: $base-link-color;
+		}
 	}
 }
 
@@ -89,14 +89,25 @@
 	margin-bottom: 24px;
 }
 
-.entry-footer .entry-meta {
-	margin: 0;
-	padding: 0 0 20px;
-}
+.entry-footer {
 
-.entry-categories,
-.entry-tags {
-	display: block;
+	.entry-meta {
+		margin: 0;
+		padding: 0 0 20px;
+	}
+
+	.entry-terms {
+		display: block;
+	}
+
+	.category {
+		padding-bottom: 5px;
+	}
+
+	.genericon {
+		font-size: 18px;
+		line-height: 26px;
+	}
 }
 
 .entry-comments-link::before {
