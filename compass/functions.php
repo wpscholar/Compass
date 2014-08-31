@@ -23,18 +23,6 @@ add_action( 'after_setup_theme', 'compass_setup', 5 );
  * as indicating support for post thumbnails.
  */
 function compass_setup() {
-	//* Make theme available for translation.
-	load_theme_textdomain( 'compass', get_template_directory() . '/languages' );
-
-	//* Handle content width for embeds and images.
-	hybrid_set_content_width( 1140 );
-
-	//* Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	//* Load theme styles.
-	add_theme_support( 'hybrid-core-styles', array( 'google-fonts', 'parent', 'style', )	);
-
 	//* Add Support for Theme layouts.
 	add_theme_support(
 		'theme-layouts',
@@ -46,6 +34,15 @@ function compass_setup() {
 		),
 		array( 'default' => is_rtl() ? '2c-r' :'2c-l' )
 	);
+
+	//* Handle content width for embeds and images.
+	hybrid_set_content_width( 1140 );
+
+	//* Add default posts and comments RSS feed links to head.
+	add_theme_support( 'automatic-feed-links' );
+
+	//* Load theme styles.
+	add_theme_support( 'hybrid-core-styles', array( 'google-fonts', 'parent', 'style', )	);
 
 	//* Add navigation menus.
 	register_nav_menu( 'header',   _x( 'Header Menu',   'nav menu location', 'compass' ) );
