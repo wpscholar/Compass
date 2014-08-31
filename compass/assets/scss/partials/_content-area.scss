@@ -21,7 +21,7 @@
 	ol,
 	ul,
 	dl {
-		margin-bottom: 24px;
+		margin-bottom: 26px;
 	}
 
 	ol,
@@ -93,7 +93,7 @@
 
 	.entry-meta {
 		margin: 0;
-		padding: 0 0 20px;
+		padding: 0 0 26px;
 	}
 
 	.entry-terms {
@@ -105,7 +105,7 @@
 	}
 
 	.genericon {
-		font-size: 18px;
+		font-size: $base-font-size;
 		line-height: 26px;
 	}
 }
