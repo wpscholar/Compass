@@ -39,7 +39,7 @@
 
 	<footer class="entry-footer">
 		<p class="entry-meta">
-			<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => '<span class="genericon genericon-category"></span> %s' ) ); ?>
+			<?php hybrid_post_terms( array( 'taxonomy' => 'category', 'text' => '<span class="genericon genericon-category"></span> %s', ) ); ?>
 			<?php hybrid_post_terms( array( 'taxonomy' => 'post_tag', 'text' => '<span class="genericon genericon-tag"></span> %s', ) ); ?>
 		</p>
 	</footer><!-- .entry-footer -->
