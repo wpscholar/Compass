@@ -442,7 +442,7 @@ a:focus {
 
 /* line 48, assets/scss/partials/defaults/_typography.scss */
 p {
-	margin: 0 0 28px;
+	margin: 0 0 26px;
 	padding: 0;
 }
 
@@ -468,7 +468,7 @@ pre {
 	font-family: Consolas, Monaco, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 	font-size: 15px;
 	line-height: 1.6;
-	margin-bottom: 1.6em;
+	margin-bottom: 26px;
 	padding: 3% 10% 3% 5%;
 	overflow: auto;
 	max-width: 100%;
@@ -485,20 +485,26 @@ var {
 }
 
 /* line 84, assets/scss/partials/defaults/_typography.scss */
+address {
+	font-style: italic;
+	margin: 0 0 26px;
+}
+
+/* line 89, assets/scss/partials/defaults/_typography.scss */
 abbr,
 acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
-/* line 89, assets/scss/partials/defaults/_typography.scss */
+/* line 94, assets/scss/partials/defaults/_typography.scss */
 mark,
 ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
 
-/* line 94, assets/scss/partials/defaults/_typography.scss */
+/* line 99, assets/scss/partials/defaults/_typography.scss */
 sup,
 sub {
 	font-size: 75%;
@@ -508,32 +514,32 @@ sub {
 	vertical-align: baseline;
 }
 
-/* line 102, assets/scss/partials/defaults/_typography.scss */
+/* line 107, assets/scss/partials/defaults/_typography.scss */
 sup {
 	bottom: 1ex;
 }
 
-/* line 106, assets/scss/partials/defaults/_typography.scss */
+/* line 111, assets/scss/partials/defaults/_typography.scss */
 sub {
 	top: 0.5ex;
 }
 
-/* line 110, assets/scss/partials/defaults/_typography.scss */
+/* line 115, assets/scss/partials/defaults/_typography.scss */
 small {
 	font-size: 75%;
 }
 
-/* line 114, assets/scss/partials/defaults/_typography.scss */
+/* line 119, assets/scss/partials/defaults/_typography.scss */
 big {
 	font-size: 125%;
 }
 
-/* line 118, assets/scss/partials/defaults/_typography.scss */
+/* line 123, assets/scss/partials/defaults/_typography.scss */
 figure {
 	margin: 0;
 }
 
-/* line 122, assets/scss/partials/defaults/_typography.scss */
+/* line 127, assets/scss/partials/defaults/_typography.scss */
 blockquote,
 cite,
 em,
@@ -541,12 +547,12 @@ i {
 	font-style: italic;
 }
 
-/* line 129, assets/scss/partials/defaults/_typography.scss */
+/* line 134, assets/scss/partials/defaults/_typography.scss */
 blockquote {
 	margin: 40px;
 }
 
-/* line 133, assets/scss/partials/defaults/_typography.scss */
+/* line 138, assets/scss/partials/defaults/_typography.scss */
 blockquote::before {
 	content: '\201C';
 	display: block;
@@ -559,7 +565,7 @@ blockquote::before {
 
 /* Headings
 --------------------------------------------- */
-/* line 147, assets/scss/partials/defaults/_typography.scss */
+/* line 152, assets/scss/partials/defaults/_typography.scss */
 h1,
 h2,
 h3,
@@ -574,32 +580,32 @@ h6 {
 	text-rendering: optimizeLegibility;
 }
 
-/* line 156, assets/scss/partials/defaults/_typography.scss */
+/* line 161, assets/scss/partials/defaults/_typography.scss */
 h1 {
 	font-size: 36px;
 }
 
-/* line 160, assets/scss/partials/defaults/_typography.scss */
+/* line 165, assets/scss/partials/defaults/_typography.scss */
 h2 {
 	font-size: 32px;
 }
 
-/* line 164, assets/scss/partials/defaults/_typography.scss */
+/* line 169, assets/scss/partials/defaults/_typography.scss */
 h3 {
 	font-size: 28px;
 }
 
-/* line 168, assets/scss/partials/defaults/_typography.scss */
+/* line 173, assets/scss/partials/defaults/_typography.scss */
 h4 {
 	font-size: 25px;
 }
 
-/* line 172, assets/scss/partials/defaults/_typography.scss */
+/* line 177, assets/scss/partials/defaults/_typography.scss */
 h5 {
 	font-size: 22px;
 }
 
-/* line 176, assets/scss/partials/defaults/_typography.scss */
+/* line 181, assets/scss/partials/defaults/_typography.scss */
 h6 {
 	font-size: 20px;
 }
@@ -1853,7 +1859,7 @@ Content Area
 .entry-content ol,
 .entry-content ul,
 .entry-content dl {
-	margin-bottom: 24px;
+	margin-bottom: 26px;
 }
 /* line 27, assets/scss/partials/_content-area.scss */
 .entry-content ol,
@@ -1923,7 +1929,7 @@ Content Area
 /* line 94, assets/scss/partials/_content-area.scss */
 .entry-footer .entry-meta {
 	margin: 0;
-	padding: 0 0 20px;
+	padding: 0 0 26px;
 }
 /* line 99, assets/scss/partials/_content-area.scss */
 .entry-footer .entry-terms {
