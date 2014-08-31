@@ -75,6 +75,16 @@
 	font-size: $secondary-font-size;
 	margin-bottom: 0;
 
+	span,
+	time,
+	a {
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
 	a {
 		border-bottom: 1px solid lighten($base-link-color, 40);
 		color: $light-gray;
@@ -85,8 +95,12 @@
 	}
 }
 
+span.comments-link {
+	display: none;
+}
+
 .entry-header .entry-meta {
-	margin-bottom: 24px;
+	margin-bottom: 26px;
 }
 
 .entry-footer {
@@ -103,17 +117,8 @@
 	.category {
 		padding-bottom: 5px;
 	}
-
-	.genericon {
-		font-size: $base-font-size;
-		line-height: 26px;
-	}
 }
 
-.entry-comments-link::before {
-	content: "\2014";
-	margin: 0 6px 0 2px;
-}
 
 /* Comments
 --------------------------------------------- */
