@@ -78,6 +78,19 @@ function flagship_seo_site_description( $desc ) {
 	return str_replace( array( '<h2', '</h2' ), array( '<p', '</p' ), $desc );
 }
 
+add_filter( 'excerpt_more', 'flagship_seo_excerpt_more' );
+/**
+ * Filter the default Hybrid more link to add a rel="nofollow" attribute.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string $text
+ * @return string
+ */
+function flagship_seo_excerpt_more( $text ) {
+	return str_replace( 'class="more-link"', 'rel="nofollow" class="more-link"', $text );
+}
+
 add_action( 'widgets_init', 'flagship_register_footer_widget_areas' );
 /**
  * Register footer widget areas based on the number of widget areas the user
