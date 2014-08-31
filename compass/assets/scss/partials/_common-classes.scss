@@ -25,13 +25,10 @@
 	margin-bottom: 20px;
 }
 
-.archive-description,
+.loop-meta,
 .author-box {
-	background-color: #fff;
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-	font-size: $secondary-font-size;
+	font-size: $base-font-size;
 	margin-bottom: 30px;
-	padding: 40px;
 }
 
 .author-box-title {
@@ -39,7 +36,7 @@
 	margin-bottom: 4px;
 }
 
-.archive-description p:last-child,
+.loop-meta p:last-child,
 .author-box p:last-child {
 	margin-bottom: 0;
 }
