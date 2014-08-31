@@ -11,7 +11,7 @@
  */
 
 //* Include Hybrid Core.
-require_once( get_template_directory() . '/hybrid-core/hybrid.php' );
+require_once( trailingslashit( get_template_directory() ) . 'hybrid-core/hybrid.php' );
 new Hybrid();
 
 add_action( 'after_setup_theme', 'compass_setup', 5 );
@@ -45,7 +45,7 @@ function compass_setup() {
 	add_theme_support( 'hybrid-core-styles', array( 'google-fonts', 'parent', 'style', )	);
 
 	//* Add navigation menus.
-	register_nav_menu( 'header',   _x( 'Header Menu',   'nav menu location', 'compass' ) );
+	register_nav_menu( 'header', _x( 'Header Menu', 'nav menu location', 'compass' ) );
 	register_nav_menu( 'after-header', _x( 'After Header Menu', 'nav menu location', 'compass' ) );
 
 	$formats = 	array(
