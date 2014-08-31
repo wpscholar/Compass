@@ -15,7 +15,19 @@
 
 	<?php tha_entry_top(); ?>
 
-	<?php get_the_image( array( 'size' => 'compass-full', 'split_content' => true, 'scan_raw' => true, 'scan' => true, 'order' => array( 'scan_raw', 'scan', 'featured', 'attachment' ) ) ); ?>
+	<?php
+	//* Display a featured image if we can find something to display.
+	get_the_image(
+		array(
+			'size'          => 'compass-full',
+			'scan'          => true,
+			'caption'       => false,
+			'order'         => array( 'scan_raw', 'scan', 'featured', 'attachment', ),
+			'before'        => '<div class="featured-media">',
+			'after'         => '</div>',
+		)
+	);
+	?>
 
 	<header class="entry-header">
 

@@ -15,7 +15,16 @@
 
 	<?php tha_entry_top(); ?>
 
-	<?php get_the_image( array( 'size' => 'compass-full' ) ); ?>
+	<?php
+	//* Display a featured image if one has been set.
+	get_the_image(
+		array(
+			'size'   => 'compass-full',
+			'before' => '<div class="featured-media">',
+			'after'  => '</div>',
+		)
+	);
+	?>
 
 	<header class="entry-header">
 
