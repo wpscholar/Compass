@@ -45,10 +45,12 @@
 		- Header Navigation
 		- Primary Navigation
 		- Secondary Navigation
+		- Pagination
 	- Content Area
 		- Entries
-		- Pagination
-		- Comments
+		- Entry Meta
+		- Featured Media
+	- Comments
 	- Widgets
 		- Featured Content
 	- Sidebars
@@ -69,8 +71,11 @@
 @import "vendor/bourbon/bourbon";
 
 // Load Neat Grid
+@import "global/neat-settings";
 @import "vendor/neat/neat";
-@import "settings/neat";
+
+// Load Global Variables
+@import "global/variables";
 
 /*
 HTML5 Reset
@@ -118,6 +123,12 @@ Site Navigation
 Content Area
 ----------------------------------------------------------------------------- */
 @import "partials/content-area";
+
+
+/* Comments
+----------------------------------------------------------------------------- */
+
+@import "partials/comments";
 
 
 /*
