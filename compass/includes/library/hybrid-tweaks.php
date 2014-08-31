@@ -62,8 +62,7 @@ function flagship_seo_site_title( $title ) {
 	if ( is_front_page() || is_home() ) {
 		return $title;
 	}
-	$title = str_replace( 'h1', 'p', $title );
-	return $title;
+	return str_replace( array( '<h1', '</h1' ), array( '<p', '</p' ), $title );
 }
 
 add_filter( 'hybrid_site_description', 'flagship_seo_site_description' );
@@ -76,8 +75,7 @@ add_filter( 'hybrid_site_description', 'flagship_seo_site_description' );
  * @return string
  */
 function flagship_seo_site_description( $desc ) {
-	$desc = str_replace( 'h2', 'p', $desc );
-	return $desc;
+	return str_replace( array( '<h2', '</h2' ), array( '<p', '</p' ), $desc );
 }
 
 add_action( 'widgets_init', 'flagship_register_footer_widget_areas' );
