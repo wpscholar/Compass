@@ -26,19 +26,6 @@ function compass_register_image_sizes() {
 	add_image_size( 'compass-full', 1025, 500, false );
 }
 
-add_filter( 'excerpt_more', 'compass_excerpt_more' );
-/**
- * Adds a read more button to post excerpts.
- *
- * @since  1.0.0
- * @access public
- * @param  string     $more
- * @return string
- */
-function compass_excerpt_more( $more ) {
-	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'compass' ) . ' &rarr;</a>';
-}
-
 add_filter( 'excerpt_length', 'compass_excerpt_length' );
 /**
  * Adds a custom excerpt length.
