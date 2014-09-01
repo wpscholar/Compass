@@ -54,7 +54,7 @@
 
 	table {
 		border-collapse: separate;
-		border: 1px solid #ddd;
+		border: 1px solid $base-border-color;
 		border-left: none;
 		margin: 20px 0;
 		width: 100%;
@@ -62,9 +62,9 @@
 
 	table th,
 	table td {
-		border-left: 1px solid #ddd;
-		border-top: 1px solid #ddd;
-		line-height: 18px;
+		border-left: 1px solid $base-border-color;
+		border-top: 1px solid $base-border-color;
+		line-height: 1.2;
 		padding: 8px;
 		text-align: left;
 		vertical-align: top;
@@ -77,8 +77,10 @@
 	}
 
 	code {
-		background: #f7f7f7;
-		padding: 0 4px;
+		background: $base-background-color;
+		border: 1px solid darken($base-border-color, 10);
+		color: $base-heading-color;
+		padding: 2px 4px;
 	}
 
 	.wp-caption .wp-caption-text {
