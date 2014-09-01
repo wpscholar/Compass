@@ -43,7 +43,7 @@
 					<?php hybrid_site_description(); ?>
 				</div><!-- #branding -->
 
-				<?php hybrid_get_menu( 'header' ); ?>
+				<?php hybrid_get_sidebar( 'header-right' ); ?>
 
 				<?php tha_header_bottom(); ?>
 
