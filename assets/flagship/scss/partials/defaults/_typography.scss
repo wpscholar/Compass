@@ -17,7 +17,7 @@ input[type="reset"],
 input[type="submit"],
 textarea:focus,
 .button {
-	@include transition(all, 0.1s, ease-in-out);
+	@include transition(all, .1s, ease-in-out);
 }
 
 ::-moz-selection {
@@ -31,7 +31,7 @@ textarea:focus,
 }
 
 a {
-	@include transition(color 0.1s linear);
+	@include transition(color .1s linear);
 	color: $base-link-color;
 	text-decoration: none;
 
@@ -39,7 +39,8 @@ a {
 		color: $hover-link-color;
 	}
 
-	&:active, &:focus {
+	&:active,
+	&:focus {
 		color: $hover-link-color;
 		outline: none;
 	}
@@ -56,10 +57,8 @@ strong {
 }
 
 hr {
+	border: 0;
 	border-bottom: 1px solid $base-border-color;
-	border-left: none;
-	border-right: none;
-	border-top: none;
 	margin: 20px 0;
 }
 
@@ -77,9 +76,12 @@ pre {
 	tab-size: 4;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
 	font-family: $monospace;
-	font-size: 15px
+	font-size: 15px;
 }
 
 address {
@@ -87,17 +89,20 @@ address {
 	margin: 0 0 26px;
 }
 
-abbr, acronym {
+abbr,
+acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
 
-sup, sub {
+sup,
+sub {
 	font-size: 75%;
 	height: 0;
 	line-height: 0;
@@ -137,7 +142,7 @@ blockquote {
 }
 
 blockquote::before {
-	content: "\201C";
+	content: '\201C';
 	display: block;
 	font-size: 30px;
 	height: 0;
@@ -150,7 +155,12 @@ blockquote::before {
 /* Headings
 --------------------------------------------- */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: $base-heading-color;
 	font-family: $header-font-family;
 	font-weight: 400;

@@ -9,9 +9,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 
 *,
 input[type="search"] {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:    border-box;
-	box-sizing:         border-box;
+	box-sizing: border-box;
 }
 
 /* Float Clearing
@@ -30,7 +28,7 @@ input[type="search"] {
 .header:before,
 .site-inner:before,
 .wrap:before {
-	content: " ";
+	content: ' ';
 	display: table;
 }
 
@@ -48,7 +46,7 @@ input[type="search"] {
 .site-inner:after,
 .wrap:after {
 	clear: both;
-	content: " ";
+	content: ' ';
 	display: table;
 }
 

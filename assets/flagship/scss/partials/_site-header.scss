@@ -8,16 +8,16 @@
 }
 
 .skip-link .screen-reader-text:focus {
-	z-index:     100;
-	top:         34px;
-	width:       200px;
-	padding:     10px 0;
-	text-align:  center;
+	z-index: 100;
+	top: 34px;
+	width: 200px;
+	padding: 10px 0;
+	text-align: center;
 }
 
 .ltr .skip-link .screen-reader-text:focus {
 	left: 50%;
-	margin-left:  -100px;
+	margin-left: -100px;
 }
 
 .rtl .skip-link .screen-reader-text:focus {
