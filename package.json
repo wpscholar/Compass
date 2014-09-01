@@ -1,17 +1,90 @@
 {
-  "name": "Compass",
+  "name": "compass",
+  "capitalname": "Compass",
   "version": "1.0.0",
-  "description": "A Starter Theme built using Hybrid Core, Bourbon, and Neat.",
   "copyright": "2014",
-  "author": "Robert Neu",
   "license": "GPL-2.0+",
+  "private": true,
+  "bugs": {
+    "url": "http://flagshipwp.com/support",
+    "email": "support@flagshipwp.com"
+  },
+  "contributors": [
+    {
+      "name": "Flagship",
+      "url": "http://flagshipwp.com"
+    },
+    {
+      "name": "Gary Jones",
+      "url": "http://gamajo.com"
+    }
+  ],
+  "theme": {
+    "name": "Compass",
+    "uri": "http://flagshipwp.com/themes/compass/",
+    "description": "A Starter Theme built using Hybrid Core, Theme Hook Alliance, Bourbon, and Neat.",
+    "author": "Flagship",
+    "authoruri": "http://flagshipwp.com",
+    "tags": "white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready",
+    "license": "GPL-2.0+",
+    "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
+    "textdomain": "compass",
+    "domainpath": "/languages"
+  },
+  "pot": {
+    "reportmsgidbugsto": "Robert Neu <translations@flagshipwp.com>",
+    "lasttranslator": "Robert Neu <translations@flagshipwp.com>",
+    "languageteam": "Robert Neu <translations@flagshipwp.com>",
+    "pluralforms": "nplurals=2; plural=n != 1;",
+    "xpoeditbasepath": "../",
+    "xpoeditlanguage": "English",
+    "xpoeditcountry": "UNITED STATES",
+    "xpoeditsourcecharset": "utf-8",
+    "xpoeditkeywordslist": "__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;",
+    "xpoeditbookmarks": "",
+    "xpoeditsearchpath0": ".",
+    "xtextdomainsupport": "yes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:flagshipwp/compass.git"
+  },
   "devDependencies": {
-    "grunt": "latest",
-    "grunt-bowercopy": "latest",
-    "grunt-contrib-sass": "latest",
-    "grunt-contrib-watch": "latest",
-    "grunt-csscomb": "latest",
-    "grunt-regex-replace": "latest",
-    "matchdep": "latest"
+    "grunt": "",
+    "grunt-autoprefixer": "",
+    "grunt-bower-task": "",
+    "grunt-bowercopy": "",
+    "grunt-bump": "",
+    "grunt-checktextdomain": "",
+    "grunt-composer": "",
+    "grunt-contrib-clean": "",
+    "grunt-contrib-compress": "",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-copy": "",
+    "grunt-contrib-cssmin": "",
+    "grunt-contrib-imagemin": "",
+    "grunt-contrib-jshint": "",
+    "grunt-contrib-rename": "",
+    "grunt-contrib-sass": "",
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-watch": "",
+    "grunt-csscomb": "",
+    "grunt-cssjanus": "",
+    "grunt-githooks": "",
+    "grunt-jsbeautifier": "",
+    "grunt-jscs": "",
+    "grunt-jsonlint": "",
+    "grunt-jsvalidate": "",
+    "grunt-mkdir": "",
+    "grunt-newer": "",
+    "grunt-phpcs": "",
+    "grunt-phplint": "",
+    "grunt-replace": "",
+    "grunt-scss-lint": "",
+    "grunt-wp-i18n": "",
+    "load-grunt-config": "",
+    "load-grunt-tasks": "",
+    "semver": "",
+    "time-grunt": ""
   }
 }

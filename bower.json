@@ -1,14 +1,10 @@
 {
-  "name": "Compass",
-  "version": "1.0.0",
-  "authors": [
-    "Robert Neu"
-  ],
-  "license": "GPL-2.0+",
-  "private": true,
-  "dependencies": {},
-  "devDependencies": {
-    "bourbon": "~4.0.2",
-    "neat": "~1.6.0"
-  }
+	"name": "compass",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {},
+	"devDependencies": {
+		"bourbon": "~4.0.2",
+		"neat": "~1.6.0"
+	}
 }

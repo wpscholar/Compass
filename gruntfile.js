@@ -1,119 +1,66 @@
-/**
- * Flagship Gruntfile
- * http://compasswp.com
- *
- * @author Robert Neu
- */
+/* global require, process */
+module.exports = function( grunt ) {
+	'use strict';
 
-'use strict';
+	// Load grunt plugins
+	require( 'time-grunt' )(grunt);
+	require( 'load-grunt-tasks' )(grunt);
 
-/**
- * Grunt Module
- */
-module.exports = function(grunt) {
-	/**
-	 * Load Grunt plugins
-	 */
-	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-
-	/**
-	 * Configuration
-	 */
-	grunt.initConfig({
-		/**
-		 * Get package meta data
-		 */
-		pkg: grunt.file.readJSON('package.json'),
-		/**
-		 * Bower Copy
-		 */
-		bowercopy: {
-			options: {
-				srcPrefix: 'bower_components',
-				clean: true
+	// Define project configuration
+	var project = {
+		paths: {
+			get authorAssets() {
+				return this.assets + 'flagship/';
 			},
-			scss: {
-				options: {
-					destPrefix: 'compass/assets/scss/vendor'
-				},
-				files: {
-					'bourbon': 'bourbon/dist',
-					'neat': 'neat/app/assets/stylesheets'
-				}
-			}
-		},
-		/**
-		 * Sass
-		 */
-		sass: {
-			dist: {
-				options: {
-					style:       'expanded',
-					lineNumbers: true,
-					debugInfo:   false,
-					compass:     false
-				},
-				files: {
-					'compass/style.css' : 'compass/assets/scss/style.scss'
-				}
-			}
-		},
-		csscomb: {
-			dist: {
-				options: {
-					config: 'csscomb.json'
-				},
-				files: {
-					'compass/style.css': ['compass/style.css']
-				}
-			}
-		},
-		'regex-replace': {
-			dist: {
-				src: ['style.css'],
-				actions: [
-					{
-						name: 'closing-brace-newline',
-						search: '}\n',
-						replace: '}\n\n',
-						flags: 'g'
-					},
-					{
-						name: 'remove-double-blanklines',
-						search: '([ \t]*\n){3,}',
-						replace: '\n\n',
-						flags: 'g'
-					}
-				]
-			}
-		},
-		/**
-		 * Watch
-		 */
-		watch: {
-			sass: {
-				files: [
-					'compass/assets/scss/*.scss',
-					'compass/assets/scss/**/*.scss'
-				],
-				tasks: [
-					'sass',
-					'csscomb',
-					'regex-replace'
-				]
+			get bower() {
+				return this.assets + 'bower/';
 			},
-		}
+			get composer() {
+				return this.assets + 'composer/';
+			},
+			get config() {
+				return this.grunt + 'config/';
+			},
+			get hybridCore() {
+				return this.theme + 'hybrid-core/';
+			},
+			get tasks() {
+				return this.grunt + 'tasks/';
+			},
+			assets: 'assets/',
+			dist: 'dist/',
+			docs: 'docs/',
+			grunt: 'grunt/',
+			languages: 'languages/',
+			logs: 'logs/',
+			theme: 'theme/',
+			tmp: 'tmp/'
+		},
+		files: {
+			get php() {
+				return project.paths.theme + '**/*.php';
+			},
+			get js() {
+				return project.paths.assets + '{,*/}js/*.js';
+			},
+			get config() {
+				return project.paths.config + '*.js';
+			},
+			get changelog() {
+				return project.paths.theme + 'CHANGELOG.md';
+			},
+			grunt: 'Gruntfile.js'
+		},
+		pkg: grunt.file.readJSON( 'package.json' )
+	};
+
+	// Load Grunt plugin configurations
+	require( 'load-grunt-config' )(grunt, {
+		configPath: require( 'path' ).join( process.cwd(), project.paths.config ),
+		data: project,
+		loadGruntTasks: false
 	});
 
-	/**
-	 * Default task
-	 * Run `grunt` on the command line
-	 */
-	grunt.registerTask('default', [
-		'bowercopy',
-		'sass',
-		'csscomb',
-		'regex-replace',
-		'watch'
-	]);
+	// Register Tasks
+	grunt.loadTasks( project.paths.tasks );
 };
