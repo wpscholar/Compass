@@ -2,11 +2,6 @@
 a[href^="mailto:"]::before,
 a[href^="tel:"]::before,
 
-// Lists
-.widget ul li::before,
-.entry-content ul li::before,
-.comment-content ul li::before,
-
 // Media player
 .mejs-controls .mejs-button button::after,
 .mejs-overlay-button::after,
