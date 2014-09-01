@@ -10,8 +10,8 @@ module.exports = {
 	normalize: {
 		files: [
 			{
-				src: ['<%= paths.bower %>normalize.css/normalize.css'],
-				dest: '<%= paths.bower %>normalize.css/_normalize.scss'
+				src: ['<%= paths.bower %>normalize/normalize.css'],
+				dest: '<%= paths.bower %>normalize/_normalize.scss'
 			}
 		]
 	}

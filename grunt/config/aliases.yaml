@@ -2,6 +2,7 @@
 --- 
 # Build everything
 build:
+  - clean
   - 'build:css'
   - 'build:images'
   - 'build:js'
@@ -24,6 +25,7 @@ build:
   - 'newer:copy:css'
   - 'newer:cssmin'
   - 'newer:replace:style'
+  - 'newer:copy:fonts'
 # Optimise images from source to production
 'build:images':
   - 'newer:imagemin'

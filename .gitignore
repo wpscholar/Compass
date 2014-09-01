@@ -16,8 +16,10 @@
 # Third-party dependencies
 assets/bower/
 assets/composer/
+assets/genericons/
 
 # Generated theme files
+/theme/font
 /theme/hybrid-core
 /theme/images
 /theme/js
