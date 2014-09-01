@@ -16,6 +16,7 @@ build:
 'build:css':
   - 'build:dependencies'
   - 'rename:genericons'
+  - 'rename:normalize'
   - 'newer:sass'
   - 'newer:autoprefixer'
   - 'newer:csscomb:css'

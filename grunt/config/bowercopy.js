@@ -8,7 +8,8 @@ module.exports = {
 		},
 		files: {
 			bourbon: 'bourbon/dist',
-			neat: 'neat/app/assets/stylesheets'
+			neat: 'neat/app/assets/stylesheets',
+			normalize: 'normalize.css/normalize.css'
 		}
 	}
 };
