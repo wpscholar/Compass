@@ -35,11 +35,11 @@ window.compass = window.compass || {};
 		},
 
 		//* Navigation Tab Fix
-		navTabbing: function() {
-			"use strict";
+		navTabbing: function( a ) {
+
 			var b, c, d = "menu-item-hover",
 				e = function() {
-					b = a("#menu-primary-navigation"), b.before('<button id="js-menu-toggle" class="menu-primary-toggle">Menu</button>'), c = a("#js-menu-toggle"), c.attr({
+					b = a("#menu-after-header"), b.before('<button id="js-menu-toggle" class="menu-primary-toggle">Menu</button>'), c = a("#js-menu-toggle"), c.attr({
 						"aria-controls": "menu-primary-navigation",
 						"aria-expanded": "false"
 					}), c.on("click.dt", function() {
@@ -75,17 +75,16 @@ window.compass = window.compass || {};
 
 		//* Mobile Menu
 		mobileNav: function() {
-			"use strict";
 
-			$('header .nav-menu, .nav-primary .nav-menu').addClass('responsive-menu').before('<div class="responsive-menu-icon"></div>');
+			$('header .nav-menu').addClass('responsive-menu').before('<div class="responsive-menu-icon"></div>');
 
 			$('.responsive-menu-icon').click(function(){
-				$(this).next('header .nav-menu, .nav-primary .nav-menu').slideToggle();
+				$(this).next('header .nav-menu').slideToggle();
 			});
 
 			$(window).resize(function(){
 				if(window.innerWidth > 768) {
-					$('header .nav-menu, .nav-primary .nav-menu, nav .sub-menu').removeAttr('style');
+					$('header .nav-menu, nav .sub-menu').removeAttr('style');
 					$('.responsive-menu > .menu-item').removeClass('menu-open');
 				}
 			});
