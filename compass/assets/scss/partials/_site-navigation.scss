@@ -107,11 +107,12 @@
 		.sub-menu {
 			margin-top: -56px;
 		}
+
+		li {
+			margin-left: 0;
+		}
 	}
 
-	li li {
-		margin-left: 0;
-	}
 }
 
 .no-menu {
