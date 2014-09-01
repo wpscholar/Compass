@@ -23,7 +23,7 @@ function compass_register_sidebars() {
 		array(
 			'id'          => 'header-right',
 			'name'        => _x( 'Header Right', 'sidebar', 'compass' ),
-			'description' => __( 'The header right sidebar area. It is displayed to the right of the site title area.', 'hunter-kelsey' ),
+			'description' => __( 'The header right sidebar area. It is displayed to the right of the site title area.', 'compass' ),
 		)
 	);
 	hybrid_register_sidebar(
