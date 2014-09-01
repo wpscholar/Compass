@@ -1,3 +1,10 @@
+// Breakpoints
+$tiny:      new-breakpoint(min-width 320 4);
+$iphone:    new-breakpoint(min-width 480px 4);
+$ipad-tall: new-breakpoint(min-width 768px 6);
+$ipad-wide: new-breakpoint(min-width 1023px 12);
+$laptop:   new-breakpoint(min-width 1180px 12);
+
 // Typography
 $sans-serif: 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $sans-serif-alt: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -59,10 +66,3 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
 $form-placeholder-color: darken($base-border-color, 10);
-
-// Breakpoints
-$tiny:      new-breakpoint(max-width 320 4);
-$iphone:    new-breakpoint(max-width 480px 4);
-$ipad-tall: new-breakpoint(max-width 768px 4);
-$ipad-wide: new-breakpoint(max-width 1023px 6);
-$desktop:   new-breakpoint(max-width 1180px 12);
