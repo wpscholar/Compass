@@ -53,7 +53,7 @@ add_filter( 'hybrid_site_title', 'flagship_seo_site_title' );
  * Returns the linked site title wrapped in a `<p>` tag unless on the home page
  * or the main blog page where no other H1 exists.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  $title
  * @return string
@@ -69,7 +69,7 @@ add_filter( 'hybrid_site_description', 'flagship_seo_site_description' );
 /**
  * Returns the site description wrapped in a `<p>` tag.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  $desc
  * @return string
@@ -91,13 +91,36 @@ function flagship_seo_excerpt_more( $text ) {
 	return str_replace( 'class="more-link"', 'rel="nofollow" class="more-link"', $text );
 }
 
+/**
+ * Sets a common class, `.nav-menu`, for the custom menu widget if used in the
+ * header right sidebar.
+ *
+ * @since  1.0.0
+ * @param  array $args Header menu args.
+ * @return array $args Modified header menu args.
+ */
+function flagship_header_menu_args( $args ) {
+	$args['menu_class'] .= ' nav-menu';
+	return $args;
+}
+
+/**
+ * Wrap the header navigation menu in its own nav tags with markup API.
+ *
+ * @since  1.0.0
+ * @param  $menu Menu output.
+ * @return string $menu Modified menu output.
+ */
+function flagship_header_menu_wrap( $menu ) {
+	return sprintf( '<nav %s>', hybrid_get_attr( 'menu', 'header' ) ) . $menu . '</nav>';
+}
+
 add_action( 'widgets_init', 'flagship_register_footer_widget_areas' );
 /**
  * Register footer widget areas based on the number of widget areas the user
  * wishes to create with `add_theme_support()`.
  *
- * @since 1.0.0
- *
+ * @since  1.0.0
  * @uses   register_sidebar() Register footer widget areas.
  * @return null Return early if there's no theme support.
  */
@@ -131,7 +154,6 @@ add_action( 'tha_footer_before', 'flagship_footer_widgets' );
  * Displays all registered footer widget areas using a template.
  *
  * @since  1.0.0
- *
  * @uses   locate_template() Load the footer widget template.
  * @return null Return early if there's no theme support.
  */
