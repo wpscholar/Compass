@@ -18,6 +18,7 @@ assets/bower/
 assets/composer/
 
 # Generated theme files
+/theme/hybrid-core
 /theme/images
 /theme/js
 /theme/languages
