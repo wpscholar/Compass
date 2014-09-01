@@ -38,5 +38,5 @@ function compass_enqueue_scripts() {
 	$js_dir = trailingslashit( get_template_directory_uri() ) . 'assets/js/';
 	$suffix = hybrid_get_min_suffix();
 
-	//wp_enqueue_script( 'compass-global', $js_dir . "global{$suffix}.js", array( 'jquery' ), null, true );
+	wp_enqueue_script( 'compass-global', $js_dir . "global{$suffix}.js", array( 'jquery' ), null, true );
 }
