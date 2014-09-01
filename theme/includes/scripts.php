@@ -19,9 +19,6 @@ add_action( 'wp_enqueue_scripts', 'compass_enqueue_styles' );
  * @return void
  */
 function compass_enqueue_styles() {
-	$css_dir = trailingslashit( get_template_directory_uri() ) . 'assets/css/';
-	$suffix = hybrid_get_min_suffix();
-
 	wp_enqueue_style( 'brick-fonts', '//brick.a.ssl.fastly.net/Raleway:400,600/Clear+Sans:300,300i,600,800', array(), '1.0.0' );
 }
 
@@ -34,7 +31,7 @@ add_action( 'wp_enqueue_scripts', 'compass_enqueue_scripts' );
  * @return void
  */
 function compass_enqueue_scripts() {
-	$js_dir = trailingslashit( get_template_directory_uri() ) . 'assets/js/';
+	$js_dir = trailingslashit( get_template_directory_uri() ) . 'js/';
 	$suffix = hybrid_get_min_suffix();
 
 	wp_enqueue_script( 'compass', $js_dir . "theme{$suffix}.js", array( 'jquery' ), null, true );
