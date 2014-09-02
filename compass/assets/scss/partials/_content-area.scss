@@ -2,13 +2,12 @@
 --------------------------------------------- */
 
 .entry {
-	font-size: 18px;
 	margin-bottom: 30px;
 	padding: 40px 40px 24px;
 }
 
 .content .entry {
-	background-color: #fff;
+	background-color: $entry-background-color;
 	border: 1px solid $base-border-color;
 }
 
@@ -47,7 +46,7 @@
 	}
 
 	blockquote{
-		border-left: 7px solid #f5f5f5;
+		border-left: 7px solid $base-border-color;
 		margin: 30px 0 30px 5%;
 		padding: 0 5%;
 	}
@@ -88,7 +87,7 @@
 		font-size: 14px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
-		line-height: 18px;
+		line-height: 1.2;
 	}
 
 }
