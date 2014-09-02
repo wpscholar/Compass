@@ -3,7 +3,7 @@ $tiny:      new-breakpoint(max-width 320 4);
 $iphone:    new-breakpoint(max-width 480px 4);
 $ipad-tall: new-breakpoint(max-width 768px 6);
 $ipad-wide: new-breakpoint(max-width 1023px 12);
-$laptop:   new-breakpoint(max-width 1180px 12);
+$laptop:    new-breakpoint(max-width 1180px 12);
 
 // Typography
 $sans-serif: 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -37,10 +37,17 @@ $light-gray: #a4a5a5;
 $fog: #ccc;
 $medium-fog: #e0e0e0;
 $light-fog: #f5f5f5;
+$white: #fff;
 $seafoam: #33b787;
 
-// Background Color
+// Background Colors
 $base-background-color: $light-fog;
+$input-background-color: $white;
+$subnav-item-background-color: $white;
+$after-header-nav-background-color: $white;
+$entry-background-color: $white;
+$widget-background-color: $white;
+$cta-background-color: $dark-gray;
 
 // Font Colors
 $base-font-color: $medium-gray;
