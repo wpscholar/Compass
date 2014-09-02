@@ -14,7 +14,8 @@ module.exports = {
 				cwd: '<%= paths.theme %>js/',
 				src: '*.js',
 				dest: '<%= paths.theme %>js/',
-				ext: '.min.js'
+				ext: '.min.js',
+				extDot: 'last'
 			}
 		]
 	}
