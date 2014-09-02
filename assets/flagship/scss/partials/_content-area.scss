@@ -1,0 +1,170 @@
+/* Entries
+--------------------------------------------- */
+
+.entry {
+	margin-bottom: 30px;
+	padding: 40px 40px 24px;
+}
+
+.content .entry {
+	background-color: $entry-background-color;
+	border: 1px solid $base-border-color;
+}
+
+.plural .content .sticky {
+	border: 1px solid $light-gray;
+}
+
+.entry-content {
+	p,
+	ol,
+	ul,
+	dl {
+		margin-bottom: 26px;
+	}
+
+	ol,
+	ul {
+		margin-left: 40px;
+	}
+
+	li {
+		margin-bottom: 2%;
+	}
+
+	ol > li {
+		list-style-type: decimal;
+	}
+
+	ul > li {
+		list-style-type: disc;
+	}
+
+	ol ol,
+	ul ul {
+		margin-bottom: 0;
+	}
+
+<<<<<<< HEAD:compass/assets/scss/partials/_content-area.scss
+	blockquote{
+		border-left: 7px solid $base-border-color;
+=======
+	blockquote {
+		border-left: 7px solid #f5f5f5;
+>>>>>>> develop:assets/flagship/scss/partials/_content-area.scss
+		margin: 30px 0 30px 5%;
+		padding: 0 5%;
+	}
+
+	table {
+		border-collapse: separate;
+		border: 1px solid $base-border-color;
+		border-left: 0;
+		margin: 20px 0;
+		width: 100%;
+	}
+
+	table th,
+	table td {
+		border-left: 1px solid $base-border-color;
+		border-top: 1px solid $base-border-color;
+		line-height: 1.2;
+		padding: 8px;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	table thead:first-child tr:first-child th,
+	table tbody:first-child tr:first-child th,
+	table tbody:first-child tr:first-child td {
+		border-top: 0 none;
+	}
+
+	code {
+		background: $base-background-color;
+		border: 1px solid darken($base-border-color, 10);
+		color: $base-heading-color;
+		padding: 2px 4px;
+	}
+
+	.wp-caption .wp-caption-text {
+		margin: .8075em 0;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		line-height: 1.2;
+	}
+
+}
+
+/* Entry Meta
+--------------------------------------------- */
+
+.entry-meta {
+	color: $light-gray;
+	font-size: $secondary-font-size;
+	margin-bottom: 0;
+
+	span,
+	time,
+	a {
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	a {
+		border-bottom: 1px solid lighten($base-link-color, 40);
+		color: $light-gray;
+
+		&:hover {
+			color: $base-link-color;
+		}
+	}
+}
+
+span.comments-link {
+	display: none;
+}
+
+.entry-header .entry-meta {
+	margin-bottom: 26px;
+}
+
+.entry-footer {
+
+	.entry-meta {
+		margin: 0;
+		padding: 0 0 26px;
+	}
+
+	.entry-terms {
+		display: block;
+	}
+
+	.category {
+		padding-bottom: 5px;
+	}
+}
+
+/* Featured Media
+--------------------------------------------- */
+
+.featured-media {
+	background: $medium-fog;
+	display: block;
+	margin: -40px -40px 26px;
+	overflow: hidden;
+
+	> a {
+		display: block;
+		line-height: 0;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}

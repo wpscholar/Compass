@@ -1,0 +1,66 @@
+# Grunt aliases
+--- 
+# Build everything
+build:
+  - clean
+  - 'build:css'
+  - 'build:images'
+  - 'build:js'
+  - 'build:i18n'
+# Build depdencies
+'build:dependencies':
+  - bowercopy
+  - 'composer:update'
+  - 'clean:hybridcore'
+  - 'newer:copy:hybridcore'
+# Build CSS from Scss to production
+'build:css':
+  - 'build:dependencies'
+  - 'rename:genericons'
+  - 'rename:normalize'
+  - 'newer:sass'
+  - 'newer:autoprefixer'
+  - 'newer:csscomb:css'
+  - 'newer:cssjanus'
+  - 'newer:copy:css'
+  - 'newer:cssmin'
+  - 'newer:replace:style'
+  - 'newer:copy:fonts'
+# Optimise images from source to production
+'build:images':
+  - 'newer:imagemin'
+  - 'newer:copy:images'
+  - 'newer:copy:screenshot'
+# Build JavaScript from assets to production
+'build:js':
+  - 'clean:js'
+  - 'newer:copy:js'
+  - 'newer:uglify'
+  - 'newer:jsvalidate:theme'
+# Build internationalisation features
+'build:i18n':
+  - 'addtextdomain'
+  - 'newer:makepot'
+# Check health of the project
+check: 
+  - 'newer:scsslint'
+  - 'newer:jshint'
+  - 'newer:jsonlint'
+  - 'newer:jsvalidate'
+  - 'newer:jscs'
+  - 'newer:phplint'
+  - 'newer:phpcs'
+  - 'newer:checktextdomain'
+# Pre-commit hook task
+commit:
+  - 'check'
+# Default task
+default: 
+  - watch
+newtheme:
+  - 'replace:packagename'
+  - 'clean'
+  - 'build'
+# Package the distribution files into a zip
+package: 
+  - "compress:dist"
