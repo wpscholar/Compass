@@ -15,7 +15,17 @@
 
 	<?php tha_entry_top(); ?>
 
-	<?php echo ( $video = hybrid_media_grabber( array( 'type' => 'video', 'split_media' => true ) ) ); ?>
+	<?php
+	//* Display a video if we have one.
+	echo $video = hybrid_media_grabber(
+		array(
+			'type'        => 'video',
+			'split_media' => true,
+			'before'      => '<div class="featured-media">',
+			'after'       => '</div>',
+		)
+	);
+	?>
 
 	<header class="entry-header">
 
