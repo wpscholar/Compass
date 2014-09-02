@@ -9,7 +9,8 @@ module.exports = {
 		files: {
 			bourbon: 'bourbon/dist',
 			neat: 'neat/app/assets/stylesheets',
-			normalize: 'normalize.css/normalize.css'
+			normalize: 'normalize.css/normalize.css',
+			fitvids: 'fitvids/jquery.fitvids.js'
 		}
 	}
 };

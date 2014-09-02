@@ -6,6 +6,7 @@
 	"devDependencies": {
 		"bourbon": "~4.0.2",
 		"neat": "~1.6.0",
-		"normalize.css": "~3.0.1"
+		"normalize.css": "~3.0.1",
+		"fitvids": "~1.1.0"
 	}
 }
