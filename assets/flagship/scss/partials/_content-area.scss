@@ -154,6 +154,10 @@ span.comments-link {
 	margin: -40px -40px 26px;
 	overflow: hidden;
 
+	&.audio {
+		padding: 20px;
+	}
+
 	> a {
 		display: block;
 		line-height: 0;
