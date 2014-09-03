@@ -48,7 +48,8 @@
 	text-rendering: optimizeLegibility;
 
 	a,
-	a:hover {
+	a:hover,
+	a:focus {
 		color: #fff;
 	}
 }

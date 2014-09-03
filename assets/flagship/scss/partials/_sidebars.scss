@@ -4,7 +4,8 @@
 	a {
 		color: $light-gray;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $base-link-color;
 		}
 	}

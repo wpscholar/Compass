@@ -114,7 +114,8 @@
 		border-bottom: 1px solid lighten($base-link-color, 40);
 		color: $light-gray;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $base-link-color;
 		}
 	}

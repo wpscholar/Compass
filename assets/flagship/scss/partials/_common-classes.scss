@@ -84,7 +84,8 @@
 	color: $base-heading-color;
 }
 
-.entry-title a:hover {
+.entry-title a:hover,
+.entry-title a:focus {
 	color: lighten($base-heading-color, 30);
 }
 

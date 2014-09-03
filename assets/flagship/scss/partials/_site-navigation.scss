@@ -17,8 +17,10 @@
 	}
 
 	li a:hover,
+	li a:focus,
 	.current-menu-item > a,
-	.sub-menu .current-menu-item > a:hover {
+	.sub-menu .current-menu-item > a:hover
+	.sub-menu .current-menu-item > a:focus {
 		color: $base-link-color;
 	}
 
@@ -46,11 +48,13 @@
 		}
 	}
 
-	.menu-item:hover {
+	.menu-item:hover,
+	.menu-item:focus {
 		position: static;
 	}
 
-	.menu-item:hover > .sub-menu {
+	.menu-item:hover > .sub-menu,
+	.menu-item:focus > .sub-menu {
 		left: auto;
 		opacity: 1;
 	}
@@ -134,8 +138,10 @@
 	}
 
 	li a:hover,
+	li a:focus,
 	.current-menu-item > a,
-	.sub-menu .current-menu-item > a:hover {
+	.sub-menu .current-menu-item > a:hover,
+	.sub-menu .current-menu-item > a:focus {
 		color: $base-link-color;
 	}
 }
@@ -217,7 +223,9 @@
 	}
 
 	.nav-next a:hover,
-	.nav-previous a:hover {
+	.nav-previous a:hover,
+	.nav-next a:focus,
+	.nav-previous a:focus {
 		background: $nav-single-hover-background;
 		color: $nav-single-color;
 	}
