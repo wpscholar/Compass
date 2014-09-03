@@ -1,6 +1,6 @@
 .header {
-	background-color: $off-black;
-	color: #cacccb;
+	background-color: $base-header-background-color;
+	color: $base-header-color;
 
 	.wrap {
 		padding: 20px 0;
@@ -42,7 +42,7 @@
 
 .site-title {
 	font-family: $header-font-family;
-	font-size: 32px;
+	font-size: $site-title-font-size;
 	font-weight: 600;
 	line-height: 1.2;
 	text-rendering: optimizeLegibility;
@@ -50,12 +50,12 @@
 	a,
 	a:hover,
 	a:focus {
-		color: #fff;
+		color: $base-header-link-color;
 	}
 }
 
 .site-description {
-	color: #cacccb;
+	color: $base-header-color;
 	font-family: $header-font-family;
 	font-size: $secondary-font-size;
 	font-weight: 300;
