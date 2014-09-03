@@ -15,7 +15,17 @@
 
 	<?php tha_entry_top(); ?>
 
-	<?php echo ( $audio = hybrid_media_grabber( array( 'type' => 'audio', 'split_media' => true ) ) ); ?>
+	<?php
+	//* Display an audio player if we have an audio file.
+	echo $audio = hybrid_media_grabber(
+		array(
+			'type'        => 'audio',
+			'split_media' => true,
+			'before'      => '<div class="featured-media audio">',
+			'after'       => '</div>',
+		)
+	);
+	?>
 
 	<header class="entry-header">
 
