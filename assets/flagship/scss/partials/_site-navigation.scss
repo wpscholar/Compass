@@ -4,8 +4,10 @@
 	$nav-border: 1px solid $nav-border-color;
 	$nav-color: $base-nav-color;
 	$nav-hover-color: $base-link-color;
+	$nav-font-size: $secondary-font-size;
+	$subnav-font-size: $secondary-font-size - 2;
 	clear: both;
-	font-size: $secondary-font-size;
+	font-size: $nav-font-size;
 	line-height: 1;
 	width: 100%;
 
@@ -42,7 +44,7 @@
 			border: $nav-border;
 			border-top: 0;
 			color: $nav-color;
-			font-size: 14px;
+			font-size: $subnav-font-size;
 			padding: 20px;
 			position: relative;
 			width: 200px;
