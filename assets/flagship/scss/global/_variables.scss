@@ -40,30 +40,25 @@ $light-fog: #f5f5f5;
 $white: #fff;
 $seafoam: #33b787;
 
-// Background Colors
+// Background Color
 $base-background-color: $light-fog;
-$input-background-color: $white;
-$subnav-item-background-color: $white;
-$after-header-nav-background-color: $white;
-$entry-background-color: $white;
-$widget-background-color: $white;
-$cta-background-color: $dark-gray;
 
-// Font Colors
+// Base Font Colors
 $base-font-color: $medium-gray;
 $base-accent-color: $light-gray;
 $base-heading-color: $off-black;
 
-// Link Colors
+// Base Link Colors
 $base-link-color: $seafoam;
 $hover-link-color: lighten($base-link-color, 40);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 
-// Border color
+// Base Border color
 $base-border-color: $medium-fog;
 
-// Forms
+// Base Form Styles
+$input-background-color: $white;
 $form-border-color: $base-border-color;
 $form-border-color-hover: darken($base-border-color, 5);
 $form-border-color-focus: darken($base-border-color, 20);
@@ -73,3 +68,20 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
 $form-placeholder-color: darken($base-border-color, 10);
+
+// Base Header Styles
+$base-header-background-color: $off-black;
+$base-header-color: $fog;
+$base-header-link-color: $white;
+
+// Base Navigation Styles
+$base-nav-background-color: $white;
+$base-nav-color: $medium-gray;
+
+// Base Entry Styles
+$entry-background-color: $white;
+
+// Base Widget Styles
+$widget-background-color: $white;
+
+$cta-background-color: $dark-gray;
