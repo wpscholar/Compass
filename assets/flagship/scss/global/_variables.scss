@@ -22,7 +22,7 @@ $base-vertical-spacing: .5em;
 
 $secondary-font-size: floor(modular-scale($base-font-size, -1, $major-second));
 
-$site-title-font-size = floor(modular-scale($base-font-size, 5, $major-second));
+$site-title-font-size: floor(modular-scale($base-font-size, 5, $major-second));
 
 $h1-font-size: floor(modular-scale($base-font-size, 6, $major-second));
 $h2-font-size: floor(modular-scale($base-font-size, 5, $major-second));
