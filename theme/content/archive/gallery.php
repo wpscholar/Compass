@@ -20,7 +20,7 @@
 	get_the_image(
 		array(
 			'size'   => 'compass-full',
-			'before' => '<div class="featured-media">',
+			'before' => '<div class="featured-media image">',
 			'after'  => '</div>',
 		)
 	);

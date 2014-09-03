@@ -21,7 +21,7 @@
 		array(
 			'type'        => 'video',
 			'split_media' => true,
-			'before'      => '<div class="featured-media">',
+			'before'      => '<div class="featured-media video">',
 			'after'       => '</div>',
 		)
 	);

@@ -21,7 +21,7 @@
 		array(
 			'size'   => 'compass-full',
 			'order'  => array( 'featured', 'attachment' ),
-			'before' => '<div class="featured-media">',
+			'before' => '<div class="featured-media image">',
 			'after'  => '</div>',
 		)
 	);

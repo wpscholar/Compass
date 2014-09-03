@@ -23,7 +23,7 @@
 			'scan'          => true,
 			'caption'       => false,
 			'order'         => array( 'scan_raw', 'scan', 'featured', 'attachment', ),
-			'before'        => '<div class="featured-media">',
+			'before'        => '<div class="featured-media image">',
 			'after'         => '</div>',
 		)
 	);
