@@ -1,4 +1,9 @@
 .nav-menu {
+	$nav-background-color: $base-nav-background-color;
+	$nav-border-color: $base-border-color;
+	$nav-border: 1px solid $nav-border-color;
+	$nav-color: $base-nav-color;
+	$nav-hover-color: $base-link-color;
 	clear: both;
 	font-size: $secondary-font-size;
 	line-height: 1;
@@ -11,7 +16,7 @@
 	}
 
 	li a {
-		color: $medium-gray;
+		color: $nav-color;
 		display: block;
 		padding: 25px 20px;
 	}
@@ -21,7 +26,7 @@
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover
 	.sub-menu .current-menu-item > a:focus {
-		color: $base-link-color;
+		color: $nav-hover-color;
 	}
 
 	.sub-menu {
@@ -33,10 +38,10 @@
 		z-index: 99;
 
 		a {
-			background-color: #fff;
-			border: 1px solid $base-border-color;
+			background-color: $nav-background-color;
+			border: $nav-border;
 			border-top: 0;
-			color: $medium-gray;
+			color: $nav-color;
 			font-size: 14px;
 			padding: 20px;
 			position: relative;
@@ -72,7 +77,7 @@
 	}
 
 	> .right {
-		color: #fff;
+		color: $nav-color;
 		float: right;
 		list-style-type: none;
 	}
@@ -95,14 +100,17 @@
 --------------------------------------------- */
 
 .menu-header {
-
+	$menu-header-border-color: $base-border-color;
+	$menu-header-border: 1px solid $menu-header-border-color;
+	$menu-header-color: $base-nav-color;
+	$menu-header-hover-color: $base-link-color;
 	li a {
-		color: $light-gray;
+		color: $menu-header-color;
 		padding: 33px 20px;
 	}
 
 	.sub-menu {
-		border-top: 1px solid $base-border-color;
+		border-top: $menu-header-border;
 
 		.sub-menu {
 			margin-top: -56px;
@@ -130,11 +138,16 @@
 --------------------------------------------- */
 
 .menu-after-header {
-	background-color: #fff;
+	$after-header-background-color: $base-nav-background-color;
+	$after-header-border-color: $base-border-color;
+	$after-header-border: 1px solid $after-header-border-color;
+	$after-header-color: ligten($base-nav-color, 10);
+	$after-header-hover-color: $base-link-color;
+	background-color: $after-header-background-color;
 	border-bottom: 1px solid $base-border-color;
 
 	li a {
-		color: $light-gray;
+		color: $after-header-color;
 	}
 
 	li a:hover,
@@ -142,7 +155,7 @@
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover,
 	.sub-menu .current-menu-item > a:focus {
-		color: $base-link-color;
+		color: $after-header-hover-color;
 	}
 }
 
