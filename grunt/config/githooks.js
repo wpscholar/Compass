@@ -1,5 +1,5 @@
 module.exports = {
 	all: {
-		// 'pre-commit': 'commit'
+		'pre-commit': 'commit'
 	}
 };
