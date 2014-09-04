@@ -25,6 +25,7 @@ build:
   - 'newer:copy:css'
   - 'newer:cssmin'
   - 'newer:replace:style'
+  - 'newer:replace:stylecomments'
   - 'newer:copy:fonts'
 # Optimise images from source to production
 'build:images':

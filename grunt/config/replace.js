@@ -17,6 +17,26 @@ module.exports = {
 			]
 		}]
 	},
+	stylecomments: {
+		options: {
+			patterns: [
+				{
+					// Change normalize.css === comment headings to ---
+					match: /==/g,
+					replacement: '--'
+				}
+			]
+		},
+		files: [
+			{
+				expand: true,
+				src: [
+					'<%= paths.theme %>style.dev.css',
+					'<%= paths.theme %>style-rtl.dev.css'
+				]
+			}
+		]
+	},
 	release: {
 		options: {
 			patterns: [{
