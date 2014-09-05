@@ -2,16 +2,41 @@
 
 A WordPress Starter Theme Using Hybrid Core, Bourbon, Neat, and the Theme Hook Alliance.
 
+## Project Development
+
+This project uses Node.js to run the Grunt task runner, so [download Node.js](http://nodejs.org/download/) and install it.
+
+Some Grunt tasks use external command-line applications, so you'll need them installed as global (not specific to this project) Node.js packages. Open up a terminal and run the following. You may need to use sudo (for OSX, *nix, BSD etc) or run your command shell as Administrator (for Windows) to do this.
+
+~~~sh
+npm install -g bower
+npm install -g csscomb
+npm install -g cssjanus
+npm install -g cssjanus
+npm install -g grunt-cli
+npm install -g jscs
+npm install -g jshint
+~~~
+
+After unzipping or cloning this repo, `cd` into it and run `npm install`. This will then install all of the project-specific tasks.
+
+To check everything appears to have installed, run `grunt check`. This will perform a series of checks on the project code to verify its health for syntax errors and code standards.
+
+You'll also need to [install Composer](https://getcomposer.org/doc/00-intro.md).
+
+### Troubleshooting
+If, when running a task (`grunt ...`) you get an error about _Cannot find module 'rimraf'_, then do the following:
+
+~~~sh
+npm uninstall grunt-phplint
+npm install grunt-phplint
+~~~
+
+There's apparently a package dependency issue that means the _grunt-phplint_ package needs installing last.
+
 ## Things for the future
 
 ### Genericons
 
 If Genericons gets Bower support, then pull it as a dependency via Bower, and update the rename task accordingly. There is likely to be a replace for the path to font files too.
 
-### `.screen-reader-text`
-
-Switch to using clip method.
-
-## Sort out how RTL CSS file
-
-Hybrid potentially tries to load css/rtl.css? Check if it does, and adjust cssjanus task accordingly.
