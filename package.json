@@ -35,16 +35,7 @@
     "reportmsgidbugsto": "Robert Neu <translations@flagshipwp.com>",
     "lasttranslator": "Robert Neu <translations@flagshipwp.com>",
     "languageteam": "Robert Neu <translations@flagshipwp.com>",
-    "pluralforms": "nplurals=2; plural=n != 1;",
-    "xpoeditbasepath": "../",
-    "xpoeditlanguage": "English",
-    "xpoeditcountry": "UNITED STATES",
-    "xpoeditsourcecharset": "utf-8",
-    "xpoeditkeywordslist": "__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;",
-    "xpoeditbookmarks": "",
-    "xpoeditsearchpath0": ".",
     "xpoeditsearchpathexcluded0": "../hybrid-core",
-    "xtextdomainsupport": "yes"
   },
   "repository": {
     "type": "git",
