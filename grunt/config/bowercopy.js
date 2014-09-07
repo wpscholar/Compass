@@ -14,10 +14,10 @@ module.exports = {
 	},
 	js: {
 		options: {
-			destPrefix: '<%= paths.bower %>/js/'
+			destPrefix: '<%= paths.bower %>'
 		},
 		files: {
-			fitvids: 'fitvids/jquery.fitvids.js'
+			'fitvids/js': 'fitvids/jquery.fitvids.js'
 		}
 	}
 };
