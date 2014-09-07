@@ -43,6 +43,9 @@ module.exports = function( grunt ) {
 			get js() {
 				return project.paths.assets + '{,*/}js/*.js';
 			},
+			get scss() {
+				return project.paths.authorAssets + 'scss/**/*.scss';
+			},
 			get config() {
 				return project.paths.config + '*.js';
 			},

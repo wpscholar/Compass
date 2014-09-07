@@ -24,9 +24,25 @@ module.exports = {
 			'<%= files.js %>'
 		],
 		tasks: [
+			'build:js',
 			'jshint:assets',
 			'jsvalidate:assets',
 			'jscs:assets'
+		]
+	},
+	scss: {
+		files: [
+			'<%= files.scss %>'
+		],
+		tasks: [
+			'sass',
+			'autoprefixer',
+			'csscomb:css',
+			'cssjanus',
+			'copy:css',
+			'cssmin',
+			'replace:style',
+			'replace:stylecomments'
 		]
 	}
 };
