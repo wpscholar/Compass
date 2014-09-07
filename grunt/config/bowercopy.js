@@ -2,7 +2,7 @@ module.exports = {
 	options: {
 		clean: true
 	},
-	scss: {
+	css: {
 		options: {
 			destPrefix: '<%= paths.bower %>'
 		},

@@ -9,7 +9,14 @@ build:
   - 'build:i18n'
 # Build depdencies
 'build:dependencies':
-  - bowercopy
+  - 'build:dependencies:css'
+  - 'build:dependencies:js'
+  - 'build:dependencies:php'
+'build:dependencies:css':
+  - 'bowercopy:css'
+'build:dependencies:js':
+  - 'bowercopy:js'
+'build:dependencies:php':
   - 'composer:update'
   - 'clean:hybridcore'
   - 'newer:copy:hybridcore'
