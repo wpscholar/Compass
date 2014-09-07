@@ -34,6 +34,5 @@ function compass_enqueue_scripts() {
 	$js_dir = trailingslashit( get_template_directory_uri() ) . 'js/';
 	$suffix = hybrid_get_min_suffix();
 
-	wp_enqueue_script( 'fitvids', $js_dir . "jquery.fitvids{$suffix}.js", array( 'jquery' ), null, true );
-	wp_enqueue_script( 'compass', $js_dir . "theme{$suffix}.js", array( 'jquery', 'fitvids' ), null, true );
+	wp_enqueue_script( 'compass', $js_dir . "theme{$suffix}.js", array( 'jquery' ), null, true );
 }

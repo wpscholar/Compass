@@ -46,17 +46,6 @@ module.exports = {
 			}
 		]
 	},
-	js: {
-		files: [
-			{
-				expand: true,
-				flatten: true,
-				src: ['<%= paths.assets %>**/js/**/*', '!<%= paths.composer %>**/*'],
-				dest: '<%= paths.theme %>js/',
-				filter: 'isFile'
-			}
-		]
-	},
 	screenshot: {
 		files: [
 			{
