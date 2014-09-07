@@ -56,11 +56,13 @@
 	}
 
 	.menu-item:hover,
+	.menu-item-hover,
 	.menu-item:focus {
 		position: static;
 	}
 
 	.menu-item:hover > .sub-menu,
+	.menu-item-hover > .sub-menu,
 	.menu-item:focus > .sub-menu {
 		left: auto;
 		opacity: 1;

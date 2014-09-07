@@ -36,95 +36,6 @@ window.compass = window.compass || {};
 			}
 		},
 
-		//* Navigation Tab Fix
-		navTabbing: function( $ ) {
-			var $primaryNav, $button, hoverClass = 'menu-item-hover',
-
-			/**
-			 * Add in responsive menu feature.
-			 *
-			 * @since 1.0.0
-			 */
-			responsiveMenu = function() {
-				$primaryNav = $( '#menu-primary-navigation' );
-				$primaryNav.before( '<button id="js-menu-toggle" class="menu-primary-toggle">Menu</button>' );
-				$button = $( '#js-menu-toggle' );
-				$button.attr({
-					'aria-controls': 'menu-primary-navigation',
-					'aria-expanded': 'false'
-				});
-
-				$button.on( 'click.incipio', function() {
-					if( 'true' === $(this).attr( 'aria-expanded' ) ) {
-						closeMenu();
-					} else {
-						openMenu();
-					}
-				});
-			},
-
-			openMenu = function() {
-				$primaryNav.slideDown();
-				$button.attr({
-					'aria-expanded': 'true'
-				});
-			},
-
-			closeMenu = function() {
-				$primaryNav.slideUp();
-				$button.attr({
-					'aria-expanded': 'false'
-				});
-			},
-
-			/**
-			 * Add class to menu item on hover.
-			 *
-			 * @since 1.0.0
-			 */
-			menuItemEnter = function() {
-				$( this ).addClass( hoverClass );
-			},
-
-			/**
-			 * After a short delay, remove a class when mouse leaves menu item.
-			 *
-			 * @since 1.0.0
-			 */
-			menuItemLeave = function() {
-				$( this ).delay( '250' ).removeClass( hoverClass );
-			},
-
-			/**
-			 * Toggle menu item class when a link fires a focus or blur event.
-			 *
-			 * @since 1.0.0
-			 */
-			menuItemToggleClass = function() {
-				$( this ).parents( '.menu-item' ).toggleClass( hoverClass );
-			},
-
-			/**
-			 * Fire events on document ready, and bind other events.
-			 *
-			 * @since 1.0.0
-			 */
-			ready = function() {
-				responsiveMenu();
-
-				$( '.menu li' )
-					.on( 'mouseenter.incipio', menuItemEnter )
-					.on( 'mouseleave.incipio', menuItemLeave )
-					.find( 'a' )
-					.on( 'focus.incipio blur.incipio', menuItemToggleClass );
-			};
-
-			// Only expose the ready function to the world
-			return {
-				ready: ready
-			};
-		},
-
 		//* Mobile Menu
 		mobileNav: function() {
 			$( 'header .nav-menu' ).addClass( 'responsive-menu' ).before( '<div class="responsive-menu-icon"></div>' );
@@ -152,16 +63,20 @@ window.compass = window.compass || {};
 
 		//* FitVids Init
 		loadFitVids: function() {
-			$( '#site-inner' ).fitVids();
+			if ( $.fn.fitVids ) {
+				$( '#site-inner' ).fitVids();
+			}
 		}
 
 	});
 
 	// Document ready.
-	jQuery(function($) {
+	jQuery(function() {
 		compass.skipLinks();
-		compass.navTabbing($);
 		compass.mobileNav();
 		compass.loadFitVids();
+		jQuery( document ).gamajoAccessibleMenu();
 	});
 })( this, jQuery );
+
+// jQuery(document).gamajoAccessibleMenu();

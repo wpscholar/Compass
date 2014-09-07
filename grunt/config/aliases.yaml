@@ -42,7 +42,7 @@ build:
 # Build JavaScript from assets to production
 'build:js':
   - 'clean:js'
-  - 'newer:copy:js'
+  - 'newer:concat:js'
   - 'newer:uglify'
   - 'newer:jsvalidate:theme'
 # Build internationalisation features
