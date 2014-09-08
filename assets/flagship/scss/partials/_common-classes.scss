@@ -152,10 +152,17 @@ img.alignright,
 
 .off-screen,
 .screen-reader-text {
-	position: absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+}
+
+.off-screen,
+.screen-reader-text:focus {
+    outline: 0;
 }
