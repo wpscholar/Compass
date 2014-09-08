@@ -1,5 +1,5 @@
 # Grunt aliases
---- 
+---
 # Build everything
 build:
   - clean
@@ -33,7 +33,6 @@ build:
   - 'newer:cssmin'
   - 'newer:replace:style'
   - 'newer:copy:css'
-  - 'newer:copy:cssrtl'
   - 'newer:copy:fonts'
 # Optimise images from source to production
 'build:images':
@@ -51,7 +50,7 @@ build:
   - 'addtextdomain'
   - 'newer:makepot'
 # Check health of the project
-check: 
+check:
   - 'newer:scsslint'
   - 'newer:jshint'
   - 'newer:jsonlint'
@@ -64,7 +63,7 @@ check:
 commit:
   - 'check'
 # Default task
-default: 
+default:
   - watch
 newtheme:
   - 'replace:packagename'
