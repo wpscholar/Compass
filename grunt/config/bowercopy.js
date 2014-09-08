@@ -17,7 +17,8 @@ module.exports = {
 			destPrefix: '<%= paths.bower %>'
 		},
 		files: {
-			'fitvids/js': 'fitvids/jquery.fitvids.js'
+			'fitvids/js': 'fitvids/jquery.fitvids.js',
+			'accessible-menu/js': 'accessible-menu/dist'
 		}
 	}
 };
