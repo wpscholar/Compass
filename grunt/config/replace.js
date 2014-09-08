@@ -13,7 +13,7 @@ module.exports = {
 			expand: true,
 			src: [
 				'<%= paths.tmp %>style.css',
-				'<%= paths.tmp %>rtl.css'
+				'<%= paths.tmp %>style-rtl.css'
 			]
 		}]
 	},

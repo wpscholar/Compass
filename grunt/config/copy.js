@@ -5,26 +5,8 @@ module.exports = {
 				cwd: '<%= paths.tmp %>',
 				expand: true,
 				flatten: true,
-				src: [
-					'style.dev.css',
-					'style.css'
-				],
+				src: ['style*.css'],
 				dest: '<%= paths.theme %>',
-				filter: 'isFile'
-			}
-		]
-	},
-	cssrtl: {
-		files: [
-			{
-				cwd: '<%= paths.tmp %>',
-				expand: true,
-				flatten: true,
-				src: [
-					'rtl.dev.css',
-					'rtl.css'
-				],
-				dest: '<%= paths.theme %>css/',
 				filter: 'isFile'
 			}
 		]
