@@ -18,7 +18,8 @@ module.exports = {
 		},
 		files: {
 			'fitvids/js': 'fitvids/jquery.fitvids.js',
-			'accessible-menu/js': 'accessible-menu/dist'
+			'accessible-menu/js': 'accessible-menu/dist',
+			'sidr/js': 'sidr/jquery.sidr.min.js'
 		}
 	}
 };
