@@ -9,6 +9,11 @@ module.exports = {
 			'<%= paths.composer %>'
 		]
 	},
+	css: {
+		src: [
+			'<%= paths.theme %>css'
+		]
+	},
 	dist: {
 		src: [
 			'<%= paths.dist %>'

@@ -4,11 +4,11 @@ module.exports = {
 	},
 	style: {
 		expand: true,
-		cwd: '<%= paths.theme %>',
+		cwd: '<%= paths.tmp %>',
 		src: [
-			'style*.dev.css'
+			'*.dev.css'
 		],
-		dest: '<%= paths.theme %>',
+		dest: '<%= paths.tmp %>',
 		ext: '.css'
 	}
 };

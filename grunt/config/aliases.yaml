@@ -28,11 +28,12 @@ build:
   - 'newer:sass'
   - 'newer:autoprefixer'
   - 'newer:wpcss:css'
+  - 'newer:replace:stylecomments'
   - 'newer:cssjanus'
-  - 'newer:copy:css'
   - 'newer:cssmin'
   - 'newer:replace:style'
-  - 'newer:replace:stylecomments'
+  - 'newer:copy:css'
+  - 'newer:copy:cssrtl'
   - 'newer:copy:fonts'
 # Optimise images from source to production
 'build:images':

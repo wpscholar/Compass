@@ -3,7 +3,7 @@ module.exports = {
 		options: {
 			patterns: [
 				{
-					// Add clear linespace between banner and minified
+					// Add line break between banner and minified
 					match: /\*\/(?=\S)/g,
 					replacement: '*/\n'
 				}
@@ -12,8 +12,8 @@ module.exports = {
 		files: [{
 			expand: true,
 			src: [
-				'<%= paths.theme %>style.css',
-				'<%= paths.theme %>style-rtl.css'
+				'<%= paths.tmp %>style.css',
+				'<%= paths.tmp %>rtl.css'
 			]
 		}]
 	},
@@ -31,8 +31,7 @@ module.exports = {
 			{
 				expand: true,
 				src: [
-					'<%= paths.theme %>style.dev.css',
-					'<%= paths.theme %>style-rtl.dev.css'
+					'<%= paths.tmp %>style.dev.css'
 				]
 			}
 		]

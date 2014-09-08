@@ -19,6 +19,7 @@ assets/composer/
 assets/genericons/
 
 # Generated theme files
+/theme/css
 /theme/font
 /theme/hybrid-core
 /theme/images
