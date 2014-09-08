@@ -39,10 +39,10 @@ module.exports = {
 			'autoprefixer',
 			'wpcss:css',
 			'cssjanus',
-			'copy:css',
 			'cssmin',
 			'replace:style',
-			'replace:stylecomments'
+			'replace:stylecomments',
+			'copy:css'
 		]
 	}
 };
