@@ -10,6 +10,19 @@
  * @since       1.0.0
  */
 
+add_action( 'wp_enqueue_scripts', 'compass_rtl_add_data' );
+/**
+ * Replace the default theme stylesheet with a RTL version when a RTL
+ * language is being used.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function compass_rtl_add_data() {
+	wp_style_add_data( 'style', 'rtl', 'replace' );
+}
+
 add_action( 'wp_enqueue_scripts', 'compass_enqueue_styles' );
 /**
  * Enqueue theme styles.
