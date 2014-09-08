@@ -22,7 +22,7 @@
 	}
 
 	.widget {
-		background-color: #fff;
+		background-color: $widget-background-color;
 		border: 1px solid $base-border-color;
 		margin-bottom: 30px;
 		padding: 40px;

@@ -31,6 +31,9 @@ $h4-font-size: floor(modular-scale($base-font-size, 3, $major-second));
 $h5-font-size: floor(modular-scale($base-font-size, 2, $major-second));
 $h6-font-size: floor(modular-scale($base-font-size, 1, $major-second));
 
+$archive-title-size: $h5-font-size;
+$widget-title-size: $h6-font-size;
+
 // Theme Colors
 $off-black: #1c1e1f;
 $dark-gray: #494b4c;
