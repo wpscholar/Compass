@@ -71,5 +71,10 @@ newtheme:
   - 'clean'
   - 'build'
 # Package the distribution files into a zip
-package: 
+package:
+  - build
   - "compress:dist"
+# Package developer files into a zip
+'package:dev':
+  - build
+  - "compress:dev"
