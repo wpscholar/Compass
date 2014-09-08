@@ -44,7 +44,6 @@
   "devDependencies": {
     "grunt": "",
     "grunt-autoprefixer": "",
-    "grunt-bower-task": "",
     "grunt-bowercopy": "",
     "grunt-bump": "",
     "grunt-checktextdomain": "",
@@ -60,7 +59,6 @@
     "grunt-contrib-sass": "",
     "grunt-contrib-uglify": "",
     "grunt-contrib-watch": "",
-    "grunt-csscomb": "",
     "grunt-cssjanus": "",
     "grunt-githooks": "",
     "grunt-jsbeautifier": "",
@@ -73,6 +71,7 @@
     "grunt-phplint": "",
     "grunt-replace": "",
     "grunt-scss-lint": "",
+    "grunt-wp-css": "cedaro/grunt-wp-css#develop",
     "grunt-wp-i18n": "",
     "load-grunt-config": "",
     "load-grunt-tasks": "",
