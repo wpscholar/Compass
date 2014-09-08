@@ -38,17 +38,21 @@ module.exports = {
 	},
 	release: {
 		options: {
-			patterns: [{
-				match: 'release',
-				replacement: '<%= pkg.version %>'
-			}]
-		},
-		files: [{
-			expand: true,
-			src: [
-				'<%= paths.theme %>**/*'
+			patterns: [
+				{
+					match: 'release',
+					replacement: '<%= pkg.version %>'
+				}
 			]
-		}]
+		},
+		files: [
+			{
+				expand: true,
+				src: [
+					'<%= paths.theme %>**/*'
+				]
+			}
+		]
 	},
 	// Useful when forking this project into a new project
 	packagename: {
@@ -68,11 +72,18 @@ module.exports = {
 			{
 				expand: true,
 				src: [
-					'**/*.*',
-					'!node_modules/**/*',
+					'**',
+					'.*',
 					'!<%= paths.bower %>**/*',
-					'!<%= paths.compass %>**/*',
-					'!**/*.{png,ico,jpg,gif}'
+					'!<%= paths.composer %>**/*',
+					'!**/*.{png,ico,jpg,gif}',
+					'!node_modules/**',
+					'!.sass-cache/**',
+					'!dist/**',
+					'!logs/**',
+					'!tmp/**',
+					'!*.sublime*',
+					'!.DS_Store'
 				]
 			}
 		]
