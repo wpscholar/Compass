@@ -21,6 +21,9 @@ add_action( 'after_setup_theme', 'compass_setup', 5 );
  * Note that this function is hooked into the after_setup_theme hook, which
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
+ *
+ * @since   1.0.0
+ * @return  void
  */
 function compass_setup() {
 	//* Add Support for Theme layouts.
@@ -45,7 +48,6 @@ function compass_setup() {
 	add_theme_support( 'hybrid-core-styles', array( 'google-fonts', 'parent', 'style', )	);
 
 	//* Add navigation menus.
-	register_nav_menu( 'header', _x( 'Header Menu', 'nav menu location', 'compass' ) );
 	register_nav_menu( 'after-header', _x( 'After Header Menu', 'nav menu location', 'compass' ) );
 
 	$formats = 	array(
@@ -86,22 +88,29 @@ function compass_setup() {
 
 add_action( 'after_setup_theme', 'compass_includes' );
 /**
- * Load required theme files.
+ * Load all required theme files.
  *
+ * @since   1.0.0
+ * @return  void
  */
 function compass_includes() {
-	//* Set the includes directory.
+	//* Set the includes directories.
 	$includes_dir = get_template_directory() . '/includes';
+	$library_dir  = $includes_dir . '/library';
+	$vendor_dir   = $includes_dir . '/vendor';
 
-	//* Load all PHP files in subdirectories of the includes directory.
-	foreach ( glob( $includes_dir . '/*/*.php' ) as $file ) {
-		require_once( $file );
-	}
+	//* Load all PHP files in the library directory.
+	require_once $library_dir . '/attributes.php';
+	require_once $library_dir . '/hybrid-tweaks.php';
+
+	//* Load all PHP files in the vendor directory.
+	require_once $vendor_dir . '/tha-theme-hooks.php';
 
 	//* Load all PHP files in the includes directory.
-	foreach ( glob( $includes_dir . '/*.php' ) as $file ) {
-		require_once( $file );
-	}
+	require_once $includes_dir . '/compatibility.php';
+	require_once $includes_dir . '/general.php';
+	require_once $includes_dir . '/scripts.php';
+	require_once $includes_dir . '/widgetize.php';
 }
 
 //* Add a hook for child themes to execute code.
