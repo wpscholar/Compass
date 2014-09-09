@@ -5,6 +5,12 @@
 		max-width: 960px;
 	}
 
+	.nav-menu li a,
+	.menu-header li a {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
 }
 
 @include media($ipad-wide) {
