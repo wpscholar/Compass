@@ -39,14 +39,14 @@ window.compass = window.compass || {};
 		//* Mobile Menu
 		mobileNav: function() {
 			var menuSelectors = [],
-				menuSide = 'right';
+				menuSide      = 'right';
 
 			if ( $( '#menu-header' ).length ) {
 				menuSelectors.push( '#menu-header' );
 			}
 
 			if ( $( '#after-header' ).length ) {
-				menuSelectors.push( '#after-header' );
+				menuSelectors.push( '#menu-after-header' );
 			}
 
 			//* End here if we don't have a menu.
@@ -54,8 +54,8 @@ window.compass = window.compass || {};
 				return;
 			}
 
-			//* Add responsive menu button.
-			$( '#branding' ).before( '<div id="responsive-menu-button" class="menu-button"></div>' );
+			//* Add a responsive menu button.
+			$( '#branding' ).before( '<button id="responsive-menu-button" class="menu-button"></button>' );
 
 			//* Switch the menu side if a RTL langauge is in use.
 			if ( $( 'body' ).hasClass( 'rtl' ) ) {
