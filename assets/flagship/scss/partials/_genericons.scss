@@ -2,6 +2,9 @@
 a[href^="mailto:"]::before,
 a[href^="tel:"]::before,
 
+// Menu
+.menu-button::before,
+
 // Media player
 .mejs-controls .mejs-button button::after,
 .mejs-overlay-button::after,
@@ -81,6 +84,12 @@ a[href^='mailto:']::before {
 
 a[href^='tel:']::before {
 	content: '\f437';
+}
+
+/* Menu Icon
+--------------------------------------------- */
+.menu-button::before {
+	content: '\f419';
 }
 
 /* Post Icons
