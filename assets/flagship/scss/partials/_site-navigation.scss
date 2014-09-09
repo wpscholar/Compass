@@ -188,11 +188,11 @@
 }
 
 .sidr {
-	$sidr-item-padding: 1.4rem;
-	$sidr-background-color: lighten($off-black,3%);
+	$sidr-background-color: lighten($off-black, 3);
 	$sidr-border: 1px solid rgba(255,255,255,0.1);
-	$sidr-color: lighten($base-nav-color, 10%);
+	$sidr-color: lighten($base-nav-color, 10);
 	$sidr-hover-color: $base-link-color;
+	$sidr-item-padding: 20px;
 	display: none;
 	position: absolute;
 	position: fixed;
@@ -218,18 +218,20 @@
 		right: auto;
 	}
 
-	.menu-item {
-		display: block;
-	}
+	.nav-menu {
+		.menu-item {
+			display: block;
+		}
 
-	li a {
-		color: $sidr-color;
-		padding: $sidr-item-padding;
-		border-bottom: $sidr-border;
+		li a {
+			color: $sidr-color;
+			padding: $sidr-item-padding;
+			border-bottom: $sidr-border;
 
-		&:hover {
-			color: $sidr-hover-color;
-			background: lighten($sidr-background-color,3%);
+			&:hover {
+				color: $sidr-hover-color;
+				background: lighten($sidr-background-color, 3);
+			}
 		}
 	}
 
@@ -245,7 +247,7 @@
 		li a {
 			width: auto;
 			padding: $sidr-item-padding;
-			padding-left: 2rem;
+			padding-left: $sidr-item-padding + 10px;
 			color: $base-nav-color;
 			background: $sidr-background-color;
 			border-bottom: $sidr-border;
@@ -258,7 +260,7 @@
 			margin: 0;
 
 			li a {
-				padding-left: 4rem;
+				padding-left: $sidr-item-padding + 20px;;
 			}
 		}
 	}
