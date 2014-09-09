@@ -150,6 +150,19 @@ img.alignright,
 	text-align: center;
 }
 
+/* Screen Readers
+--------------------------------------------- */
+
+.skip-link .screen-reader-text:focus {
+	left: 50%;
+	margin-left: -100px;
+	padding: 10px 0;
+	text-align: center;
+	top: 34px;
+	width: 200px;
+	z-index: 100;
+}
+
 .off-screen,
 .screen-reader-text {
     position: absolute;
