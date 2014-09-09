@@ -57,7 +57,6 @@
 @include media($ipad-tall) {
 
 	body {
-		background-color: #fff;
 		font-size: $secondary-font-size;
 	}
 
@@ -74,6 +73,12 @@
 	.entry-comments,
 	.sidebar .widget {
 		padding: 20px;
+	}
+
+	.featured-media {
+		margin-left: -20px;
+		margin-right: -20px;
+		margin-top: -20px;
 	}
 
 	.archive-pagination li a {
