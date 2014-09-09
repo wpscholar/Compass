@@ -8,7 +8,7 @@
     "neat": "~1.6.0",
     "normalize.css": "~3.0.1",
     "fitvids": "~1.1.0",
-    "accessible-menu": "GaryJones/accessible-menu#develop",
+    "accessible-menu": "GaryJones/accessible-menu#master",
     "sidr": "~1.2.1"
   }
 }
