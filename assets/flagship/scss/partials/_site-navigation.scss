@@ -146,7 +146,7 @@
 	$after-header-background-color: $base-nav-background-color;
 	$after-header-border-color: $base-border-color;
 	$after-header-border: 1px solid $after-header-border-color;
-	$after-header-color: ligten($base-nav-color, 10);
+	$after-header-color: lighten($base-nav-color, 10);
 	$after-header-hover-color: $base-link-color;
 	background-color: $after-header-background-color;
 	border-bottom: 1px solid $base-border-color;
@@ -191,37 +191,44 @@
 	$sidr-item-padding: 1.4rem;
 	$sidr-background-color: lighten($off-black,3%);
 	$sidr-border: 1px solid rgba(255,255,255,0.1);
-    display: none;
-    position: absolute;
-    position: fixed;
-    top: 0;
-    height: 100%;
-    z-index: 999999;
-    width: 260px;
-    overflow-x: none;
-    overflow-y: auto;
-	color: #fff;
+	$sidr-color: lighten($base-nav-color, 10%);
+	$sidr-hover-color: $base-link-color;
+	display: none;
+	position: absolute;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	z-index: 999999;
+	width: 260px;
+	overflow-x: none;
+	overflow-y: auto;
 	background: $sidr-background-color;
 
-    &.right {
-        left: auto;
-        right: -260px;
-    }
+	&.right {
+		/* @noflip */
+		left: auto;
+		/* @noflip */
+		right: -260px;
+	}
 
-    &.left {
-        left: -260px;
-        right: auto;
-    }
+	&.left {
+		/* @noflip */
+		left: -260px;
+		/* @noflip */
+		right: auto;
+	}
 
 	.menu-item {
 		display: block;
 	}
 
 	li a {
+		color: $sidr-color;
 		padding: $sidr-item-padding;
 		border-bottom: $sidr-border;
 
 		&:hover {
+			color: $sidr-hover-color;
 			background: lighten($sidr-background-color,3%);
 		}
 	}
@@ -235,10 +242,10 @@
 		opacity: 1;
 		box-shadow: none;
 
-		a {
+		li a {
 			width: auto;
 			padding: $sidr-item-padding;
-			padding-left: 3rem;
+			padding-left: 2rem;
 			color: $base-nav-color;
 			background: $sidr-background-color;
 			border-bottom: $sidr-border;
@@ -250,8 +257,8 @@
 		.sub-menu {
 			margin: 0;
 
-			a {
-				padding-left: 6rem;
+			li a {
+				padding-left: 4rem;
 			}
 		}
 	}
