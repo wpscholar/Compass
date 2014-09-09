@@ -167,14 +167,14 @@
 /* Responsive Menu
 --------------------------------------------- */
 
-#responsive-menu-button {
+.menu-button {
 	display: none;
 	float: right;
 	margin: 1rem 0 0;
 	padding: 8px 12px 10px;
 	color: rgba(255,255,255,.95);
 	background: $seafoam;
-	border-radius: 10px;
+	border-radius: $base-border-radius;
 	@include transition (all .2s ease-in-out);
 	cursor: pointer;
 
@@ -220,7 +220,7 @@
 	li a {
 		padding: $sidr-item-padding;
 		border-bottom: $sidr-border;
-		
+
 		&:hover {
 			background: lighten($sidr-background-color,3%);
 		}
