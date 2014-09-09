@@ -38,10 +38,10 @@ module.exports = {
 			'sass',
 			'autoprefixer',
 			'wpcss:css',
+			'replace:stylecomments',
 			'cssjanus',
 			'cssmin',
 			'replace:style',
-			'replace:stylecomments',
 			'copy:css'
 		]
 	}
