@@ -67,6 +67,7 @@
     "grunt-jsvalidate": "",
     "grunt-mkdir": "",
     "grunt-newer": "",
+    "grunt-phpcpd": "",
     "grunt-phpcs": "",
     "grunt-phplint": "",
     "grunt-phpmd": "",
