@@ -15,25 +15,26 @@
  * @since       1.0.0
  */
 
-/* Attributes for major structural elements. */
-add_filter( 'hybrid_attr_header',  'flagship_attr_header_class'         );
-add_filter( 'hybrid_attr_content', 'flagship_attr_content_class'        );
-add_filter( 'hybrid_attr_footer',  'flagship_attr_footer_class'         );
-add_filter( 'hybrid_attr_sidebar', 'flagship_attr_sidebar_class', 10, 2 );
-add_filter( 'hybrid_attr_menu',    'flagship_attr_menu_class',    10, 2 );
+//* Attributes for major structural elements.
+add_filter( 'hybrid_attr_header',      'flagship_attr_header_class'         );
+add_filter( 'hybrid_attr_content',     'flagship_attr_content_class'        );
+add_filter( 'hybrid_attr_footer',      'flagship_attr_footer_class'         );
+add_filter( 'hybrid_attr_sidebar',     'flagship_attr_sidebar_class', 10, 2 );
+add_filter( 'hybrid_attr_menu',        'flagship_attr_menu_class',    10, 2 );
+add_filter( 'hybrid_attr_widget-menu', 'flagship_attr_widget_menu',   10, 2 );
 
-/* Header attributes. */
+//* Header attributes.
 add_filter( 'hybrid_attr_branding',         'flagship_attr_branding_class'   );
 add_filter( 'hybrid_attr_site-title',       'flagship_attr_site_title_class' );
 add_filter( 'hybrid_attr_site-description', 'flagship_attr_site_desc_class'  );
 
-/* Post-specific attributes. */
+//* Post-specific attributes.
 add_filter( 'hybrid_attr_entry-summary',   'flagship_attr_entry_summary_class' );
 
 /**
  * Page <header> element attributes.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $attr
  * @return array
@@ -46,7 +47,7 @@ function flagship_attr_header_class( $attr ) {
 /**
  * Main content container of the page attributes.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $attr
  * @return array
@@ -59,7 +60,7 @@ function flagship_attr_content_class( $attr ) {
 /**
  * Page <footer> element attributes.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $attr
  * @return array
@@ -72,7 +73,7 @@ function flagship_attr_footer_class( $attr ) {
 /**
  * Sidebar attributes.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $attr
  * @param  string  $context
@@ -90,7 +91,7 @@ function flagship_attr_sidebar_class( $attr, $context ) {
 /**
  * Nav menu attributes.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $attr
  * @param  string  $context
@@ -105,12 +106,41 @@ function flagship_attr_menu_class( $attr, $context ) {
 	return $attr;
 }
 
-/* === header === */
+/**
+ * Widget nav menu attributes.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array   $attr
+ * @param  string  $context
+ * @return array
+ */
+function flagship_attr_widget_menu( $attr, $context ) {
+	$class = 'menu';
+
+	if ( ! empty( $context ) ) {
+		$attr['id'] = "menu-{$context}";
+		$class    .= " menu-{$context}";
+	}
+
+	$attr['class'] = $class;
+	$attr['role']  = 'navigation';
+
+	if ( ! empty( $context ) ) {
+		/* Translators: The %s is the menu name. This is used for the 'aria-label' attribute. */
+		$attr['aria-label'] = esc_attr( sprintf( _x( '%s Menu', 'nav menu aria label', 'compass' ), ucwords ( $context ) ) );
+	}
+
+	$attr['itemscope']  = 'itemscope';
+	$attr['itemtype']   = 'http://schema.org/SiteNavigationElement';
+
+	return $attr;
+}
 
 /**
  * Branding (usually a wrapper for title and tagline) attributes.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $attr
  * @return array
@@ -123,7 +153,7 @@ function flagship_attr_branding_class( $attr ) {
 /**
  * Site title attributes.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $attr
  * @param  string  $context
@@ -137,7 +167,7 @@ function flagship_attr_site_title_class( $attr ) {
 /**
  * Site description attributes.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $attr
  * @param  string  $context
@@ -151,7 +181,7 @@ function flagship_attr_site_desc_class( $attr ) {
 /**
  * Post summary/excerpt attributes.
  *
- * @since  2.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $attr
  * @return array
