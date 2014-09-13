@@ -112,7 +112,7 @@ function flagship_header_menu_args( $args ) {
  * @return string $menu Modified menu output.
  */
 function flagship_header_menu_wrap( $menu ) {
-	return sprintf( '<nav %s>', hybrid_get_attr( 'menu', 'header' ) ) . $menu . '</nav>';
+	return sprintf( '<nav %s>', hybrid_get_attr( 'widget-menu', 'header' ) ) . $menu . '</nav>';
 }
 
 add_action( 'widgets_init', 'flagship_register_footer_widget_areas' );
