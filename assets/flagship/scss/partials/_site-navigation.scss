@@ -295,6 +295,14 @@
 		color: $pagination-color;
 	}
 
+	.next:before {
+		content: '\2192';
+	}
+
+	.prev:before {
+		content: '\2190';
+	}
+
 	a {
 		color: $pagination-color;
 		border: 1px solid $base-background-color;
@@ -304,6 +312,16 @@
 			background: $pagination-hover-background;
 			border: $pagination-border;
 		}
+	}
+}
+
+.rtl {
+	.pagination .next:before {
+		content: '\2190';
+	}
+
+	.pagination .prev:before {
+		content: '\2192';
 	}
 }
 
