@@ -11,20 +11,22 @@
  */
 ?>
 
-<?php if ( is_singular( 'post' ) ) : // If viewing a single post page. ?>
+<?php if ( is_singular( 'post' ) ) : ?>
 
 	<nav class="nav-single">
 		<?php previous_post_link( '<span class="nav-previous">' . __( '%link', 'compass' ) . '</span>', '&larr; Previous Post' ); ?>
 		<?php next_post_link(     '<span class="nav-next">' . __( '%link', 'compass' ) . '</span>', 'Next Post &rarr;' ); ?>
 	</nav><!-- .nav-singl -->
 
-<?php elseif ( is_home() || is_archive() || is_search() ) : // If viewing the blog, an archive, or search results. ?>
+<?php elseif ( is_home() || is_archive() || is_search() ) : ?>
 
-	<?php loop_pagination(
+	<?php
+	loop_pagination(
 		array(
-			'prev_text' => _x( '&larr; <span class="screen-reader-text">Previous Page</span>', 'posts navigation', 'compass' ),
-			'next_text' => _x( '<span class="screen-reader-text">Next Page</span> &rarr;', 'posts navigation', 'compass' )
+			'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Page', 'compass' ) . '</span>',
+			'next_text' => '<span class="screen-reader-text">' . __( 'Next Page', 'compass' ) . '</span>',
 		)
-	); ?>
+	);
+	?>
 
-<?php endif; // End check for type of page being viewed. ?>
+<?php endif; ?>
