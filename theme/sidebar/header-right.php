@@ -12,11 +12,11 @@ add_filter( 'wp_nav_menu_args', 'flagship_header_menu_args' );
 add_filter( 'wp_nav_menu', 'flagship_header_menu_wrap' );
 ?>
 
-<?php if ( is_active_sidebar( 'header-right' ) ) : // If the sidebar has widgets. ?>
+<?php if ( is_active_sidebar( 'header-right' ) ) : ?>
 
 	<div <?php hybrid_attr( 'header-right' ); ?>>
 
-		<?php dynamic_sidebar( 'header-right' ); // Displays the header-right sidebar. ?>
+		<?php dynamic_sidebar( 'header-right' ); ?>
 
 	</div><!-- .header-right -->
 
