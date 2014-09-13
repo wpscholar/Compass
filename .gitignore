@@ -21,6 +21,7 @@ assets/genericons/
 # Generated theme files
 /theme/css
 /theme/font
+/theme/includes/vendor
 /theme/hybrid-core
 /theme/images
 /theme/js
