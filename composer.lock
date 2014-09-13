@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "326f4750edee31403faa6df9c5ef5ec3",
+    "hash": "7c0b32d519614ab1be15b81a11525c06",
     "packages": [
         {
             "name": "justintadlock/hybrid-core",
@@ -43,6 +43,43 @@
                 "wordpress"
             ],
             "time": "2014-08-12 14:41:22"
+        },
+        {
+            "name": "zamoose/themehookalliance",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zamoose/themehookalliance.git",
+                "reference": "f4950c6343e85b105c0c78a65e90df2f1476e6c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zamoose/themehookalliance/zipball/f4950c6343e85b105c0c78a65e90df2f1476e6c6",
+                "reference": "f4950c6343e85b105c0c78a65e90df2f1476e6c6",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "tha-theme-hooks.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Doug Stewart",
+                    "homepage": "http://literalbarrage.org"
+                }
+            ],
+            "description": "Theme Hook Alliance",
+            "homepage": "https://github.com/zamoose/themehookalliance",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2014-09-13 04:43:40"
         }
     ],
     "packages-dev": [
@@ -52,9 +89,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "zamoose/themehookalliance": 20
+    },
     "prefer-stable": false,
     "platform": [
 

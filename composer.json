@@ -3,6 +3,7 @@
 		"vendor-dir": "assets/composer"
 	},
 	"require": {
-		"justintadlock/hybrid-core": "~2.0"
+		"justintadlock/hybrid-core": "~2.0",
+		"zamoose/themehookalliance": "dev-master"
 	}
 }

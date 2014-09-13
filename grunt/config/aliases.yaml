@@ -20,6 +20,8 @@ build:
   - 'composer:update'
   - 'clean:hybridcore'
   - 'newer:copy:hybridcore'
+  - 'clean:themehookalliance'
+  - 'newer:copy:themehookalliance'
 # Build CSS from Scss to production
 'build:css':
   - 'build:dependencies'

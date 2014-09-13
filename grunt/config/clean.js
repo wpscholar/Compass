@@ -34,6 +34,11 @@ module.exports = {
 			'<%= paths.hybridCore %>'
 		]
 	},
+	themehookalliance: {
+		src: [
+			'<%= paths.theme %>includes/vendor/tha-theme-hooks.php'
+		]
+	},
 	logs: {
 		src: [
 			'<%= paths.logs %>'

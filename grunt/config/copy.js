@@ -34,6 +34,16 @@ module.exports = {
 			}
 		]
 	},
+	themehookalliance: {
+		files: [
+			{
+				cwd: '<%= paths.composer %>zamoose/themehookalliance',
+				expand: true,
+				src: ['tha-theme-hooks.php'],
+				dest: '<%= paths.theme %>includes/vendor/'
+			}
+		]
+	},
 	images: {
 		files: [
 			{
