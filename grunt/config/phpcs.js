@@ -6,7 +6,7 @@ module.exports = {
 	php: {
 		options: {
 			extensions: 'php',
-			reportFile: '<%= paths.logs %>phpcs-php.txt'
+			reportFile: '<%= paths.logs %>phpcs.log'
 		},
 		dir: [
 			'<%= paths.theme %>'
