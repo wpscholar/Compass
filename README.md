@@ -4,7 +4,17 @@ A WordPress Starter Theme Using Hybrid Core, Bourbon, Neat, and the Theme Hook A
 
 ## Project Development
 
-This project uses Node.js to run the Grunt task runner, so [download Node.js](http://nodejs.org/download/) and install it.
+### Ruby and Sass
+
+This project uses [Ruby](https://www.ruby-lang.org/en/) and Sass to build the `.scss` files into a CSS file. [Install Ruby](https://www.ruby-lang.org/en/installation/) and then run `gem install sass` to install Sass. You may need to use sudo (for OSX, *nix, BSD etc) or run your command shell as Administrator (for Windows) to do this
+
+### Composer
+
+This project uses [Composer](https://getcomposer.org/) to manage PHP dependencies such as [Hybrid Core](https://github.com/justintadlock/hybrid-core) and [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) support. [Install Composer](https://getcomposer.org/doc/00-intro.md) to enable this functionality.
+
+### Node, NPM and Grunt
+
+This project also uses Node.js to run the Grunt task runner, so [download Node.js](http://nodejs.org/download/) and install it.
 
 Some Grunt tasks use external command-line applications, so you'll need them installed as global (not specific to this project) Node.js packages. Open up a terminal and run the following. You may need to use sudo (for OSX, *nix, BSD etc) or run your command shell as Administrator (for Windows) to do this.
 
