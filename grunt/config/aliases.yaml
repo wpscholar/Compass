@@ -50,7 +50,7 @@ build:
 # Build internationalisation features
 'build:i18n':
   - 'addtextdomain'
-  - 'newer:makepot'
+  - 'makepot'
 # Check health of the project
 check:
   - 'newer:scsslint'
