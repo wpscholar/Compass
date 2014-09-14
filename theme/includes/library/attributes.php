@@ -128,7 +128,7 @@ function flagship_attr_widget_menu( $attr, $context ) {
 
 	if ( ! empty( $context ) ) {
 		/* Translators: The %s is the menu name. This is used for the 'aria-label' attribute. */
-		$attr['aria-label'] = esc_attr( sprintf( _x( '%s Menu', 'nav menu aria label', 'compass' ), ucwords ( $context ) ) );
+		$attr['aria-label'] = esc_attr( sprintf( _x( '%s Menu', 'nav menu aria label', 'compass' ), ucwords( $context ) ) );
 	}
 
 	$attr['itemscope']  = 'itemscope';
