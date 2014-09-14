@@ -33,7 +33,7 @@
 
 	<?php else : ?>
 
-		<?php  get_template_part( 'content/error' ); ?>
+		<?php get_template_part( 'content/error' ); ?>
 
 	<?php endif; ?>
 
