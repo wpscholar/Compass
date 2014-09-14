@@ -34,8 +34,7 @@
   "pot": {
     "reportmsgidbugsto": "Robert Neu <translations@flagshipwp.com>",
     "lasttranslator": "Robert Neu <translations@flagshipwp.com>",
-    "languageteam": "Robert Neu <translations@flagshipwp.com>",
-    "xpoeditsearchpathexcluded0": "../hybrid-core"
+    "languageteam": "Robert Neu <translations@flagshipwp.com>"
   },
   "repository": {
     "type": "git",

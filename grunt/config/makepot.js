@@ -7,8 +7,7 @@ module.exports = {
 				poedit: true,
 				'report-msgid-bugs-to': '<%= pkg.pot.reportmsgidbugsto %>',
 				'last-translator': '<%= pkg.pot.lasttranslator %>',
-				'language-team': '<%= pkg.pot.languageteam %>',
-				'x-poedit-searchpathexcluded-0': '<%= pkg.pot.xpoeditsearchpathexcluded0 %>'
+				'language-team': '<%= pkg.pot.languageteam %>'
 			},
 			type: 'wp-theme'
 		}
