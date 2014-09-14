@@ -13,13 +13,15 @@
 
 <?php get_header(); ?>
 
+<?php tha_content_before(); ?>
+
 <main <?php hybrid_attr( 'content' ); ?>>
+
+	<?php tha_content_top(); ?>
 
 	<?php if ( have_posts() ) : ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php tha_entry_before(); ?>
 
 				<?php if ( is_home() ) : ?>
 
@@ -31,8 +33,6 @@
 
 				<?php endif; ?>
 
-				<?php tha_entry_after(); ?>
-
 		<?php endwhile; ?>
 
 		<?php get_template_part( 'misc-templates/loop-nav' ); ?>
@@ -43,7 +43,11 @@
 
 	<?php endif; ?>
 
+	<?php tha_content_bottom(); ?>
+
 </main><!-- #content -->
+
+<?php tha_content_after(); ?>
 
 <?php
 get_footer();

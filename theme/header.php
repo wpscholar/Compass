@@ -55,10 +55,6 @@
 
 		<?php hybrid_get_menu( 'after-header' ); ?>
 
-		<?php tha_content_before(); ?>
-
 		<div id="site-inner" class="site-inner">
-
-			<?php tha_content_top(); ?>
 
 			<?php hybrid_get_menu( 'breadcrumbs' ); ?>

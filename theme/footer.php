@@ -15,11 +15,7 @@
 
 	<?php hybrid_get_sidebar( 'primary' ); ?>
 
-	<?php tha_content_bottom(); ?>
-
-	</div><!-- #content -->
-
-	<?php tha_content_after(); ?>
+	</div><!-- #site-inner -->
 
 	<?php tha_footer_before(); ?>
 

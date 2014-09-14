@@ -13,7 +13,11 @@
 
 <?php get_header(); ?>
 
+<?php tha_content_before(); ?>
+
 <main <?php hybrid_attr( 'content' ); ?>>
+
+	<?php tha_content_top(); ?>
 
 	<article class="entry error-404 not-found">
 
@@ -41,7 +45,11 @@
 
 	</article><!-- .error-404 -->
 
-</main><!-- #main -->
+	<?php tha_content_bottom(); ?>
+
+</main><!-- #content -->
+
+<?php tha_content_after(); ?>
 
 <?php
 get_footer();

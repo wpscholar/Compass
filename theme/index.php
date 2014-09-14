@@ -19,7 +19,11 @@
 
 <?php get_header(); ?>
 
+<?php tha_content_before(); ?>
+
 <main <?php hybrid_attr( 'content' ); ?>>
+
+	<?php tha_content_top(); ?>
 
 	<?php if ( ! is_front_page() && ! is_home() && ! is_404() ) : ?>
 
@@ -39,11 +43,15 @@
 
 	<?php else : ?>
 
-		<?php  get_template_part( 'templates/parts/error' ); ?>
+		<?php get_template_part( 'templates/parts/error' ); ?>
 
 	<?php endif; ?>
 
+	<?php tha_content_bottom(); ?>
+
 </main><!-- #content -->
+
+<?php tha_content_after(); ?>
 
 <?php
 get_footer();

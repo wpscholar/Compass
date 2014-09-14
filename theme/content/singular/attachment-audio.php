@@ -11,6 +11,8 @@
  */
 ?>
 
+<?php tha_entry_before(); ?>
+
 <article <?php hybrid_attr( 'post' ); ?>>
 
 	<?php tha_entry_top(); ?>
@@ -34,7 +36,11 @@
 		</p>
 	</footer><!-- .entry-footer -->
 
+	<?php tha_entry_bottom(); ?>
+
 </article><!-- .entry -->
+
+<?php tha_entry_after(); ?>
 
 <div class="attachment-meta">
 
@@ -45,7 +51,5 @@
 		<?php hybrid_media_meta(); ?>
 
 	</div><!-- .media-info -->
-
-	<?php tha_entry_bottom(); ?>
 
 </div><!-- .attachment-meta -->

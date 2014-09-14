@@ -11,6 +11,8 @@
  */
 ?>
 
+<?php tha_entry_before(); ?>
+
 <article <?php hybrid_attr( 'post' ); ?>>
 
 	<?php tha_entry_top(); ?>
@@ -33,3 +35,6 @@
 	<?php tha_entry_bottom(); ?>
 
 </article><!-- .entry -->
+
+<?php
+tha_entry_after();
