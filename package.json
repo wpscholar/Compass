@@ -70,6 +70,7 @@
     "grunt-phpcs": "",
     "grunt-phplint": "",
     "grunt-phpmd": "",
+    "grunt-plato": "",
     "grunt-replace": "",
     "grunt-scss-lint": "",
     "grunt-stylestats": "",

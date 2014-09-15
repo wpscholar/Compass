@@ -79,3 +79,6 @@ package:
 'package:dev':
   - build
   - "compress:dev"
+# Update reports
+reports:
+  - plato
