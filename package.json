@@ -72,6 +72,7 @@
     "grunt-phpmd": "",
     "grunt-replace": "",
     "grunt-scss-lint": "",
+    "grunt-stylestats": "",
     "grunt-wp-css": "cedaro/grunt-wp-css#develop",
     "grunt-wp-i18n": "",
     "load-grunt-config": "",
