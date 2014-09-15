@@ -44,6 +44,15 @@ npm install grunt-phplint
 
 There's apparently a package dependency issue that means the _grunt-phplint_ package needs installing last.
 
+## Create A New Theme
+
+1. Clone or manually copy this repo to a new directory. 
+- Update `name` and `capitalname` in `package.json`.
+- On the command line, `cd` into the new project directory and run `npm install`.
+- Run `grunt newtheme`. This will replace instances of `incipio` and `Incipio` for function names, class names, text domains, enqueued script and style handles, README, and so on. It will then run a build process to generate everything needed for the theme.
+
+It doesn't change filenames, so avoid theme-specific filenames in the original project.
+
 ## Things for the future
 
 ### Genericons
