@@ -28,11 +28,9 @@
 	.sidebar-primary,
 	.sidebar-secondary,
 	.layout-2c-l .sidebar {
-		width: 100%;
-	}
-
-	.footer-widgets-1 {
+		float: none;
 		margin-right: 0;
+		width: 100%;
 	}
 
 	/* Responsive Menu */
