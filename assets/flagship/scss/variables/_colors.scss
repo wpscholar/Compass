@@ -1,0 +1,53 @@
+// This file controls all base color styles for our theme. All colors should be
+// defined in _colors.scss. This allows us to at a glance determine global color
+// styles of our theme and prevents arbitrary color assignment.
+// Do not use the base theme colors in the scss partial files! Set up your theme's
+// base colors and then use scoped color values in your Sass partials.
+
+// Theme Colors (private vars)
+// --------------------------------------------------
+$off-black:   #1c1e1f;
+$dark-gray:   #494b4c;
+$medium-gray: #676869;
+$light-gray:  #a4a5a5;
+$fog:         #cccccc;
+$medium-fog:  #e0e0e0;
+$light-fog:   #f5f5f5;
+$white:       #ffffff;
+$seafoam:     #33b787;
+
+// Global Base Colors
+$base-background-color:         $light-fog;
+$base-font-color:               $dark-gray;
+$base-accent-color:             $light-gray;
+$base-heading-color:            $off-black;
+$base-link-color:               $seafoam;
+$hover-link-color:              lighten($base-link-color, 40);
+$base-button-color:             $base-link-color;
+$hover-button-color:            $hover-link-color;
+$base-border-color:             $medium-fog;
+
+// Base Form Colors
+$input-background-color:        $white;
+$form-border-color:             $base-border-color;
+$form-border-color-hover:       darken($base-border-color, 5);
+$form-border-color-focus:       darken($base-border-color, 20);
+$form-placeholder-color:        darken($base-border-color, 10);
+
+// Base Header Colors
+$base-header-background-color:  $off-black;
+$base-header-color:             $fog;
+$base-header-link-color:        $white;
+
+// Base Navigation Colors
+$base-nav-background-color:     $white;
+$base-nav-color:                $dark-gray;
+$header-nav-color:              $light-gray;
+
+// Base Entry Colors
+$entry-background-color:        $white;
+
+// Base Widget Colors
+$widget-background-color:       $white;
+
+$cta-background-color:          $dark-gray;

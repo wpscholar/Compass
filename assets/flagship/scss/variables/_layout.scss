@@ -1,0 +1,6 @@
+// Breakpoints
+$tiny:      new-breakpoint(max-width 320 4);
+$iphone:    new-breakpoint(max-width 480px 4);
+$ipad-tall: new-breakpoint(max-width 768px 6);
+$ipad-wide: new-breakpoint(max-width 1023px 12);
+$laptop:    new-breakpoint(max-width 1180px 12);
