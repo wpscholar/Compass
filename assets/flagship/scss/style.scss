@@ -59,11 +59,15 @@
 @import '../../bower/bourbon/bourbon';
 
 // Load Neat Grid
-@import 'global/neat-settings';
+@import 'variables/neat-grid';
 @import '../../bower/neat/neat';
 
 // Load Global Variables
-@import 'global/variables';
+@import 'variables/colors';
+@import 'variables/layout';
+@import 'variables/misc';
+@import 'variables/typography';
+@import 'variables/z-index';
 
 /*
 HTML5 Reset
