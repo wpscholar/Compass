@@ -106,7 +106,7 @@
 .menu-header {
 	$menu-header-border-color: $base-border-color;
 	$menu-header-border: 1px solid $menu-header-border-color;
-	$menu-header-color: $base-nav-color;
+	$menu-header-color: $header-nav-color;
 	$menu-header-hover-color: $base-link-color;
 
 	li a {
@@ -190,8 +190,9 @@
 .sidr {
 	$sidr-background-color: lighten($off-black, 3);
 	$sidr-border: 1px solid rgba(255,255,255,0.1);
-	$sidr-color: lighten($base-nav-color, 10);
+	$sidr-color: lighten($base-nav-color, 30);
 	$sidr-hover-color: $base-link-color;
+	$sidr-subnav-color: lighten($base-nav-color, 15);
 	$sidr-item-padding: 20px;
 	display: none;
 	position: absolute;
@@ -248,7 +249,7 @@
 			width: auto;
 			padding: $sidr-item-padding;
 			padding-left: $sidr-item-padding + 10px;
-			color: $base-nav-color;
+			color: $sidr-subnav-color;
 			background: $sidr-background-color;
 			border-bottom: $sidr-border;
 			border-top: 0;

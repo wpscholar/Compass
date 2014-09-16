@@ -23,10 +23,13 @@
 		- Titles
 		- WordPress
 		- Screen Readers
-	- Site Header
+	- Genericons
+		- Defaults
+		- Theme Icons
+	- Header
 		- Title Area
 		- Widget Area
-	- Site Navigation
+	- Navigation
 		- Header Navigation
 		- After Header Navigation
 		- Mobile Menu
@@ -40,7 +43,7 @@
 		- Featured Content
 	- Sidebars
 	- Footer Widgets
-	- Site Footer
+	- Footer
 	- Plugins
 		- eNews Extended
 		- Latest Tweets
@@ -78,7 +81,7 @@ Defaults
 /*
 Structure and Layout
 ----------------------------------------------------------------------------- */
-@import 'partials/structure-layout';
+@import 'partials/base-layout';
 
 
 /*
@@ -97,13 +100,13 @@ Genericons
 /*
 Site Header
 ----------------------------------------------------------------------------- */
-@import 'partials/site-header';
+@import 'partials/header';
 
 
 /*
 Site Navigation
 ----------------------------------------------------------------------------- */
-@import 'partials/site-navigation';
+@import 'partials/navigation';
 
 
 /*
@@ -139,7 +142,7 @@ Footer Widgets
 /*
 Site Footer
 ----------------------------------------------------------------------------- */
-@import 'partials/site-footer';
+@import 'partials/footer';
 
 
 /*
