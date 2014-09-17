@@ -55,7 +55,7 @@ window.compass = window.compass || {};
 			}
 
 			//* Add a responsive menu button.
-			$( '#branding' ).before( '<button id="responsive-menu-button" class="menu-button"></button>' );
+			$( '#branding' ).before( '<button id="responsive-menu-button" class="menu-button" role="button" aria-pressed="false"></button>' );
 
 			//* Switch the menu side if a RTL langauge is in use.
 			if ( $( 'body' ).hasClass( 'rtl' ) ) {
@@ -63,26 +63,37 @@ window.compass = window.compass || {};
 			}
 
 			//* Sidr menu init.
-			$('#responsive-menu-button').sidr({
+			$( '#responsive-menu-button' ).sidr({
 				name: 'sidr-main',
 				renaming: false,
 				side: menuSide,
 				source: menuSelectors.toString(),
 				onOpen: function() {
+					$( '#responsive-menu-button' ).attr( 'aria-pressed', function() {
+						return 'true';
+					});
+					$( '#responsive-menu-button' ).toggleClass( 'activated' );
 					$( '.site-container' ).on( 'click.wpscCloseSidr', function() {
-						$.sidr('close', 'sidr-main');
+						$.sidr( 'close', 'sidr-main' );
 						event.preventDefault();
 					});
 				},
 				onClose: function() {
+					$( '#responsive-menu-button' ).attr( 'aria-pressed', function() {
+						return 'false';
+					});
+					$( '#responsive-menu-button' ).toggleClass( 'activated' );
 					$( '.site-container' ).off( 'click.wpscCloseSidr' );
 				}
 			});
 
 			//* Close sidr menu if open on larger screens
 			$( window ).resize(function() {
-				if( window.innerWidth > 900 ) {
+				if( window.innerWidth > 1023 ) {
 					$.sidr('close', 'sidr-main');
+					$( '#responsive-menu-button' ).attr( 'aria-pressed', function() {
+						return 'false';
+					});
 				}
 			});
 		},
