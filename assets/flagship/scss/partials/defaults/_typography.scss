@@ -21,13 +21,13 @@ textarea:focus,
 }
 
 ::-moz-selection {
-	background-color: $off-black;
-	color: #fff;
+	background-color: $base-selection-background-color;
+	color: $base-selection-color;
 }
 
 ::selection {
-	background-color: $off-black;
-	color: #fff;
+	background-color: $base-selection-background-color;
+	color: $base-selection-color;
 }
 
 a {
@@ -36,12 +36,12 @@ a {
 	text-decoration: none;
 
 	&:hover {
-		color: $hover-link-color;
+		color: $base-link-hover-color;
 	}
 
 	&:active,
 	&:focus {
-		color: $hover-link-color;
+		color: $base-link-hover-color;
 		outline: none;
 	}
 }
@@ -91,13 +91,13 @@ address {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted $base-border-color;
 	cursor: help;
 }
 
 mark,
 ins {
-	background: #fff9c0;
+	background: $base-insert-color;
 	text-decoration: none;
 }
 

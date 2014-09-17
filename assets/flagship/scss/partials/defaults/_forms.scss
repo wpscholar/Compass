@@ -1,10 +1,10 @@
 #{$all-text-inputs},
 select,
 textarea {
-	background-color: #fff;
+	background-color: $input-background-color;
 	border: 1px solid $form-border-color;
 	box-shadow: $form-box-shadow;
-	color: $dark-gray;
+	color: $form-font-color;
 	font-size: $form-font-size;
 	font-weight: 300;
 	padding: 10px;

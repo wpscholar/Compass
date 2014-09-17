@@ -1,11 +1,4 @@
 .nav-menu {
-	$nav-background-color: $base-nav-background-color;
-	$nav-border-color: $base-border-color;
-	$nav-border: 1px solid $nav-border-color;
-	$nav-color: $base-nav-color;
-	$nav-hover-color: $base-link-color;
-	$nav-font-size: $secondary-font-size;
-	$subnav-font-size: $secondary-font-size - 2;
 	clear: both;
 	font-size: $nav-font-size;
 	line-height: 1;
@@ -18,7 +11,7 @@
 	}
 
 	li a {
-		color: $nav-color;
+		color: $nav-link-color;
 		display: block;
 		padding: 25px 20px;
 	}
@@ -28,7 +21,7 @@
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover
 	.sub-menu .current-menu-item > a:focus {
-		color: $nav-hover-color;
+		color: $nav-link-hover-color;
 	}
 
 	.sub-menu {
@@ -41,9 +34,9 @@
 
 		a {
 			background-color: $nav-background-color;
-			border: $nav-border;
+			border: 1px solid $nav-border-color;
 			border-top: 0;
-			color: $nav-color;
+			color: $nav-link-color;
 			font-size: $subnav-font-size;
 			padding: 20px;
 			position: relative;
@@ -81,7 +74,7 @@
 	}
 
 	> .right {
-		color: $nav-color;
+		color: $nav-link-color;
 		float: right;
 		list-style-type: none;
 	}
@@ -104,10 +97,6 @@
 --------------------------------------------- */
 
 .menu-header {
-	$menu-header-border-color: $base-border-color;
-	$menu-header-border: 1px solid $menu-header-border-color;
-	$menu-header-color: $header-nav-color;
-	$menu-header-hover-color: $base-link-color;
 
 	li a {
 		color: $menu-header-color;
@@ -115,7 +104,7 @@
 	}
 
 	.sub-menu {
-		border-top: $menu-header-border;
+		border-top: 1px solid $menu-header-border-color;
 
 		.sub-menu {
 			margin-top: -56px;
@@ -143,16 +132,11 @@
 --------------------------------------------- */
 
 .menu-after-header {
-	$after-header-background-color: $base-nav-background-color;
-	$after-header-border-color: $base-border-color;
-	$after-header-border: 1px solid $after-header-border-color;
-	$after-header-color: lighten($base-nav-color, 10);
-	$after-header-hover-color: $base-link-color;
 	background-color: $after-header-background-color;
-	border-bottom: 1px solid $base-border-color;
+	border-bottom: 1px solid $after-header-border-color;
 
 	li a {
-		color: $after-header-color;
+		color: $after-header-link-color;
 	}
 
 	li a:hover,
@@ -160,7 +144,7 @@
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover,
 	.sub-menu .current-menu-item > a:focus {
-		color: $after-header-hover-color;
+		color: $after-header-link-hover-color;
 	}
 }
 
@@ -172,14 +156,14 @@
 	float: right;
 	margin: 1rem 0 0;
 	padding: 8px 12px 10px;
-	color: rgba(255,255,255,.95);
-	background: $seafoam;
+	color: $menu-button-link-color;
+	background: $menu-button-background-color;
 	border-radius: $base-border-radius;
 	@include transition (all .2s ease-in-out);
 	cursor: pointer;
 
 	&:hover {
-		background: lighten($seafoam,5%);
+		background: lighten($menu-button-background-color, 5%);
 	}
 
 	&::before {
@@ -188,12 +172,6 @@
 }
 
 .sidr {
-	$sidr-background-color: lighten($off-black, 3);
-	$sidr-border: 1px solid rgba(255,255,255,0.1);
-	$sidr-color: lighten($base-nav-color, 30);
-	$sidr-hover-color: $base-link-color;
-	$sidr-subnav-color: lighten($base-nav-color, 15);
-	$sidr-item-padding: 20px;
 	display: none;
 	position: absolute;
 	position: fixed;
@@ -227,7 +205,7 @@
 		li a {
 			color: $sidr-color;
 			padding: $sidr-item-padding;
-			border-bottom: $sidr-border;
+			border-bottom: 1px solid $sidr-border-color;
 
 			&:hover {
 				color: $sidr-hover-color;
@@ -251,7 +229,7 @@
 			padding-left: $sidr-item-padding + 10px;
 			color: $sidr-subnav-color;
 			background: $sidr-background-color;
-			border-bottom: $sidr-border;
+			border-bottom: 1px solid $sidr-border-color;
 			border-top: 0;
 			border-left: 0;
 			border-right: 0;
@@ -261,7 +239,7 @@
 			margin: 0;
 
 			li a {
-				padding-left: $sidr-item-padding + 20px;;
+				padding-left: $sidr-item-padding + 20px;
 			}
 		}
 	}

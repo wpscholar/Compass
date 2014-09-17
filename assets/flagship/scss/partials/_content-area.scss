@@ -8,11 +8,11 @@
 
 .content .entry {
 	background-color: $entry-background-color;
-	border: 1px solid $base-border-color;
+	border: 1px solid $entry-border-color;
 }
 
 .plural .content .sticky {
-	border: 1px solid $light-gray;
+	border: 1px solid $entry-sticky-border-color;
 }
 
 .entry-content {
@@ -46,14 +46,14 @@
 	}
 
 	blockquote {
-		border-left: 7px solid $base-border-color;
+		border-left: 7px solid $table-border-color;
 		margin: 30px 0 30px 5%;
 		padding: 0 5%;
 	}
 
 	table {
 		border-collapse: separate;
-		border: 1px solid $base-border-color;
+		border: 1px solid $table-border-color;
 		border-left: 0;
 		margin: 20px 0;
 		width: 100%;
@@ -61,8 +61,8 @@
 
 	table th,
 	table td {
-		border-left: 1px solid $base-border-color;
-		border-top: 1px solid $base-border-color;
+		border-left: 1px solid $table-border-color;
+		border-top: 1px solid $table-border-color;
 		line-height: 1.2;
 		padding: 8px;
 		text-align: left;
@@ -76,15 +76,15 @@
 	}
 
 	code {
-		background: $base-background-color;
-		border: 1px solid darken($base-border-color, 10);
-		color: $base-heading-color;
+		background: $code-background-color;
+		border: 1px solid $code-border-color;
+		color: $code-font-color;
 		padding: 2px 4px;
 	}
 
 	.wp-caption .wp-caption-text {
-		margin: .8075em 0;
-		font-size: 14px;
+		margin: 10px 0;
+		font-size: $wp-caption-font-size;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		line-height: 1.2;
@@ -96,7 +96,7 @@
 --------------------------------------------- */
 
 .entry-meta {
-	color: $light-gray;
+	color: $entry-meta-font-color;
 	font-size: $secondary-font-size;
 	margin-bottom: 0;
 
@@ -111,12 +111,12 @@
 	}
 
 	a {
-		border-bottom: 1px solid lighten($base-link-color, 40);
-		color: $light-gray;
+		border-bottom: 1px solid $entry-meta-link-border-color;
+		color:  $entry-meta-link-color;
 
 		&:hover,
 		&:focus {
-			color: $base-link-color;
+			color: $entry-meta-link-color;
 		}
 	}
 }
@@ -149,7 +149,7 @@ span.comments-link {
 --------------------------------------------- */
 
 .featured-media {
-	background: $medium-fog;
+	background: $featured-media-background-color;
 	display: block;
 	margin: -40px -40px 26px;
 	overflow: hidden;

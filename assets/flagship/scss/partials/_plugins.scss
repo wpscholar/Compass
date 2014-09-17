@@ -2,16 +2,16 @@
 --------------------------------------------- */
 
 .enews-widget {
-	color: $light-gray;
+	color: $enews-font-color;
 
 	.widget-title {
-		color: #fff;
+		color: $enews-title-color;
 	}
 
 	input,
 	input:hover,
 	input:focus {
-		border-color: $dark-gray;
+		border-color: $enews-border-color
 	}
 
 	input {
@@ -20,20 +20,20 @@
 	}
 
 	input[type="submit"] {
-		background-color: #e5554e;
-		color: #fff;
+		background-color: $enews-button-background-color;
+		color: $enews-button-font-color;
 		margin: 0;
 		width: 100%;
 	}
 
 	input:hover[type="submit"] {
-		background-color: #fff;
-		color: $dark-gray;
+		background-color: $enews-button-background-hover-color;
+		color: $enews-button-font-hover-color;
 	}
 }
 
 .sidebar .widget.enews-widget {
-	background-color: $dark-gray;
+	background-color: $enews-background-color;
 }
 
 .enews form + p {

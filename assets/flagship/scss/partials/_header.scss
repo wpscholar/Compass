@@ -1,6 +1,6 @@
 .header {
-	background-color: $base-header-background-color;
-	color: $base-header-color;
+	background-color: $header-background-color;
+	color: $header-font-color;
 
 	.wrap {
 		padding: 20px 0;
@@ -26,12 +26,12 @@
 	a,
 	a:hover,
 	a:focus {
-		color: $base-header-link-color;
+		color: $header-link-color;
 	}
 }
 
 .site-description {
-	color: $base-header-color;
+	color: $header-font-color;
 	font-family: $header-font-family;
 	font-size: $secondary-font-size;
 	font-weight: 300;

@@ -1,16 +1,17 @@
 .footer-widgets {
-	background-color: $dark-gray;
+	background-color: $footer-widgets-background-color;
 	clear: both;
+	color: $footer-widgets-font-color;
 	padding-bottom: 40px;
 	padding-top: 40px;
 
-	&,
 	a {
-		color: #999;
+		color: $footer-widgets-link-color;
+		border-bottom: 1px solid $footer-widgets-link-border-color;
 	}
 
 	input {
-		border: 1px solid $dark-gray;
+		border: 1px solid $footer-widgets-border-color;
 	}
 
 	button,
@@ -18,8 +19,8 @@
 	input[type="reset"],
 	input[type="submit"],
 	.button {
-		background-color: #e5554e;
-		color: #fff;
+		background-color: $footer-widgets-button-background-color;
+		color: $footer-widgets-button-font-color;
 	}
 
 	button:hover,
@@ -27,17 +28,17 @@
 	input:hover[type="reset"],
 	input:hover[type="submit"],
 	.button:hover {
-		background-color: #fff;
-		color: $off-black;
+		background-color: $footer-widgets-button-background-hover-color;
+		color: $footer-widgets-button-font-hover-color;
 	}
 
 	th,
 	td {
-		border-bottom-color: #474747;
+		border-bottom-color: $footer-widgets-border-color;
 	}
 
 	li {
-		border-bottom: 1px dotted #666;
+		border-bottom: 1px solid $footer-widgets-border-color;
 		margin-bottom: 10px;
 		padding-bottom: 10px;
 	}
