@@ -5,7 +5,7 @@
 // base colors and then use scoped color values in your Sass partials.
 
 // Theme Colors (private vars)
-// --------------------------------------------------
+//------------------------------------------------------------------------------
 $off-black:   #1c1e1f;
 $dark-gray:   #494b4c;
 $medium-gray: #676869;
@@ -17,38 +17,101 @@ $white:       #ffffff;
 $seafoam:     #33b787;
 
 // Global Base Colors
-$base-background-color:         $light-fog;
-$base-font-color:               $dark-gray;
-$base-accent-color:             $light-gray;
-$base-heading-color:            $off-black;
-$base-link-color:               $seafoam;
-$hover-link-color:              lighten($base-link-color, 40);
-$base-button-color:             $base-link-color;
-$hover-button-color:            $hover-link-color;
-$base-border-color:             $medium-fog;
+//------------------------------------------------------------------------------
+$base-background-color:                $light-fog;
+$base-font-color:                      $dark-gray;
+$base-accent-color:                    $light-gray;
+$base-heading-color:                   $off-black;
+$base-link-color:                      $seafoam;
+$base-link-hover-color:                lighten($base-link-color, 40);
+$base-button-background-color:         $base-link-color;
+$base-button-background-hover-color:   lighten($base-link-color, 10);
+$base-button-font-color:               $white;
+$base-button-font-hover-color:         $white;
+$base-border-color:                    $medium-fog;
+$base-selection-background-color:      $off-black;
+$base-selection-color:                 $white;
+$base-insert-color:                    lighten($seafoam, 45);
+$cta-background-color:                 $dark-gray;
 
-// Base Form Colors
-$input-background-color:        $white;
-$form-border-color:             $base-border-color;
-$form-border-color-hover:       darken($base-border-color, 5);
-$form-border-color-focus:       darken($base-border-color, 20);
-$form-placeholder-color:        darken($base-border-color, 10);
+// Form Colors
+//------------------------------------------------------------------------------
+$input-background-color:    $white;
+$form-font-color:           $base-font-color;
+$form-border-color:         $base-border-color;
+$form-border-color-hover:   darken($base-border-color, 5);
+$form-border-color-focus:   darken($base-border-color, 20);
+$form-placeholder-color:    darken($base-border-color, 10);
 
-// Base Header Colors
-$base-header-background-color:  $off-black;
-$base-header-color:             $fog;
-$base-header-link-color:        $white;
+// Header Colors
+//------------------------------------------------------------------------------
+$header-background-color:  $off-black;
+$header-font-color:        $fog;
+$header-link-color:        $white;
 
-// Base Navigation Colors
-$base-nav-background-color:     $white;
-$base-nav-color:                $dark-gray;
-$header-nav-color:              $light-gray;
+// Navigation Colors
+//------------------------------------------------------------------------------
+$nav-background-color:           $white;
+$nav-border-color:               $base-border-color;
+$nav-link-color:                 $dark-gray;
+$nav-link-hover-color:           $base-link-color;
 
-// Base Entry Colors
-$entry-background-color:        $white;
+$menu-header-border-color:       $base-border-color;
+$menu-header-color:              $light-gray;
+$menu-header-hover-color:        $base-link-color;
 
-// Base Widget Colors
-$widget-background-color:       $white;
-$widget-link-color:             $medium-gray;
+$after-header-background-color:  $nav-background-color;
+$after-header-border-color:      $base-border-color;
+$after-header-link-color:        lighten($nav-link-color, 10);
+$after-header-link-hover-color:  $base-link-color;
 
-$cta-background-color:          $dark-gray;
+$menu-button-background-color:   $base-link-color;
+$menu-button-link-color:         $white;
+$sidr-background-color:          lighten($off-black, 3);
+$sidr-border-color:              rgba(255,255,255,0.1);
+$sidr-color:                     lighten($nav-link-color, 30);
+$sidr-hover-color:               $base-link-color;
+$sidr-subnav-color:              lighten($nav-link-color, 15);
+
+//* Entry Colors
+//------------------------------------------------------------------------------
+$entry-background-color:           $white;
+$entry-border-color:               $base-border-color;
+$entry-sticky-border-color:        $dark-gray;
+$blockquote-border-color:          lighten($light-fog, 10);
+$table-border-color:               $base-border-color;
+$code-background-color:            $light-fog;
+$code-border-color:                darken($base-border-color, 10);
+$code-font-color:                  $off-black;
+$entry-meta-font-color:            $medium-gray;
+$entry-meta-link-color:            $medium-gray;
+$entry-meta-link-border-color:     $base-link-color;
+$featured-media-background-color:  $medium-fog;
+
+//* Base Widget Colors
+//------------------------------------------------------------------------------
+$widget-background-color:  $white;
+$widget-link-color:        $medium-gray;
+
+//* eNews Widget Colors
+//------------------------------------------------------------------------------
+$enews-background-color:               $cta-background-color;
+$enews-font-color:                     $light-fog;
+$enews-title-color:                    $white;
+$enews-border-color:                   $off-black;
+$enews-button-background-color:        $base-button-background-color;
+$enews-button-font-color:              $base-button-font-color;
+$enews-button-background-hover-color:  $base-button-background-hover-color;;
+$enews-button-font-hover-color:        $base-button-font-hover-color;
+
+//* Footer Widgets Colors
+//------------------------------------------------------------------------------
+$footer-widgets-background-color:               $dark-gray;
+$footer-widgets-font-color:                     $light-fog;
+$footer-widgets-link-color:                     $medium-fog;
+$footer-widgets-link-border-color:              $base-link-color;
+$footer-widgets-border-color:                   $off-black;
+$footer-widgets-button-background-color:        $base-button-background-color;
+$footer-widgets-button-font-color:              $base-button-font-color;
+$footer-widgets-button-background-hover-color:  $base-button-background-hover-color;
+$footer-widgets-button-font-hover-color:        $base-button-font-hover-color;
