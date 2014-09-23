@@ -47,7 +47,7 @@ a[href^="tel:"]::before,
 .comment-respond label[for="comment"]::before {
 	display: inline-block;
 	font-family: 'Genericons';
-	font-size: 16px;
+	font-size: $secondary-font-size;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
