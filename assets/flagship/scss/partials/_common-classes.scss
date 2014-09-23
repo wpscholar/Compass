@@ -1,24 +1,3 @@
-/* Avatar
---------------------------------------------- */
-
-.avatar {
-	border-radius: 100%;
-	float: left;
-}
-
-.alignleft .avatar,
-.author-box .avatar {
-	margin-right: 24px;
-}
-
-.alignright .avatar {
-	margin-left: 24px;
-}
-
-.comment .avatar {
-	margin: 0 16px 24px 0;
-}
-
 /* Hybrid Core
 --------------------------------------------- */
 
@@ -47,6 +26,16 @@
 
 .search-form {
 	overflow: hidden;
+
+	button {
+		border: 0;
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
 }
 
 .header .search-form {
@@ -55,16 +44,6 @@
 
 .entry-content .search-form {
 	width: 50%;
-}
-
-.search-form button {
-	border: 0;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	position: absolute;
-	width: 1px;
 }
 
 /* Post Password Form
@@ -116,6 +95,23 @@
 	color: #fff;
 }
 
+/* Avatar
+--------------------------------------------- */
+
+.avatar {
+	border-radius: 100%;
+	float: left;
+}
+
+.alignleft .avatar,
+.author-box .avatar {
+	margin-right: 24px;
+}
+
+.comment .avatar {
+	margin: 0 16px 24px 0;
+}
+
 /* WordPress
 --------------------------------------------- */
 
@@ -127,6 +123,10 @@
 .alignright {
 	float: right;
 	text-align: right;
+
+	.avatar {
+		margin-left: 24px;
+	}
 }
 
 a.alignleft,

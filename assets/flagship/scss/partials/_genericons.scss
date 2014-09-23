@@ -242,11 +242,8 @@ a[href^='tel:']::before {
 .media-info-toggle::after {
 	content: '\f431';
 	color: $media-info-toggle-color;
-	vertical-align: top;
-}
-
-.media-info-toggle::after {
 	padding-left: 5px;
+	vertical-align: top;
 }
 
 .media-info-toggle.active::after {

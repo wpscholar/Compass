@@ -77,11 +77,11 @@
 		color: $nav-link-color;
 		float: right;
 		list-style-type: none;
-	}
 
-	> .right > a {
-		display: inline;
-		padding: 0;
+		> a {
+			display: inline;
+			padding: 0;
+		}
 	}
 
 	> .rss > a {

@@ -12,6 +12,10 @@
 
 .entry-comments {
 	padding: 40px;
+
+	.comment-author {
+		margin-bottom: 0;
+	}
 }
 
 .comment-header {
@@ -95,13 +99,14 @@
 }
 
 .comment-list {
+
 	.comment {
 		margin-top: 24px;
 		padding: 32px;
-	}
 
-	.comment .comment {
-		margin-right: -32px;
+		.comment {
+			margin-right: -32px;
+		}
 	}
 }
 
@@ -114,10 +119,6 @@
 .comment-respond label {
 	display: block;
 	margin-right: 12px;
-}
-
-.entry-comments .comment-author {
-	margin-bottom: 0;
 }
 
 .entry-pings .reply {

@@ -10,10 +10,10 @@ $off-black:   #1c1e1f;
 $dark-gray:   #494b4c;
 $medium-gray: #676869;
 $light-gray:  #a4a5a5;
-$fog:         #cccccc;
+$fog:         #ccc;
 $medium-fog:  #e0e0e0;
 $light-fog:   #f5f5f5;
-$white:       #ffffff;
+$white:       #fff;
 $seafoam:     #33b787;
 
 // Global Base Colors
@@ -69,7 +69,7 @@ $after-header-link-hover-color:  $base-link-color;
 $menu-button-background-color:   $base-link-color;
 $menu-button-link-color:         $white;
 $sidr-background-color:          lighten($off-black, 3);
-$sidr-border-color:              rgba(255,255,255,0.1);
+$sidr-border-color:              rgba(255, 255, 255, .1);
 $sidr-color:                     lighten($nav-link-color, 30);
 $sidr-hover-color:               $base-link-color;
 $sidr-subnav-color:              lighten($nav-link-color, 15);
