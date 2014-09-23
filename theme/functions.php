@@ -50,7 +50,7 @@ function compass_setup() {
 	//* Add navigation menus.
 	register_nav_menu( 'after-header', _x( 'After Header Menu', 'nav menu location', 'compass' ) );
 
-	$formats = 	array(
+	$formats = array(
 		'aside',
 		'gallery',
 		'link',
@@ -59,7 +59,7 @@ function compass_setup() {
 		'status',
 		'video',
 		'audio',
-		'chat'
+		'chat',
 	);
 
 	//* Enable support for Post Formats.

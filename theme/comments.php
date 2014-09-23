@@ -31,7 +31,7 @@ if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! p
 					array(
 						'style'        => 'ol',
 						'callback'     => 'hybrid_comments_callback',
-						'end-callback' => 'hybrid_comments_end_callback'
+						'end-callback' => 'hybrid_comments_end_callback',
 					)
 				); ?>
 			</ol><!-- .comment-list -->
