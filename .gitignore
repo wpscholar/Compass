@@ -11,6 +11,7 @@
 /dist/
 /docs/
 /logs/
+/reports/
 /tmp/
 
 # Third-party dependencies
