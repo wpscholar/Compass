@@ -218,7 +218,7 @@ a[href^='tel:']::before {
 .comment-respond label[for='comment']::before {
 	margin-bottom: 3px;
 	padding: 0 5px;
-	color: #555;
+	color: $comments-font-color;
 }
 
 .comment-respond label[for='author']::before {
@@ -241,7 +241,7 @@ a[href^='tel:']::before {
 ---------------------- */
 .media-info-toggle::after {
 	content: '\f431';
-	color: #f5f5f5;
+	color: $media-info-toggle-color;
 	vertical-align: top;
 }
 
@@ -256,11 +256,11 @@ a[href^='tel:']::before {
 /* Media Player Icons
 ---------------------- */
 .mejs-button button::after {
-	color: #fff;
+	color: $media-player-button-color;
 }
 
 .mejs-unmute button::after {
-	color: #454545;
+	color: $media-player-unmute-button-color;
 }
 
 .mejs-fullscreen-button button::after {

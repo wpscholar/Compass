@@ -90,9 +90,16 @@ $entry-meta-link-hover-color:      $base-link-color;
 $entry-meta-link-border-color:     $base-link-color;
 $featured-media-background-color:  $medium-fog;
 
+//* Icon Colors
+//------------------------------------------------------------------------------
+$media-info-toggle-color:           $light-fog;
+$media-player-button-color:         $white;
+$media-player-unmute-button-color:  $dark-gray;
+
 //* Coment Section Colors
 //------------------------------------------------------------------------------
 $comments-background-color:      $white;
+$comments-font-color:            $base-font-color;
 $comment-background-color:       $light-fog;
 $comment-border-color:           $white;
 $allowed-tags-background-color:  $light-fog;
