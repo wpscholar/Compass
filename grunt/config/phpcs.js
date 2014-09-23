@@ -1,7 +1,11 @@
 module.exports = {
 	options: {
 		standard: 'WordPress',
-		ignoreExitCode: true
+		ignoreExitCode: true,
+		ignore: [
+			'<%= paths.hybridCore %>',
+			'<%= paths.theme %>includes/vendor/'
+		]
 	},
 	php: {
 		options: {
@@ -10,7 +14,6 @@ module.exports = {
 		},
 		dir: [
 			'<%= paths.theme %>'
-		],
-		ignore: '<%= paths.hybridCore %>'
+		]
 	}
 };
