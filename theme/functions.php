@@ -99,9 +99,8 @@ function compass_includes() {
 	$library_dir  = $includes_dir . '/library';
 	$vendor_dir   = $includes_dir . '/vendor';
 
-	//* Load all PHP files in the library directory.
-	require_once $library_dir . '/attributes.php';
-	require_once $library_dir . '/hybrid-tweaks.php';
+	//* Load the main init file in the library directory.
+	require_once $library_dir . '/init.php';
 
 	//* Load all PHP files in the vendor directory.
 	require_once $vendor_dir . '/tha-theme-hooks.php';
