@@ -79,7 +79,7 @@ $sidr-subnav-color:              lighten($nav-link-color, 15);
 $entry-background-color:           $white;
 $entry-border-color:               $base-border-color;
 $entry-sticky-border-color:        $dark-gray;
-$blockquote-border-color:          lighten($light-fog, 10);
+$blockquote-border-color:          $light-fog;
 $table-border-color:               $base-border-color;
 $code-background-color:            $light-fog;
 $code-border-color:                darken($base-border-color, 10);
