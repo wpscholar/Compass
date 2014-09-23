@@ -57,7 +57,7 @@
 	width: 50%;
 }
 
-.search-form input[type="submit"] {
+.search-form button {
 	border: 0;
 	clip: rect(0, 0, 0, 0);
 	height: 1px;
@@ -86,7 +86,7 @@
 
 .entry-title a:hover,
 .entry-title a:focus {
-	color: lighten($base-heading-color, 30);
+	color: $base-heading-hover-color;
 }
 
 .widget-title {
