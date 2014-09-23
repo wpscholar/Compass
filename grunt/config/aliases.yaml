@@ -30,11 +30,11 @@ build:
   - 'rename:normalize'
   - 'newer:sass'
   - 'newer:autoprefixer'
-  - 'newer:replace:stylecomments'
-  - 'newer:replace:style'
   - 'newer:wpcss:css'
+  - 'newer:replace:stylecomments'
   - 'newer:cssjanus'
   - 'newer:cssmin'
+  - 'newer:replace:style'
   - 'newer:copy:css'
 # Build Fonts from source to production
 'build:font':

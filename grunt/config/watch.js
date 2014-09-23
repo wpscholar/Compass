@@ -37,11 +37,11 @@ module.exports = {
 		tasks: [
 			'sass',
 			'autoprefixer',
-			'replace:stylecomments',
-			'replace:style',
 			'wpcss:css',
+			'replace:stylecomments',
 			'cssjanus',
 			'cssmin:style',
+			'replace:style',
 			'copy:css'
 		]
 	}
