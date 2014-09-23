@@ -11,7 +11,7 @@ module.exports = {
 		diff: '<%= paths.logs %>autoprefixer.diff'
 	},
 	theme: {
-		src: '<%= paths.tmp %>style.dev.css',
-		dest: '<%= paths.tmp %>style.dev.css'
+		src: '<%= paths.tmp %>style.css',
+		dest: '<%= paths.tmp %>style.css'
 	}
 };

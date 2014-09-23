@@ -5,8 +5,8 @@ module.exports = {
 		},
 		files: [
 			{ // Must be done on dev, otherwise /* @noflip */ is removed
-				src: '<%= paths.tmp %>style.dev.css',
-				dest: '<%= paths.tmp %>style-rtl.dev.css'
+				src: '<%= paths.tmp %>style.css',
+				dest: '<%= paths.tmp %>style-rtl.css'
 			}
 		]
 	}

@@ -6,9 +6,18 @@ module.exports = {
 		expand: true,
 		cwd: '<%= paths.tmp %>',
 		src: [
-			'*.dev.css'
+			'*.css'
 		],
 		dest: '<%= paths.tmp %>',
-		ext: '.css'
+		ext: '.min.css'
+	},
+	vendor: {
+		expand: true,
+		cwd: '<%= paths.theme %>css/',
+		src: [
+			'*.css'
+		],
+		dest: '<%= paths.theme %>css/',
+		ext: '.min.css'
 	}
 };

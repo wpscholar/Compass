@@ -31,7 +31,7 @@ module.exports = {
 			{
 				expand: true,
 				src: [
-					'<%= paths.tmp %>style.dev.css'
+					'<%= paths.tmp %>style.css'
 				]
 			}
 		]

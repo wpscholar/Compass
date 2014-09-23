@@ -26,7 +26,7 @@ module.exports = {
 				cwd: '<%= paths.authorAssets %>scss/',
 				src: '*.scss',
 				dest: '<%= paths.tmp %>',
-				ext: '.dev.css'
+				ext: '.css'
 			}
 		]
 	}
