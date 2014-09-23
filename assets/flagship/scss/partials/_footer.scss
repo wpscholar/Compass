@@ -1,5 +1,5 @@
 .footer {
-	background-color: #fff;
+	background-color: $footer-background-color;
 	font-size: $secondary-font-size;
 	line-height: 1;
 	padding: 40px 0;
@@ -10,6 +10,6 @@
 	}
 
 	.wp-caption {
-		border: 1px solid #4c5763;
+		border: 1px solid $footer-border-color;
 	}
 }

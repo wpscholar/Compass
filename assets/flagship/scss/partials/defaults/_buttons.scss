@@ -6,7 +6,7 @@ input[type="submit"],
 	background-color: $base-button-background-color;
 	border: 0;
 	border-radius: $base-border-radius;
-	color: #fff;
+	color: $base-button-font-color;
 	cursor: pointer;
 	font-size: $secondary-font-size;
 	font-weight: 300;
