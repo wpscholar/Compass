@@ -6,7 +6,8 @@ module.exports = {
 		expand: true,
 		cwd: '<%= paths.tmp %>',
 		src: [
-			'*.css'
+			'*.css',
+			'!*.min.css'
 		],
 		dest: '<%= paths.tmp %>',
 		ext: '.min.css'
