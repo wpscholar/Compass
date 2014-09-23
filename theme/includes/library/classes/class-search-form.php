@@ -47,9 +47,10 @@ class Flagship_Search_Form {
 		$placeholder = apply_filters( 'flagship_search_text', __( 'Search this website', 'compass' ) );
 
 		return sprintf(
-			'<input type="search" name="s" id="%s" placeholder="%s" autocomplete="off" />',
+			'<input type="search" name="s" id="%s" placeholder="%s" autocomplete="off" value="%s" />',
 			esc_attr( $this->get_id() ),
-			esc_attr( $placeholder )
+			esc_attr( $placeholder ),
+			esc_attr( $value )
 		);
 	}
 
