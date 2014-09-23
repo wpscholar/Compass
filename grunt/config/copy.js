@@ -32,7 +32,7 @@ module.exports = {
 				src: [
 					'<%= paths.assets %>genericons/font/*'
 				],
-				dest: '<%= paths.theme %>font/',
+				dest: '<%= paths.theme %>font/'
 			}
 		]
 	},
