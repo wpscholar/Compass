@@ -36,7 +36,7 @@ class Flagship_Search_Form {
 		$label = apply_filters( 'flagship_search_form_label', __( 'Search site', 'compass' ) );
 
 		return sprintf(
-			'<label accesskey="4" for="%s" class="screen-reader-text">%s</label>',
+			'<label for="%s" class="screen-reader-text">%s</label>',
 			esc_attr( $this->get_id() ),
 			esc_attr( $label )
 		);
