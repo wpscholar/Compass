@@ -12,8 +12,8 @@ module.exports = {
 		files: [{
 			expand: true,
 			src: [
-				'<%= paths.tmp %>style.css',
-				'<%= paths.tmp %>style-rtl.css'
+				'<%= paths.tmp %>style.min.css',
+				'<%= paths.tmp %>style-rtl.min.css'
 			]
 		}]
 	},
