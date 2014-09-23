@@ -11,7 +11,7 @@
  */
 ?>
 
-<?php if ( is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ) : // If the taxonomy is hierarchical. ?>
+<?php if ( is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ) : ?>
 
 	<?php $terms = wp_list_categories(
 		array(
@@ -20,11 +20,11 @@
 			'depth'            => 1,
 			'title_li'         => false,
 			'show_option_none' => false,
-			'echo'             => false
+			'echo'             => false,
 		)
 	); ?>
 
-	<?php if ( !empty( $terms ) ) : // If a list of child categories/terms was found. ?>
+	<?php if ( ! empty( $terms ) ) : // If a list of child categories/terms was found. ?>
 
 		<nav <?php hybrid_attr( 'menu', 'sub-terms' ); ?>>
 
@@ -34,6 +34,6 @@
 
 		</nav><!-- .menu -->
 
-	<?php endif; // End check for list. ?>
+	<?php endif; // End check for list.
 
-<?php endif; // End check for hierarchy.
+endif; // End check for hierarchy.

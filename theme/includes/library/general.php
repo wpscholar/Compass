@@ -96,7 +96,7 @@ function flagship_footer_widgets() {
 		return;
 	}
 
-	//* Check to see if first widget area has widgets. If not, do nothing. No need to check all footer widget areas.
+	//* Return early if the first widget area has no widgets.
 	if ( ! is_active_sidebar( 'footer-1' ) ) {
 		return;
 	}
@@ -105,12 +105,14 @@ function flagship_footer_widgets() {
 
 	$counter = 1;
 
-	echo '<div ' . hybrid_get_attr( 'footer-widgets' ) . '>';
-		echo '<div class="wrap">';
-			while ( $counter <= $footer_widgets ) {
-				include( locate_template( 'sidebar/footer-widgets.php' ) );
-				$counter++;
-			}
-		echo '</div>';
-	echo '</div>';
+	?>
+	<div <?php hybrid_attr( 'footer-widgets' ); ?>>
+		<div class="wrap">
+			<?php while ( $counter <= $footer_widgets ) : ?>
+				<?php include( locate_template( 'sidebar/footer-widgets.php' ) ); ?>
+				<?php $counter++; ?>
+			<?php endwhile; ?>
+		</div>
+	</div>
+	<?php
 }

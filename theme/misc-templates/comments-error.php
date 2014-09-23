@@ -19,11 +19,16 @@
 			printf( __( 'Comments are closed, but %strackbacks%s and pingbacks are open.', 'compass' ), '<a href="' . esc_url( get_trackback_url() ) . '">', '</a>' );
 		?>
 	</p><!-- .comments-closed .pings-open -->
+	<?php
 
-<?php elseif ( ! comments_open() ) : ?>
+endif;
+
+if ( ! comments_open() ) : ?>
 
 	<p class="comments-closed">
 		<?php _e( 'Comments are closed.', 'compass' ); ?>
 	</p><!-- .comments-closed -->
 
-<?php endif; ?>
+	<?php
+
+endif;

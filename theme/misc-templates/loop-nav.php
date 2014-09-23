@@ -18,15 +18,17 @@
 		<?php next_post_link(     '<span class="nav-next">' . __( '%link', 'compass' ) . '</span>', 'Next Post &rarr;' ); ?>
 	</nav><!-- .nav-singl -->
 
-<?php elseif ( is_home() || is_archive() || is_search() ) : ?>
-
 	<?php
-	loop_pagination(
-		array(
-			'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Page', 'compass' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next Page', 'compass' ) . '</span>',
-		)
-	);
-	?>
 
-<?php endif; ?>
+endif;
+
+if ( is_home() || is_archive() || is_search() ) :
+
+		loop_pagination(
+			array(
+				'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Page', 'compass' ) . '</span>',
+				'next_text' => '<span class="screen-reader-text">' . __( 'Next Page', 'compass' ) . '</span>',
+			)
+		);
+
+endif;

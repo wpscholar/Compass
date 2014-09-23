@@ -22,7 +22,7 @@
 	</header><!-- .entry-header -->
 
 	<div <?php hybrid_attr( 'entry-content' ); ?>>
-		<?php echo wpautop( __( 'Apologies, but no entries were found.', 'compass' ) ); ?>
+		<p><?php _e( 'Apologies, but no entries were found.', 'compass' ); ?></p>
 	</div><!-- .entry-content -->
 
 	<?php tha_entry_bottom(); ?>

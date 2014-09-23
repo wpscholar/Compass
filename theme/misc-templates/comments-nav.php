@@ -28,4 +28,6 @@
 
 	</nav><!-- .comments-nav -->
 
-<?php endif; // End check for paged comments. ?>
+	<?php
+
+endif; // End check for paged comments.

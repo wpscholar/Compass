@@ -11,7 +11,7 @@
  */
 ?>
 
-<?php if ( has_nav_menu( 'after-header' ) ) : // Check if there's a menu assigned to the 'after-header' location. ?>
+<?php if ( has_nav_menu( 'after-header' ) ) : ?>
 
 	<nav <?php hybrid_attr( 'menu', 'after-header' ); ?>>
 
@@ -29,10 +29,12 @@
 				'menu_id'         => 'after-header',
 				'menu_class'      => 'nav-menu after-header',
 				'fallback_cb'     => '',
-				'items_wrap'      => '<div class="wrap"><ul id="%s" class="%s">%s</ul></div>'
+				'items_wrap'      => '<div class="wrap"><ul id="%s" class="%s">%s</ul></div>',
 			)
 		); ?>
 
 	</nav><!-- #menu-after-header -->
 
-<?php endif; // End check for menu. ?>
+	<?php
+
+endif; // End check for menu.

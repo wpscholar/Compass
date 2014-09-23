@@ -70,7 +70,7 @@
 
 	<?php $gallery = gallery_shortcode( array( 'columns' => 4, 'numberposts' => 8, 'orderby' => 'rand', 'id' => get_queried_object()->post_parent, 'exclude' => get_the_ID() ) ); ?>
 
-	<?php if ( !empty( $gallery ) ) : // Check if the gallery is not empty. ?>
+	<?php if ( ! empty( $gallery ) ) : // Check if the gallery is not empty. ?>
 
 		<div class="image-gallery">
 			<h3 class="attachment-meta-title"><?php _e( 'Gallery', 'compass' ); ?></h3>
