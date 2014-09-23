@@ -160,7 +160,7 @@ img.alignright,
 	text-align: center;
 	top: 34px;
 	width: 200px;
-	z-index: 100;
+	z-index: $screen-reader-z-index;
 }
 
 .off-screen,

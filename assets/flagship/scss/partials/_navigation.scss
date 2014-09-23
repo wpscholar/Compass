@@ -30,7 +30,7 @@
 		position: absolute;
 		transition: opacity .4s ease-in-out;
 		width: 200px;
-		z-index: 99;
+		z-index: $sub-menu-z-index;
 
 		a {
 			background-color: $nav-background-color;
@@ -177,7 +177,7 @@
 	position: fixed;
 	top: 0;
 	height: 100%;
-	z-index: 999999;
+	z-index: $sidr-z-index;
 	width: 260px;
 	overflow-x: hidden;
 	overflow-y: auto;
