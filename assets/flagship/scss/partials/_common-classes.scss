@@ -67,6 +67,22 @@
 	width: 1px;
 }
 
+/* Post Password Form
+--------------------------------------------- */
+
+.post-password-form {
+
+	input {
+		display: block;
+		width: 100%;
+	}
+
+	input[type="password"] {
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
 /* Titles
 --------------------------------------------- */
 
@@ -165,17 +181,17 @@ img.alignright,
 
 .off-screen,
 .screen-reader-text {
-    position: absolute;
-    margin: -1px;
-    padding: 0;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    border: 0;
+	position: absolute;
+	margin: -1px;
+	padding: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	border: 0;
 }
 
 .off-screen,
 .screen-reader-text:focus {
-    outline: 0;
+	outline: 0;
 }
