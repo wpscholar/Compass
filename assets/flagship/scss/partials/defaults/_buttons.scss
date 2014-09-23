@@ -16,16 +16,22 @@ input[type="submit"],
 }
 
 button:hover,
+button:focus,
 input:hover[type="button"],
+input:focus[type="button"],
 input:hover[type="reset"],
+input:focus[type="reset"],
 input:hover[type="submit"],
-.button:hover {
+input:focus[type="submit"],
+.button:hover,
+.button:focus  {
 	background-color: $base-button-background-hover-color;
 	color: $base-button-font-color;
 	display: inline-block;
 }
 
-.entry-content .button:hover {
+.entry-content .button:hover,
+.entry-content .button:focus {
 	color: $base-button-font-hover-color;
 }
 
