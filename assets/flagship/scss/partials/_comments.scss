@@ -1,8 +1,7 @@
 .comment-respond,
 .entry-comments,
 .entry-pings {
-	background-color: #fff;
-	box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+	background-color: $comments-background-color;
 	margin-bottom: 40px;
 }
 
@@ -19,23 +18,89 @@
 	font-size: $secondary-font-size;
 }
 
-li.comment {
-	background-color: #f5f5f5;
-	border: 2px solid #fff;
+.comment {
+	background-color: $comment-background-color;
+	border: 2px solid $comment-border-color;
 	border-right: 0;
 }
 
 .comment-content {
 	clear: both;
+
+	p,
+	> ol,
+	> ul,
+	> dl {
+		margin-bottom: 26px;
+	}
+
+	ol,
+	ul {
+		margin-left: 40px;
+	}
+
+	li {
+		margin-bottom: 2%;
+	}
+
+	ol > li {
+		list-style-type: decimal;
+	}
+
+	ul > li {
+		list-style-type: disc;
+	}
+
+	li ol,
+	li ul {
+		margin-top: 2%;
+	}
+
+	blockquote {
+		border-left: 7px solid $table-border-color;
+		margin: 30px 0 30px 5%;
+		padding: 0 5%;
+	}
+
+	table {
+		border-collapse: separate;
+		border: 1px solid $table-border-color;
+		border-left: 0;
+		margin: 20px 0;
+		width: 100%;
+	}
+
+	table th,
+	table td {
+		border-left: 1px solid $table-border-color;
+		border-top: 1px solid $table-border-color;
+		line-height: 1.2;
+		padding: 8px;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	table thead:first-child tr:first-child th,
+	table tbody:first-child tr:first-child th,
+	table tbody:first-child tr:first-child td {
+		border-top: 0 none;
+	}
+
+	code {
+		background: $code-background-color;
+		border: 1px solid $code-border-color;
+		color: $code-font-color;
+		padding: 2px 4px;
+	}
 }
 
 .comment-list {
-	li {
+	.comment {
 		margin-top: 24px;
 		padding: 32px;
 	}
 
-	li li {
+	.comment .comment {
 		margin-right: -32px;
 	}
 }
@@ -60,7 +125,7 @@ li.comment {
 }
 
 .form-allowed-tags {
-	background-color: #f5f5f5;
+	background-color: $allowed-tags-background-color;
 	font-size: $secondary-font-size;
 	padding: 24px;
 }
