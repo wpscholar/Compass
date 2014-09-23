@@ -96,14 +96,12 @@ add_action( 'after_setup_theme', 'compass_includes' );
 function compass_includes() {
 	//* Set the includes directories.
 	$includes_dir = get_template_directory() . '/includes';
-	$library_dir  = $includes_dir . '/library';
-	$vendor_dir   = $includes_dir . '/vendor';
 
 	//* Load the main init file in the library directory.
-	require_once $library_dir . '/init.php';
+	require_once $includes_dir . '/library/init.php';
 
 	//* Load all PHP files in the vendor directory.
-	require_once $vendor_dir . '/tha-theme-hooks.php';
+	require_once $includes_dir . '/vendor/tha-theme-hooks.php';
 
 	//* Load all PHP files in the includes directory.
 	require_once $includes_dir . '/compatibility.php';
