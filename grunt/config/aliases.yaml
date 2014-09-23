@@ -4,6 +4,7 @@
 build:
   - clean
   - 'build:css'
+  - 'build:font'
   - 'build:images'
   - 'build:js'
   - 'build:i18n'
@@ -14,6 +15,7 @@ build:
   - 'build:dependencies:php'
 'build:dependencies:css':
   - 'bowercopy:css'
+  - 'newer:copy:vendorcss'
 'build:dependencies:js':
   - 'bowercopy:js'
 'build:dependencies:php':
@@ -25,7 +27,6 @@ build:
 # Build CSS from Scss to production
 'build:css':
   - 'build:dependencies'
-  - 'rename:genericons'
   - 'rename:normalize'
   - 'newer:sass'
   - 'newer:autoprefixer'
@@ -35,7 +36,9 @@ build:
   - 'newer:cssmin'
   - 'newer:replace:style'
   - 'newer:copy:css'
-  - 'newer:copy:fonts'
+# Build Fonts from source to production
+'build:font':
+  - 'newer:copy:font'
 # Optimise images from source to production
 'build:images':
   - 'newer:imagemin'

@@ -11,7 +11,20 @@ module.exports = {
 			}
 		]
 	},
-	fonts: {
+	vendorcss: {
+		files: [
+			{
+				expand: true,
+				flatten: true,
+				src: [
+					'<%= paths.assets %>genericons/css/*'
+				],
+				dest: '<%= paths.theme %>css/',
+				filter: 'isFile'
+			}
+		]
+	},
+	font: {
 		files: [
 			{
 				expand: true,
@@ -20,7 +33,6 @@ module.exports = {
 					'<%= paths.assets %>genericons/font/*'
 				],
 				dest: '<%= paths.theme %>font/',
-				filter: 'isFile'
 			}
 		]
 	},
