@@ -7,7 +7,7 @@ textarea {
 	box-shadow: $form-box-shadow;
 	color: $form-font-color;
 	font-size: $form-font-size;
-	font-weight: 300;
+	font-weight: 400;
 	padding: 10px;
 	width: 100%;
 }
@@ -34,6 +34,6 @@ input {
 	@include placeholder {
 		color: $form-placeholder-color;
 		opacity: 1;
-		font-weight: 300;
+		font-weight: 400;
 	}
 }
