@@ -169,16 +169,6 @@ img.alignright,
 /* Screen Readers
 --------------------------------------------- */
 
-.skip-link .screen-reader-text:focus {
-	left: 50%;
-	margin-left: -100px;
-	padding: 10px 0;
-	text-align: center;
-	top: 34px;
-	width: 200px;
-	z-index: $screen-reader-z-index;
-}
-
 .off-screen,
 .screen-reader-text {
 	position: absolute;
@@ -189,9 +179,17 @@ img.alignright,
 	overflow: hidden;
 	clip: rect(0 0 0 0);
 	border: 0;
+
+	&:focus {
+		outline: 0;
+	}
 }
 
-.off-screen,
-.screen-reader-text:focus {
-	outline: 0;
+.skip-link .screen-reader-text:focus {
+	clip: auto;
+	height: auto;
+	margin: 20px;
+	padding: 15px;
+	width: auto;
+	z-index: $screen-reader-z-index;
 }
