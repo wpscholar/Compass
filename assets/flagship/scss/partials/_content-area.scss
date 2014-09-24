@@ -4,6 +4,7 @@
 .entry {
 	margin-bottom: 30px;
 	padding: 40px 40px 24px;
+	position: relative;
 }
 
 .content .entry {
@@ -11,18 +12,36 @@
 	border: 1px solid $entry-border-color;
 }
 
-.plural .content .sticky {
-	border: 1px solid $entry-sticky-border-color;
-}
-
 .entry-title {
 	font-weight: 600;
+
+	a {
+		color: $base-heading-color;
+	}
 }
 
-.entry-title a {
-	color: $base-heading-color;
-}
+.corner-ribbon {
+	overflow: hidden;
+	position: absolute;
+	right: -1px;
+	@include size($corner-ribbon-size);
+	top: -1px;
 
+	.ribbon-content {
+		background-color: $corner-ribbon-background-color;
+		color: $corner-ribbon-font-color;
+		font-size: .8em;
+		font-weight: 800;
+		margin: 0;
+		position: relative;
+		padding: 2px 7px;
+		left: -5px;
+		text-align: center;
+		top: 15px;
+		@include transform(rotate(45deg));
+		width: 120px;
+	}
+}
 
 .entry-title a:hover,
 .entry-title a:focus {

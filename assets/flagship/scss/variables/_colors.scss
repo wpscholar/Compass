@@ -23,6 +23,7 @@ $base-font-color:                      $dark-gray;
 $base-accent-color:                    $light-gray;
 $base-heading-color:                   $off-black;
 $base-heading-hover-color:             $seafoam;
+$base-blockquote-color:                $medium-gray;
 $base-link-color:                      $seafoam;
 $base-link-hover-color:                lighten($base-link-color, 40);
 $base-button-background-color:         $base-link-color;
@@ -111,6 +112,8 @@ $entry-meta-link-color:            $medium-gray;
 $entry-meta-link-hover-color:      $base-link-color;
 $entry-meta-link-border-color:     $base-link-color;
 $featured-media-background-color:  $medium-fog;
+$corner-ribbon-background-color:   $base-accent-color;
+$corner-ribbon-font-color:         $white;
 
 //* Icon Colors
 //------------------------------------------------------------------------------
@@ -148,6 +151,7 @@ $footer-widgets-background-color:               $dark-gray;
 $footer-widgets-font-color:                     $light-fog;
 $footer-widgets-heading-color:                  $white;
 $footer-widgets-link-color:                     $medium-fog;
+$footer-widgets-link-hover-color:               $base-link-color;
 $footer-widgets-link-border-color:              $base-link-color;
 $footer-widgets-border-color:                   $off-black;
 $footer-widgets-button-background-color:        $base-button-background-color;
