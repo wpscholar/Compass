@@ -256,17 +256,15 @@
 
 	.page-numbers {
 		@include transition (all .2s ease-in-out);
+		background: $pagination-background-color;
+		border: 1px solid $pagination-border-color;
 		border-radius: $base-border-radius;
 		display: inline-block;
 		padding: 10px 20px;
 	}
 
-	.next,
-	.prev,
 	.current {
-		background: $pagination-background-color;
-		border: 1px solid $pagination-border-color;
-		color: $pagination-link-color;
+		background: $pagination-current-background-color;
 	}
 
 	.next:before {
@@ -279,7 +277,6 @@
 
 	a {
 		color: $pagination-link-color;
-		border: 1px solid $pagination-border-color;
 
 		&:hover,
 		&:focus {
@@ -352,12 +349,17 @@
 		border-radius: $base-border-radius;
 		display: inline-block;
 		padding: 10px 20px;
-		background: $page-links-background-color;
 		border: 1px solid $page-links-border-color;
 		color: $page-links-link-color;
 	}
 
+	span {
+		background: $page-links-current-background-color;
+	}
+
 	a {
+		background: $page-links-background-color;
+
 		&:hover,
 		&:focus {
 			background: $page-links-background-hover-color;
