@@ -5,13 +5,17 @@
 	padding-bottom: 40px;
 	padding-top: 40px;
 
+	.widget-title {
+		color: $footer-widgets-heading-color;
+	}
+
 	a {
 		color: $footer-widgets-link-color;
 		border-bottom: 1px solid $footer-widgets-link-border-color;
 	}
 
 	input {
-		border: 1px solid $footer-widgets-border-color;
+		border-color: $footer-widgets-border-color;
 	}
 
 	button,
@@ -43,16 +47,19 @@
 		padding-bottom: 10px;
 	}
 
-	.widget {
-		margin-bottom: 30px;
-	}
-
 	p:last-child,
 	ul > li:last-child,
 	.widget:last-child {
 		margin-bottom: 0;
 	}
 
+	.entry {
+		border-bottom: 1px dotted $footer-widgets-border-color;
+	}
+
+	.search-form .button-wrap {
+		border-color: $footer-widgets-border-color;
+	}
 }
 
 .footer-widgets-1,
