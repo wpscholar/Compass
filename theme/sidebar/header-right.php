@@ -10,9 +10,8 @@
  */
 add_filter( 'wp_nav_menu_args', 'flagship_header_menu_args' );
 add_filter( 'wp_nav_menu', 'flagship_header_menu_wrap' );
-?>
 
-<?php if ( is_active_sidebar( 'header-right' ) ) : ?>
+if ( is_active_sidebar( 'header-right' ) ) : ?>
 
 	<div <?php hybrid_attr( 'header-right' ); ?>>
 
@@ -24,6 +23,7 @@ add_filter( 'wp_nav_menu', 'flagship_header_menu_wrap' );
 
 endif;
 
+//* Add a notice about the widget area for logged-in users if no widgets are added.
 if ( ! is_active_sidebar( 'header-right' ) && current_user_can( 'edit_theme_options' ) ) :
 
 	?>
