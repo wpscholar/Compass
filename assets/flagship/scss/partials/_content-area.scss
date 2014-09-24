@@ -15,6 +15,20 @@
 	border: 1px solid $entry-sticky-border-color;
 }
 
+.entry-title {
+	font-weight: 600;
+}
+
+.entry-title a {
+	color: $base-heading-color;
+}
+
+
+.entry-title a:hover,
+.entry-title a:focus {
+	color: $base-heading-hover-color;
+}
+
 .entry-content {
 	p,
 	> ol,
@@ -90,6 +104,9 @@
 		line-height: 1.2;
 	}
 
+	.search-form {
+		margin-bottom: 30px;
+	}
 }
 
 /* Entry Meta
