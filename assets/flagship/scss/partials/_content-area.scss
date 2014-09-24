@@ -20,6 +20,11 @@
 	}
 }
 
+.entry-title a:hover,
+.entry-title a:focus {
+	color: $base-heading-hover-color;
+}
+
 .corner-ribbon {
 	overflow: hidden;
 	position: absolute;
@@ -41,11 +46,6 @@
 		@include transform(rotate(45deg));
 		width: 120px;
 	}
-}
-
-.entry-title a:hover,
-.entry-title a:focus {
-	color: $base-heading-hover-color;
 }
 
 .entry-content {
