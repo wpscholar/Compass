@@ -13,7 +13,7 @@
 }
 
 .entry-title {
-	font-weight: 400;
+	font-weight: 600;
 
 	a {
 		color: $base-heading-color;
@@ -46,6 +46,10 @@
 		@include transform(rotate(45deg));
 		width: 120px;
 	}
+}
+
+.rtl .ribbon-content {
+	@include transform(rotate(-45deg));
 }
 
 .entry-content {
