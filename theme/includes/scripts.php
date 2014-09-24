@@ -21,6 +21,7 @@ add_action( 'wp_enqueue_scripts', 'compass_rtl_add_data' );
  */
 function compass_rtl_add_data() {
 	wp_style_add_data( 'style', 'rtl', 'replace' );
+	wp_style_add_data( 'style', 'suffix', hybrid_get_min_suffix() );
 }
 
 add_action( 'wp_enqueue_scripts', 'compass_enqueue_styles' );
