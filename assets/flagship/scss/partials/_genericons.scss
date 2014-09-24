@@ -7,6 +7,9 @@ a[href^="tel:"]::before,
 // Menu
 .menu-button::before,
 
+// Search
+.search-form button::before,
+
 // Media player
 .mejs-controls .mejs-button button::after,
 .mejs-overlay-button::after,
@@ -92,6 +95,12 @@ a[href^='tel:']::before {
 ---------------------- */
 .menu-button::before {
 	content: '\f419';
+}
+
+/* Search Icon
+---------------------- */
+.search-form button::before {
+	content: '\f400';
 }
 
 /* Post Icons
