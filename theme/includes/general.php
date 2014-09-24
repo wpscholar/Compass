@@ -77,8 +77,8 @@ function compass_do_sticky_banner() {
 		return;
 	}
 	?>
-	<div class="sticky-ribbon">
-		<p class="sticky"><?php _e( 'Sticky', 'compass' ); ?></p>
+	<div class="corner-ribbon sticky">
+		<p class="ribbon-content"><?php _e( 'Sticky', 'compass' ); ?></p>
 	</div>
 	<?php
 }
