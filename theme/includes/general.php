@@ -65,6 +65,24 @@ function compass_nav_fallback_cb( $args ) {
 	<?php
 }
 
+add_action( 'tha_entry_top', 'compass_do_sticky_banner' );
+/**
+ * Add markup for a sticky ribbon on sticky posts in archive views.
+ *
+ * @since   1.0.0
+ * @return  null if singular or the post isn't sticky
+ */
+function compass_do_sticky_banner() {
+	if ( is_singular() || ! is_sticky() ) {
+		return;
+	}
+	?>
+	<div class="sticky-ribbon">
+		<p class="sticky"><?php _e( 'Sticky', 'compass' ); ?></p>
+	</div>
+	<?php
+}
+
 add_action( 'wp_footer', 'compass_footer_creds' );
 /**
  * Displays footer credits for the theme.
