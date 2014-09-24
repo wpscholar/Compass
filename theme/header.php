@@ -26,8 +26,10 @@
 
 	<div id="site-container" class="site-container">
 
-		<div class="skip-link off-screen">
-			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'compass' ); ?></a>
+		<div class="skip-link">
+			<a class="button screen-reader-text" href="#content">
+				<?php _e( 'Skip to content (Press enter)', 'compass' ); ?>
+			</a>
 		</div><!-- .skip-link -->
 
 		<?php tha_header_before(); ?>
