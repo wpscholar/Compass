@@ -30,47 +30,32 @@
 --------------------------------------------- */
 
 .search-form {
-	border-collapse: separate;
-	display: table;
 	position: relative;
+	display: block;
 
-	input,
-	button {
+	input[type=search] {
+		@include appearance(none);
 		font-size: $base-font-size;
-		position: relative;
-	}
-
-	input {
-		display: table-cell;
-		border-radius: 3px 0 0 3px;
-		border-right: 0;
-		height: 45px;
-		padding: 0 10px;
+		padding: 10px;
+		margin: 0;
 		width: 100%;
 	}
 
-	button {
-		border-radius: 0;
-		height: 43px;
-		padding: 0 20px;
-	}
-
-	.button-wrap {
+	button[type=submit] {
+		@include position(absolute, 0 0 0 null);
 		border: 1px solid $base-button-background-color;
-		border-radius: 0 3px 3px 0;
-		display: table-cell;
-		height: 45px;
-		overflow: hidden;
-		vertical-align: middle;
-		white-space: nowrap;
-		width: 1%;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		outline: none;
+		padding: 0 20px;
 
-		button::before {
+		&::before {
 			font-size: $base-font-size;
 			line-height: $base-line-height;
 		}
 	}
 }
+
 
 /* Post Password Form
 --------------------------------------------- */
