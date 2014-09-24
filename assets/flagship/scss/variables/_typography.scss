@@ -4,14 +4,18 @@
 // Do not use the base theme font stlyes in the scss partial files! Set up your
 // theme's base font stlyes and then use scoped font values in your Sass partials.
 
+// Global Font Families
+//------------------------------------------------------------------------------
+$sans-serif:      'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$sans-serif-alt:  Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif:           Georgia, Times, 'Times New Roman', serif;
+$monospace:       Consolas, Monaco, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+
 // Base Font Families
 //------------------------------------------------------------------------------
-$sans-serif:         'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$sans-serif-alt:     Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$serif:              Georgia, Times, 'Times New Roman', serif;
-$monospace:          Consolas, Monaco, 'Andale Mono', 'DejaVu Sans Mono', monospace;
-$base-font-family:   $sans-serif;
-$header-font-family: $sans-serif-alt;
+$base-font-family:        $sans-serif;
+$header-font-family:      $sans-serif-alt;
+$blockquote-font-family:  $serif;
 
 // Base Font Sizes
 //------------------------------------------------------------------------------
