@@ -24,7 +24,7 @@ if ( post_password_required() || ( ! have_comments() && ! comments_open() && ! p
 
 		<div id="comments">
 
-			<h3 id="comments-number"><?php comments_number(); ?></h3>
+			<h3 class="comments-number" id="comments-number"><?php comments_number(); ?></h3>
 
 			<ol class="comment-list">
 				<?php wp_list_comments(
