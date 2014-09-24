@@ -250,11 +250,6 @@
 --------------------------------------------- */
 
 .pagination {
-	$pagination-border-color: $base-border-color;
-	$pagination-border: 1px solid $pagination-border-color;
-	$pagination-background: lighten($pagination-border-color, 10);
-	$pagination-hover-background: lighten($pagination-background, 5);
-	$pagination-color: $base-font-color;
 	margin-bottom: 30px;
 	text-align: center;
 	display: block;
@@ -269,9 +264,9 @@
 	.next,
 	.prev,
 	.current {
-		background: $pagination-background;
-		border: $pagination-border;
-		color: $pagination-color;
+		background: $pagination-background-color;
+		border: 1px solid $pagination-border-color;
+		color: $pagination-link-color;
 	}
 
 	.next:before {
@@ -283,13 +278,13 @@
 	}
 
 	a {
-		color: $pagination-color;
-		border: 1px solid $base-background-color;
+		color: $pagination-link-color;
+		border: 1px solid $pagination-border-color;
 
 		&:hover,
 		&:focus {
-			background: $pagination-hover-background;
-			border: $pagination-border;
+			background: $pagination-background-hover-color;
+			border: 1px solid $pagination-border-hover-color;
 		}
 	}
 }
@@ -308,17 +303,12 @@
 --------------------------------------------- */
 
 .nav-single {
-	$nav-single-border-color: $base-border-color;
-	$nav-single-border: 1px solid $nav-single-border-color;
-	$nav-single-background: lighten($nav-single-border-color, 10);
-	$nav-single-hover-background: lighten($nav-single-background, 5);
-	$nav-single-color: $base-font-color;
 	display: block;
 	clear: both;
 	overflow: hidden;
-	margin: 0;
-	padding: 0 0 40px;
-	font-size: $secondary-font-size;
+	margin-bottom: 30px;
+	padding: 0;
+	font-size: $pagination-font-size;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 
@@ -332,10 +322,10 @@
 
 	.nav-next a,
 	.nav-previous a {
-		background: $nav-single-background;
+		background: $nav-single-background-color;
 		border-radius: $base-border-radius;
-		border: $nav-single-border;
-		color: $nav-single-color;
+		border: 1px solid $nav-single-border-color;
+		color: $nav-single-link-color;
 		display: inline-block;
 		padding: 16px 20px 14px;
 	}
@@ -344,8 +334,8 @@
 	.nav-previous a:hover,
 	.nav-next a:focus,
 	.nav-previous a:focus {
-		background: $nav-single-hover-background;
-		color: $nav-single-color;
+		background: $nav-single-background-hover-color;
+		color: $nav-single-link-color;
 	}
 }
 
@@ -353,11 +343,6 @@
 --------------------------------------------- */
 
 .page-links {
-	$pagination-border-color: $base-border-color;
-	$pagination-border: 1px solid $pagination-border-color;
-	$pagination-background: lighten($pagination-border-color, 10);
-	$pagination-hover-background: lighten($pagination-background, 5);
-	$pagination-color: $base-font-color;
 	margin: 30px 0;
 	display: block;
 
@@ -367,16 +352,16 @@
 		border-radius: $base-border-radius;
 		display: inline-block;
 		padding: 10px 20px;
-		background: $pagination-background;
-		border: $pagination-border;
-		color: $pagination-color;
+		background: $page-links-background-color;
+		border: 1px solid $page-links-border-color;
+		color: $page-links-link-color;
 	}
 
 	a {
 		&:hover,
 		&:focus {
-			background: $pagination-hover-background;
-			color: $base-link-color;
+			background: $page-links-background-hover-color;
+			color: $page-links-link-color;
 		}
 	}
 }

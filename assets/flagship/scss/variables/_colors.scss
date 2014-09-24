@@ -74,6 +74,26 @@ $sidr-color:                     lighten($nav-link-color, 30);
 $sidr-hover-color:               $base-link-color;
 $sidr-subnav-color:              lighten($nav-link-color, 15);
 
+// Pagination Colors
+//------------------------------------------------------------------------------
+$pagination-background-color:        lighten($base-border-color, 10);
+$pagination-background-hover-color:  lighten($base-background-color, 5);
+$pagination-link-color:              $base-font-color;
+$pagination-border-color:            $base-border-color;
+$pagination-border-hover-color:      lighten($pagination-border-color, 5);
+
+$nav-single-background-color:        $pagination-background-color;
+$nav-single-background-hover-color:  $pagination-background-hover-color;
+$nav-single-link-color:              $pagination-link-color;
+$nav-single-border-color:            $pagination-border-color;
+$nav-single-border-hover-color:      $pagination-border-hover-color;
+
+$page-links-background-color:        $pagination-background-color;
+$page-links-background-hover-color:  $pagination-background-hover-color;
+$page-links-link-color:              $pagination-link-color;
+$page-links-border-color:            $pagination-border-color;
+$page-links-border-hover-color:      $pagination-border-hover-color;
+
 //* Entry Colors
 //------------------------------------------------------------------------------
 $entry-background-color:           $white;
@@ -124,6 +144,7 @@ $enews-button-font-hover-color:        $base-button-font-hover-color;
 //------------------------------------------------------------------------------
 $footer-widgets-background-color:               $dark-gray;
 $footer-widgets-font-color:                     $light-fog;
+$footer-widgets-heading-color:                  $white;
 $footer-widgets-link-color:                     $medium-fog;
 $footer-widgets-link-border-color:              $base-link-color;
 $footer-widgets-border-color:                   $off-black;
