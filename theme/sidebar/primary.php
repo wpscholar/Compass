@@ -20,7 +20,7 @@
 
 		<span id="sidebar-primary-title" class="screen-reader-text"><?php
 			//* Translators: %s is the sidebar name. This is the sidebar title shown to screen readers.
-			printf( _x( '%s Sidebar', 'sidebar title', 'compass' ), hybrid_get_sidebar_name( 'primary' ) );
+			printf( _x( '%s', 'sidebar title', 'compass' ), hybrid_get_sidebar_name( 'primary' ) );
 		?></span>
 
 		<?php if ( is_active_sidebar( 'primary' ) ) : ?>
