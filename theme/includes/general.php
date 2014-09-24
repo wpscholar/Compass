@@ -39,32 +39,6 @@ function compass_excerpt_length( $length ) {
 	return 60;
 }
 
-/**
- * Output primary nav menu fallback message.
- *
- * @since 1.0.0
- *
- * @param  array $args
- * @return string
- */
-function compass_nav_fallback_cb( $args ) {
-	if ( ! current_user_can( 'edit_theme_options' ) ) {
-		return;
-	}
-	?>
-	<p class="no-menu">
-		<?php _e( 'Ready to create your first menu?', 'compass' ); ?>
-
-		<?php
-		printf( '<a class="button" href="%s">%s</a>',
-			esc_url( admin_url( 'nav-menus.php' ) ),
-			__( 'Let\'s Get Started!', 'compass' )
-		);
-		?>
-	</p>
-	<?php
-}
-
 add_action( 'tha_entry_top', 'compass_do_sticky_banner' );
 /**
  * Add markup for a sticky ribbon on sticky posts in archive views.

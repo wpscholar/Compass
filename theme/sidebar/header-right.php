@@ -24,5 +24,27 @@ add_filter( 'wp_nav_menu', 'flagship_header_menu_wrap' );
 
 endif;
 
+if ( ! is_active_sidebar( 'header-right' ) && current_user_can( 'edit_theme_options' ) ) :
+
+	?>
+	<div <?php hybrid_attr( 'header-right' ); ?>>
+
+		<p class="no-menu">
+			<?php _e( 'This is a widget area! It\'s perfect for a custom menu.', 'compass' ); ?>
+
+			<?php
+			printf( '<a class="button" href="%s">%s</a>',
+				esc_url( admin_url( 'customize.php' ) ),
+				__( 'Customize Now', 'compass' )
+			);
+			?>
+		</p>
+
+	</div><!-- .header-right -->
+
+	<?php
+
+endif;
+
 remove_filter( 'wp_nav_menu_args', 'flagship_header_menu_args' );
 remove_filter( 'wp_nav_menu', 'flagship_header_menu_wrap' );
