@@ -11,7 +11,10 @@
 
 	a {
 		color: $footer-widgets-link-color;
-		border-bottom: 1px solid $footer-widgets-link-border-color;
+
+		&:hover {
+			color: $footer-widgets-link-hover-color;
+		}
 	}
 
 	input {
@@ -42,9 +45,8 @@
 	}
 
 	li {
-		border-bottom: 1px solid $footer-widgets-border-color;
-		margin-bottom: 10px;
-		padding-bottom: 10px;
+		margin-bottom: 5px;
+		padding-bottom: 5px;
 	}
 
 	p:last-child,
@@ -53,11 +55,12 @@
 	}
 
 	.entry {
-		border-bottom: 1px dotted $footer-widgets-border-color;
+		margin-bottom: 10px;
 	}
 
 	.search-form button {
-		border-color: $footer-widgets-border-color;
+		border-radius: $base-border-radius;
+		margin: 5px;
 	}
 }
 
