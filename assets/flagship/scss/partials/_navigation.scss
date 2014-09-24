@@ -10,15 +10,18 @@
 		text-align: left;
 	}
 
-	li a {
+	li > a {
 		color: $nav-link-color;
 		display: block;
+		letter-spacing: 1px;
 		padding: 25px 20px;
 	}
 
 	li a:hover,
 	li a:focus,
 	.current-menu-item > a,
+	.current-menu-ancestor > a,
+	.current-menu-parent > a,
 	.sub-menu .current-menu-item > a:hover
 	.sub-menu .current-menu-item > a:focus {
 		color: $nav-link-hover-color;
@@ -97,7 +100,7 @@
 
 .menu-header {
 
-	li a {
+	li > a {
 		color: $menu-header-color;
 		padding: 33px 20px;
 	}
@@ -134,12 +137,12 @@
 	background-color: $after-header-background-color;
 	border-bottom: 1px solid $after-header-border-color;
 
-	li a {
+	li > a {
 		color: $after-header-link-color;
 	}
 
-	li a:hover,
-	li a:focus,
+	li > a:hover,
+	li > a:focus,
 	.current-menu-item > a,
 	.sub-menu .current-menu-item > a:hover,
 	.sub-menu .current-menu-item > a:focus {
