@@ -50,4 +50,8 @@
 	float: right;
 	text-align: right;
 	@include span-columns(9);
+
+	.widget {
+		margin: 0;
+	}
 }
