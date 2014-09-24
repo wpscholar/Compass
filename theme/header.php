@@ -27,7 +27,7 @@
 	<div id="site-container" class="site-container">
 
 		<div class="skip-link">
-			<a class="button screen-reader-text" href="#content">
+			<a href="#content" class="button screen-reader-text">
 				<?php _e( 'Skip to content (Press enter)', 'compass' ); ?>
 			</a>
 		</div><!-- .skip-link -->
