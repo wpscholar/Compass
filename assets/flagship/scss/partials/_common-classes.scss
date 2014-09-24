@@ -21,29 +21,55 @@
 	margin-bottom: 0;
 }
 
+.archive-title {
+	font-size: $archive-title-size;
+	font-weight: 600;
+}
+
 /* Search Form
 --------------------------------------------- */
 
 .search-form {
-	overflow: hidden;
+	border-collapse: separate;
+	display: table;
+	position: relative;
+
+	input,
+	button {
+		font-size: $base-font-size;
+		position: relative;
+	}
+
+	input {
+		display: table-cell;
+		border-radius: 3px 0 0 3px;
+		border-right: 0;
+		height: 45px;
+		padding: 0 10px;
+		width: 100%;
+	}
 
 	button {
-		border: 0;
-		clip: rect(0, 0, 0, 0);
-		height: 1px;
-		margin: -1px;
-		padding: 0;
-		position: absolute;
-		width: 1px;
+		border-radius: 0;
+		height: 43px;
+		padding: 0 20px;
 	}
-}
 
-.header .search-form {
-	margin-top: 12px;
-}
+	.button-wrap {
+		border: 1px solid $base-button-background-color;
+		border-radius: 0 3px 3px 0;
+		display: table-cell;
+		height: 45px;
+		overflow: hidden;
+		vertical-align: middle;
+		white-space: nowrap;
+		width: 1%;
 
-.entry-content .search-form {
-	width: 50%;
+		button::before {
+			font-size: $base-font-size;
+			line-height: $base-line-height;
+		}
+	}
 }
 
 /* Post Password Form
@@ -60,39 +86,6 @@
 		display: block;
 		margin-bottom: 20px;
 	}
-}
-
-/* Titles
---------------------------------------------- */
-
-.archive-title {
-	font-size: $archive-title-size;
-	font-weight: 600;
-}
-
-.entry-title {
-	font-weight: 600;
-}
-
-.entry-title a,
-.sidebar .widget-title a {
-	color: $base-heading-color;
-}
-
-.entry-title a:hover,
-.entry-title a:focus {
-	color: $base-heading-hover-color;
-}
-
-.widget-title {
-	color: $base-font-color;
-	font-size: $widget-title-size;
-	font-weight: 600;
-	margin-bottom: 20px;
-}
-
-.footer-widgets .widget-title {
-	color: #fff;
 }
 
 /* Avatar
