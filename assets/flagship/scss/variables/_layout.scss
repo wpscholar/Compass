@@ -1,6 +1,16 @@
+// Screen sizes
+$smallest-screen:  320px;
+$smaller-screen:   480px;
+$small-screen:     768px;
+$medium-screen:    1023px;
+$large-screen:     1180px;
+
 // Breakpoints
-$tiny:      new-breakpoint(max-width 320 4);
-$iphone:    new-breakpoint(max-width 480px 4);
-$ipad-tall: new-breakpoint(max-width 768px 6);
-$ipad-wide: new-breakpoint(max-width 1023px 12);
-$laptop:    new-breakpoint(max-width 1180px 12);
+$smallest-screen-up:  new-breakpoint(max-width $smallest-screen  4);
+$smaller-screen-up:   new-breakpoint(max-width $smaller-screen   6);
+$small-screen-up:     new-breakpoint(max-width $small-screen     8);
+$medium-screen-up:    new-breakpoint(max-width $medium-screen   12);
+$large-screen-up:     new-breakpoint(max-width $large-screen    12);
+
+$sidr-item-padding:   20px;
+$corner-ribbon-size:  85px;

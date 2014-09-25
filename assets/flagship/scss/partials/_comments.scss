@@ -10,7 +10,7 @@
 	border: 1px solid $comment-border-color;
 	padding: 40px 40px 16px;
 
-	@include media($ipad-tall) {
+	@include media($small-screen-up) {
 		padding: 20px;
 	}
 }
@@ -27,7 +27,7 @@
 .entry-comments {
 	padding: 40px;
 
-	@include media($ipad-tall) {
+	@include media($small-screen-up) {
 		padding: 20px;
 	}
 

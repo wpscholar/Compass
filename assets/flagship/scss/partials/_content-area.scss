@@ -6,7 +6,7 @@
 	padding: 40px 40px 24px;
 	position: relative;
 
-	@include media($ipad-tall) {
+	@include media($small-screen-up) {
 		padding: 20px;
 	}
 }
@@ -198,7 +198,7 @@ span.comments-link {
 	margin: -40px -40px 26px;
 	overflow: hidden;
 
-	@include media($ipad-tall) {
+	@include media($small-screen-up) {
 		margin-left: -20px;
 		margin-right: -20px;
 		margin-top: -20px;

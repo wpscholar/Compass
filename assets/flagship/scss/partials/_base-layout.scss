@@ -16,15 +16,15 @@
 .wrap {
 	@include outer-container;
 
-	@include media($laptop) {
+	@include media($large-screen-up) {
 		max-width: 960px;
 	}
 
-	@include media($ipad-wide) {
+	@include media($medium-screen-up) {
 		max-width: 768px;
 	}
 
-	@include media($ipad-tall) {
+	@include media($small-screen-up) {
 		padding-left: 5%;
 		padding-right: 5%;
 	}
@@ -50,7 +50,7 @@
 
 .layout-1c-narrow .content {
 	@include span-columns(12);
-	@include pad(0 15%)
+	@include pad(0 15%);
 }
 
 /* Primary Sidebar
@@ -80,7 +80,7 @@
 	@include omega();
 }
 
-@include media($ipad-wide) {
+@include media($medium-screen-up) {
 	.content,
 	.layout-2c-r .content,
 	.sidebar-primary,
@@ -144,7 +144,7 @@
 .two-thirds {
 	float: left;
 
-	@include media($ipad-tall) {
+	@include media($small-screen-up) {
 		margin: 0;
 		width: 100%;
 	}

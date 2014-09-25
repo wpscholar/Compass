@@ -78,7 +78,7 @@
 .footer-widgets-3 {
 	@include span-columns(4);
 
-	@include media($ipad-wide) {
+	@include media($medium-screen-up) {
 		float: none;
 		margin-right: 0;
 		width: 100%;

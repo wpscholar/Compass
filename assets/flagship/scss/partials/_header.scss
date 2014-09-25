@@ -2,7 +2,7 @@
 	background-color: $header-background-color;
 	color: $header-font-color;
 
-	@include media($ipad-tall) {
+	@include media($small-screen-up) {
 		padding-left: 5%;
 		padding-right: 5%;
 	}
@@ -20,7 +20,7 @@
 	padding: 10px 0;
 	@include span-columns(3);
 
-	@include media($ipad-wide) {
+	@include media($medium-screen-up) {
 		float: none;
 		width: auto;
 		margin-right: 0;

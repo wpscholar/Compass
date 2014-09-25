@@ -15,7 +15,7 @@
 		display: block;
 		padding: 25px 20px;
 
-		@include media($laptop) {
+		@include media($large-screen-up) {
 			padding-left: 15px;
 			padding-right: 15px;
 		}
@@ -104,7 +104,7 @@
 
 .menu-header {
 
-	@include media($ipad-wide) {
+	@include media($medium-screen-up) {
 		display: none;
 	}
 
@@ -112,7 +112,7 @@
 		color: $menu-header-color;
 		padding: 33px 20px;
 
-		@include media($laptop) {
+		@include media($large-screen-up) {
 			padding-left: 15px;
 			padding-right: 15px;
 		}
@@ -149,7 +149,7 @@
 	background-color: $after-header-background-color;
 	border-bottom: 1px solid $after-header-border-color;
 
-	@include media($ipad-wide) {
+	@include media($medium-screen-up) {
 		display: none;
 	}
 
@@ -180,7 +180,7 @@
 	@include transition (all .2s ease-in-out);
 	cursor: pointer;
 
-	@include media($ipad-wide) {
+	@include media($medium-screen-up) {
 		display: block;
 	}
 

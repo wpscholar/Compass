@@ -13,7 +13,7 @@
 .author-box {
 	padding: 40px;
 
-	@include media($ipad-tall) {
+	@include media($small-screen-up) {
 		padding: 20px;
 	}
 }
