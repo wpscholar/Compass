@@ -5,6 +5,10 @@
 	margin-bottom: 30px;
 	padding: 40px 40px 24px;
 	position: relative;
+
+	@include media($ipad-tall) {
+		padding: 20px;
+	}
 }
 
 .content .entry {
@@ -193,6 +197,12 @@ span.comments-link {
 	display: block;
 	margin: -40px -40px 26px;
 	overflow: hidden;
+
+	@include media($ipad-tall) {
+		margin-left: -20px;
+		margin-right: -20px;
+		margin-top: -20px;
+	}
 
 	&.audio {
 		padding: 20px;

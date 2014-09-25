@@ -14,6 +14,11 @@
 		color: $nav-link-color;
 		display: block;
 		padding: 25px 20px;
+
+		@include media($laptop) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 
 	li a:hover,
@@ -99,9 +104,18 @@
 
 .menu-header {
 
+	@include media($ipad-wide) {
+		display: none;
+	}
+
 	li > a {
 		color: $menu-header-color;
 		padding: 33px 20px;
+
+		@include media($laptop) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 
 	.sub-menu {
@@ -115,7 +129,6 @@
 			margin-left: 0;
 		}
 	}
-
 }
 
 .no-menu {
@@ -135,6 +148,10 @@
 .menu-after-header {
 	background-color: $after-header-background-color;
 	border-bottom: 1px solid $after-header-border-color;
+
+	@include media($ipad-wide) {
+		display: none;
+	}
 
 	li > a {
 		color: $after-header-link-color;
@@ -162,6 +179,10 @@
 	border-radius: $base-border-radius;
 	@include transition (all .2s ease-in-out);
 	cursor: pointer;
+
+	@include media($ipad-wide) {
+		display: block;
+	}
 
 	&:hover {
 		background: lighten($menu-button-background-color, 5%);
@@ -251,7 +272,7 @@
 --------------------------------------------- */
 
 .pagination {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	text-align: center;
 	display: block;
 
@@ -261,6 +282,7 @@
 		border: 1px solid $pagination-border-color;
 		border-radius: $base-border-radius;
 		display: inline-block;
+		margin-bottom: 10px;
 		padding: 10px 20px;
 	}
 

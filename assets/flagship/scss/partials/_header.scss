@@ -2,6 +2,11 @@
 	background-color: $header-background-color;
 	color: $header-font-color;
 
+	@include media($ipad-tall) {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
 	.wrap {
 		padding: 20px 0;
 	}
@@ -14,6 +19,12 @@
 	float: left;
 	padding: 10px 0;
 	@include span-columns(3);
+
+	@include media($ipad-wide) {
+		float: none;
+		width: auto;
+		margin-right: 0;
+	}
 }
 
 .site-title {

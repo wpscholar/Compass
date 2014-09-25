@@ -9,6 +9,10 @@
 .entry-pings {
 	border: 1px solid $comment-border-color;
 	padding: 40px 40px 16px;
+
+	@include media($ipad-tall) {
+		padding: 20px;
+	}
 }
 
 .comments-number {
@@ -22,6 +26,10 @@
 
 .entry-comments {
 	padding: 40px;
+
+	@include media($ipad-tall) {
+		padding: 20px;
+	}
 
 	.comment-author {
 		margin-bottom: 0;

@@ -25,6 +25,10 @@
 		background-color: $widget-background-color;
 		border: 1px solid $base-border-color;
 		padding: 40px;
+
+		@include media($ipad-tall) {
+			padding: 20px;
+		}
 	}
 
 	.widget-title a {

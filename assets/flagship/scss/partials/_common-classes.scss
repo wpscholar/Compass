@@ -2,13 +2,20 @@
 --------------------------------------------- */
 
 .breadcrumbs {
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 .loop-meta,
 .author-box {
-	font-size: $base-font-size;
 	margin-bottom: 30px;
+}
+
+.author-box {
+	padding: 40px;
+
+	@include media($ipad-tall) {
+		padding: 20px;
+	}
 }
 
 .author-box-title {

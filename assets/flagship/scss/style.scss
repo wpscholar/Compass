@@ -48,10 +48,6 @@
 		- Latest Tweets
 		- Gravity Forms
 		- Jetpack
-	- Media Queries
-		- max-width: 1139px
-		- max-width: 1023px
-		- max-width: 767px
 
 */
 // Load Bourbon
@@ -161,9 +157,3 @@ Plugins
 /* Jetpack
 --------------------------------------------- */
 @import 'partials/jetpack';
-
-
-/*
-Media Queries
------------------------------------------------------------------------------ */
-@import 'partials/media-queries';

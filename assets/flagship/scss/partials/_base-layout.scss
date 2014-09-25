@@ -5,16 +5,29 @@
 	position: relative;
 }
 
-.site-inner,
-.wrap {
-	@include outer-container;
-}
-
 .site-inner {
 	clear: both;
 	padding-top: 30px;
 	word-wrap: break-word;
 	word-break: normal;
+}
+
+.site-inner,
+.wrap {
+	@include outer-container;
+
+	@include media($laptop) {
+		max-width: 960px;
+	}
+
+	@include media($ipad-wide) {
+		max-width: 768px;
+	}
+
+	@include media($ipad-tall) {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
 }
 
 /* Column Widths and Positions
@@ -67,22 +80,20 @@
 	@include omega();
 }
 
-/* Column Classes
---------------------------------------------- */
-.five-sixths,
-.four-sixths,
-.one-fourth,
-.one-half,
-.one-sixth,
-.one-third,
-.three-fourths,
-.three-sixths,
-.two-fourths,
-.two-sixths,
-.two-thirds {
-	float: left;
+@include media($ipad-wide) {
+	.content,
+	.layout-2c-r .content,
+	.sidebar-primary,
+	.sidebar-secondary,
+	.layout-2c-l .sidebar {
+		float: none;
+		margin-right: 0;
+		width: 100%;
+	}
 }
 
+/* Column Classes
+--------------------------------------------- */
 .one-half,
 .three-sixths,
 .two-fourths {
@@ -118,4 +129,23 @@
 .last {
 	clear: right;
 	@include omega();
+}
+
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+	float: left;
+
+	@include media($ipad-tall) {
+		margin: 0;
+		width: 100%;
+	}
 }
