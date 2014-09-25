@@ -19,7 +19,7 @@
 		<?php tha_sidebar_top(); ?>
 
 		<span id="sidebar-primary-title" class="screen-reader-text"><?php
-			//* Translators: %s is the sidebar name. This is the sidebar title shown to screen readers.
+			// Translators: %s is the sidebar name. This is the sidebar title shown to screen readers.
 			printf( _x( '%s', 'sidebar title', 'compass' ), hybrid_get_sidebar_name( 'primary' ) );
 		?></span>
 
@@ -33,7 +33,7 @@
 				'WP_Widget_Text',
 				array(
 					'title'  => __( 'Example Widget', 'compass' ),
-					/* Translators: The %s are placeholders for HTML, so the order can't be changed. */
+					// Translators: The %s are placeholders for HTML, so the order can't be changed.
 					'text'   => sprintf( __( 'This is an example widget to show how the Primary sidebar looks by default. You can add custom widgets from the %swidgets screen%s in the admin.', 'compass' ), current_user_can( 'edit_theme_options' ) ? '<a href="' . esc_url( admin_url( 'widgets.php' ) ) . '">' : '', current_user_can( 'edit_theme_options' ) ? '</a>' : '' ),
 					'filter' => true,
 				),

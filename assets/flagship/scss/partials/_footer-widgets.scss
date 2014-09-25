@@ -10,7 +10,11 @@
 	}
 
 	.widget {
-		padding: 0 30px;
+		padding: 0;
+
+		@include media($small-screen-up) {
+			padding: 0 30px;
+		}
 	}
 
 	a {

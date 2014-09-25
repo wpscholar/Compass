@@ -15,7 +15,7 @@
  * @since       1.0.0
  */
 
-//* Attributes for major structural elements.
+// Attributes for major structural elements.
 add_filter( 'hybrid_attr_header',      'flagship_attr_header_class'         );
 add_filter( 'hybrid_attr_content',     'flagship_attr_content_class'        );
 add_filter( 'hybrid_attr_footer',      'flagship_attr_footer_class'         );
@@ -23,12 +23,12 @@ add_filter( 'hybrid_attr_sidebar',     'flagship_attr_sidebar_class', 10, 2 );
 add_filter( 'hybrid_attr_menu',        'flagship_attr_menu_class',    10, 2 );
 add_filter( 'hybrid_attr_widget-menu', 'flagship_attr_widget_menu',   10, 2 );
 
-//* Header attributes.
+// Header attributes.
 add_filter( 'hybrid_attr_branding',         'flagship_attr_branding_class'   );
 add_filter( 'hybrid_attr_site-title',       'flagship_attr_site_title_class' );
 add_filter( 'hybrid_attr_site-description', 'flagship_attr_site_desc_class'  );
 
-//* Post-specific attributes.
+// Post-specific attributes.
 add_filter( 'hybrid_attr_entry-summary',   'flagship_attr_entry_summary_class' );
 
 /**
@@ -36,7 +36,7 @@ add_filter( 'hybrid_attr_entry-summary',   'flagship_attr_entry_summary_class' )
  *
  * @since  1.0.0
  * @access public
- * @param  array   $attr
+ * @param  array $attr
  * @return array
  */
 function flagship_attr_header_class( $attr ) {
@@ -49,7 +49,7 @@ function flagship_attr_header_class( $attr ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array   $attr
+ * @param  array $attr
  * @return array
  */
 function flagship_attr_content_class( $attr ) {
@@ -62,7 +62,7 @@ function flagship_attr_content_class( $attr ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array   $attr
+ * @param  array $attr
  * @return array
  */
 function flagship_attr_footer_class( $attr ) {
@@ -75,8 +75,8 @@ function flagship_attr_footer_class( $attr ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array   $attr
- * @param  string  $context
+ * @param  array $attr
+ * @param  string $context
  * @return array
  */
 function flagship_attr_sidebar_class( $attr, $context ) {
@@ -93,8 +93,8 @@ function flagship_attr_sidebar_class( $attr, $context ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array   $attr
- * @param  string  $context
+ * @param  array $attr
+ * @param  string $context
  * @return array
  */
 function flagship_attr_menu_class( $attr, $context ) {
@@ -111,8 +111,8 @@ function flagship_attr_menu_class( $attr, $context ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array   $attr
- * @param  string  $context
+ * @param  array $attr
+ * @param  string $context
  * @return array
  */
 function flagship_attr_widget_menu( $attr, $context ) {
@@ -127,7 +127,7 @@ function flagship_attr_widget_menu( $attr, $context ) {
 	$attr['role']  = 'navigation';
 
 	if ( ! empty( $context ) ) {
-		/* Translators: The %s is the menu name. This is used for the 'aria-label' attribute. */
+		// Translators: The %s is the menu name. This is used for the 'aria-label' attribute.
 		$attr['aria-label'] = esc_attr( sprintf( _x( '%s Menu', 'nav menu aria label', 'compass' ), ucwords( $context ) ) );
 	}
 
@@ -142,7 +142,7 @@ function flagship_attr_widget_menu( $attr, $context ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array   $attr
+ * @param  array $attr
  * @return array
  */
 function flagship_attr_branding_class( $attr ) {
@@ -155,8 +155,7 @@ function flagship_attr_branding_class( $attr ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array   $attr
- * @param  string  $context
+ * @param  array $attr
  * @return array
  */
 function flagship_attr_site_title_class( $attr ) {
@@ -169,8 +168,7 @@ function flagship_attr_site_title_class( $attr ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array   $attr
- * @param  string  $context
+ * @param  array $attr
  * @return array
  */
 function flagship_attr_site_desc_class( $attr ) {
@@ -183,7 +181,7 @@ function flagship_attr_site_desc_class( $attr ) {
  *
  * @since  1.0.0
  * @access public
- * @param  array   $attr
+ * @param  array $attr
  * @return array
  */
 function flagship_attr_entry_summary_class( $attr ) {

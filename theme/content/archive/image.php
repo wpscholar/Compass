@@ -18,7 +18,7 @@
 	<?php tha_entry_top(); ?>
 
 	<?php
-	//* Display a featured image if we can find something to display.
+	// Display a featured image if we can find something to display.
 	get_the_image(
 		array(
 			'size'          => 'compass-full',

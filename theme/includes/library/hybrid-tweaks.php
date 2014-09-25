@@ -10,7 +10,7 @@
  * @since       1.0.0
  */
 
-//* Remove the default Hybrid head elements.
+// Remove the default Hybrid head elements.
 remove_action( 'wp_head', 'hybrid_meta_template', 1 );
 remove_action( 'wp_head', 'hybrid_doctitle',      0 );
 
@@ -36,8 +36,8 @@ add_filter( 'hybrid_content_template_hierarchy', 'flagship_content_template_hier
  *
  * @since  1.0.0
  * @access public
- * @param  array
- * @return array
+ * @param  array $templates
+ * @return array $templates
  */
 function flagship_content_template_hierarchy( $templates ) {
 	if ( is_singular() || is_attachment() ) {
@@ -55,7 +55,7 @@ add_filter( 'hybrid_site_title', 'flagship_seo_site_title' );
  *
  * @since  1.0.0
  * @access public
- * @param  $title
+ * @param  string $title
  * @return string
  */
 function flagship_seo_site_title( $title ) {
@@ -71,7 +71,7 @@ add_filter( 'hybrid_site_description', 'flagship_seo_site_description' );
  *
  * @since  1.0.0
  * @access public
- * @param  $desc
+ * @param  string $desc
  * @return string
  */
 function flagship_seo_site_description( $desc ) {

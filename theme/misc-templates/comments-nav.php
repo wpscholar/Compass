@@ -11,7 +11,7 @@
  */
 ?>
 
-<?php if ( get_option( 'page_comments' ) && 1 < get_comment_pages_count() ) : // Check for paged comments. ?>
+<?php if ( get_option( 'page_comments' ) && 1 < get_comment_pages_count() ) : ?>
 
 	<nav class="comments-nav" role="navigation" aria-labelledby="comments-nav-title">
 
@@ -20,7 +20,7 @@
 		<?php previous_comments_link( _x( '&larr; Previous', 'comments navigation', 'compass' ) ); ?>
 
 		<span class="page-numbers"><?php
-			/* Translators: Comments page numbers. 1 is current page and 2 is total pages. */
+			// Translators: Comments page numbers. 1 is current page and 2 is total pages.
 			printf( __( 'Page %1$s of %2$s', 'compass' ), get_query_var( 'cpage' ) ? absint( get_query_var( 'cpage' ) ) : 1, get_comment_pages_count() );
 		?></span>
 
@@ -30,4 +30,4 @@
 
 	<?php
 
-endif; // End check for paged comments.
+endif;

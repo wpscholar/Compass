@@ -21,6 +21,3 @@
 			<?php edit_comment_link(); ?>
 		</header><!-- .comment-meta -->
 	</article>
-
-<?php
-//* No closing </li> is needed.  WordPress will know where to add it.

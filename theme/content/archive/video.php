@@ -18,7 +18,7 @@
 	<?php tha_entry_top(); ?>
 
 	<?php
-	//* Display a video if we have one.
+	// Display a video if we have one.
 	echo $video = hybrid_media_grabber(
 		array(
 			'type'        => 'video',

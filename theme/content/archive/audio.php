@@ -18,7 +18,7 @@
 	<?php tha_entry_top(); ?>
 
 	<?php
-	//* Display an audio player if we have an audio file.
+	// Display an audio player if we have an audio file.
 	echo $audio = hybrid_media_grabber(
 		array(
 			'type'        => 'audio',

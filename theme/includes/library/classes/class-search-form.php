@@ -16,14 +16,18 @@
 
 /**
  * Flagship Search Form Class.
- *
- * @since  1.0.0
- * @author Gary Jones
- * @return void
  */
 class Flagship_Search_Form {
+
 	protected $id;
 
+	/**
+	 * Get the search form elements and return them as a single string.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return string
+	 */
 	public function get_form() {
 		return sprintf(
 			'<form class="search-form" method="get" action="%s" role="search">%s</form>',
@@ -32,6 +36,13 @@ class Flagship_Search_Form {
 		);
 	}
 
+	/**
+	 * Get the search form label.
+	 *
+	 * @since  1.0.0
+	 * @access protected
+	 * @return string
+	 */
 	protected function get_label() {
 		$label = apply_filters( 'flagship_search_form_label', __( 'Search site', 'compass' ) );
 
@@ -42,6 +53,13 @@ class Flagship_Search_Form {
 		);
 	}
 
+	/**
+	 * Get the search form input field.
+	 *
+	 * @since  1.0.0
+	 * @access protected
+	 * @return string
+	 */
 	protected function get_input() {
 		$value = get_search_query() ? apply_filters( 'the_search_query', get_search_query() ) : '';
 		$placeholder = apply_filters( 'flagship_search_text', __( 'Search this website', 'compass' ) );
@@ -54,6 +72,13 @@ class Flagship_Search_Form {
 		);
 	}
 
+	/**
+	 * Get the search form button element.
+	 *
+	 * @since  1.0.0
+	 * @access protected
+	 * @return string
+	 */
 	protected function get_button() {
 		return sprintf(
 			'<button type="submit" aria-label="%s"><span class="screen-reader-text">%s</span></button>',
@@ -62,6 +87,13 @@ class Flagship_Search_Form {
 		);
 	}
 
+	/**
+	 * Generate a unique ID for each search form.
+	 *
+	 * @since  1.0.0
+	 * @access protected
+	 * @return string
+	 */
 	protected function get_id() {
 		if ( ! isset( $this->id ) ) {
 			$this->id = uniqid( 'searchform-' );

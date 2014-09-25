@@ -24,11 +24,11 @@ endif;
 
 if ( is_home() || is_archive() || is_search() ) :
 
-		loop_pagination(
-			array(
-				'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Page', 'compass' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next Page', 'compass' ) . '</span>',
-			)
-		);
+	loop_pagination(
+		array(
+			'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Page', 'compass' ) . '</span>',
+			'next_text' => '<span class="screen-reader-text">' . __( 'Next Page', 'compass' ) . '</span>',
+		)
+	);
 
 endif;

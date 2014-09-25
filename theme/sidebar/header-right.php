@@ -23,7 +23,7 @@ if ( is_active_sidebar( 'header-right' ) ) : ?>
 
 endif;
 
-//* Add a notice about the widget area for logged-in users if no widgets are added.
+// Add a notice about the widget area for logged-in users if no widgets are added.
 if ( ! is_active_sidebar( 'header-right' ) && current_user_can( 'edit_theme_options' ) ) :
 
 	?>

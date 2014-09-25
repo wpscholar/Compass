@@ -17,7 +17,7 @@
 
 		<span id="menu-after-header-title" class="menu-toggle off-screen">
 			<button class="screen-reader-text"><?php
-				/* Translators: %s is the nav menu name. This is the nav menu title shown to screen readers. */
+				// Translators: %s is the nav menu name. This is the nav menu title shown to screen readers.
 				printf( _x( '%s Menu', 'nav menu title', 'compass' ), hybrid_get_menu_location_name( 'after-header' ) );
 			?></button>
 		</span><!-- .menu-toggle -->

@@ -28,6 +28,3 @@
 
 		<?php hybrid_comment_reply_link(); ?>
 	</article>
-
-<?php
-//* No closing </li> is needed.  WordPress will know where to add it.

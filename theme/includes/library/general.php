@@ -89,14 +89,14 @@ add_action( 'tha_footer_before', 'flagship_footer_widgets' );
  * @return null Return early if there's no theme support.
  */
 function flagship_footer_widgets() {
-	//* Get the current theme's support for footer widgets.
+	// Get the current theme's support for footer widgets.
 	$footer_widgets = get_theme_support( 'flagship-footer-widgets' );
 
 	if ( ! $footer_widgets || ! isset( $footer_widgets[0] ) || ! is_numeric( $footer_widgets[0] ) ) {
 		return;
 	}
 
-	//* Return early if the first widget area has no widgets.
+	// Return early if the first widget area has no widgets.
 	if ( ! is_active_sidebar( 'footer-1' ) ) {
 		return;
 	}
