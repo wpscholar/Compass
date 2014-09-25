@@ -51,6 +51,10 @@
 .layout-1c-narrow .content {
 	@include span-columns(12);
 	@include pad(0 15%);
+
+	@include media($medium-screen-up) {
+		padding: 0;
+	}
 }
 
 /* Primary Sidebar
