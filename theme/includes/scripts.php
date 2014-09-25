@@ -36,7 +36,7 @@ function compass_enqueue_styles() {
 	$css_dir = trailingslashit( get_template_directory_uri() ) . 'css/';
 	$suffix  = hybrid_get_min_suffix();
 
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,600|Open+Sans:400,400italic,600,700', array(), '1.0.0' );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Raleway:400,600|Lato:400,400italic,700', array(), '1.0.0' );
 	wp_enqueue_style( 'genericons', $css_dir . "genericons{$suffix}.css", array(), '3.1' );
 }
 
