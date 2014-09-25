@@ -68,19 +68,15 @@
 	}
 }
 
-.footer-widgets-3 {
-	clear: right;
-	@include omega();
-}
+@include media($medium-screen-up) {
+	.footer-widgets-3 {
+		clear: right;
+		@include omega();
+	}
 
-.footer-widgets-1,
-.footer-widgets-2,
-.footer-widgets-3 {
-	@include span-columns(4);
-
-	@include media($medium-screen-up) {
-		float: none;
-		margin-right: 0;
-		width: 100%;
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3 {
+		@include span-columns(4);
 	}
 }

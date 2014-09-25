@@ -11,10 +11,10 @@
 }
 
 .author-box {
-	padding: 40px;
+	padding: 20px;
 
 	@include media($small-screen-up) {
-		padding: 20px;
+		padding: 40px;
 	}
 }
 

@@ -1,10 +1,12 @@
 .header {
 	background-color: $header-background-color;
 	color: $header-font-color;
+	padding-left: 5%;
+	padding-right: 5%;
 
 	@include media($small-screen-up) {
-		padding-left: 5%;
-		padding-right: 5%;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.wrap {
@@ -16,14 +18,14 @@
 --------------------------------------------- */
 
 .branding {
-	float: left;
+	float: none;
+	margin-right: 0;
 	padding: 10px 0;
-	@include span-columns(3);
+	width: auto;
 
 	@include media($medium-screen-up) {
-		float: none;
-		width: auto;
-		margin-right: 0;
+		float: left;
+		@include span-columns(3);
 	}
 }
 

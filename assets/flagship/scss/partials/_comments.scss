@@ -8,10 +8,10 @@
 .comment-respond,
 .entry-pings {
 	border: 1px solid $comment-border-color;
-	padding: 40px 40px 16px;
+	padding: 20px 20px 0;
 
 	@include media($small-screen-up) {
-		padding: 20px;
+		padding: 40px 40px 16px;
 	}
 }
 
@@ -25,10 +25,10 @@
 }
 
 .entry-comments {
-	padding: 40px;
+	padding: 20px;
 
 	@include media($small-screen-up) {
-		padding: 20px;
+		padding: 40px;
 	}
 
 	.comment-author {

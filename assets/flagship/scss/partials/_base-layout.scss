@@ -14,19 +14,23 @@
 
 .site-inner,
 .wrap {
-	@include outer-container;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 768px;
+	padding-left: 5%;
+	padding-right: 5%;
 
-	@include media($large-screen-up) {
-		max-width: 960px;
+	@include media($small-screen-up) {
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	@include media($medium-screen-up) {
-		max-width: 768px;
+		max-width: 960px;
 	}
 
-	@include media($small-screen-up) {
-		padding-left: 5%;
-		padding-right: 5%;
+	@include media($large-screen-up) {
+		max-width: 1140px;
 	}
 }
 
@@ -35,37 +39,48 @@
 
 /* Content
 -------------------- */
-.content {
-	@include span-columns(8);
-}
-
-.layout-2c-r .content {
-	float: right;
-	@include omega();
-}
-
-.layout-1c .content {
-	width: 100%;
-}
 
 .layout-1c-narrow .content {
-	@include span-columns(12);
-	@include pad(0 15%);
+	padding: 0;
+}
 
-	@include media($medium-screen-up) {
-		padding: 0;
+@include media($medium-screen-up) {
+
+	.layout-1c-narrow .content {
+		@include pad(0 15%);
 	}
-}
 
-/* Primary Sidebar
--------------------- */
-.sidebar {
-	@include span-columns(4);
-}
+	.layout-2c-l .content,
+	.layout-2c-r .content {
+		@include span-columns(8);
+	}
 
-.layout-2c-l .sidebar {
-	float: right;
-	@include omega();
+	.layout-2c-r .content {
+		float: right;
+		@include omega();
+	}
+
+	/* Primary Sidebar
+	-------------------- */
+	.sidebar {
+		@include span-columns(4);
+	}
+
+	.layout-2c-l .sidebar {
+		float: right;
+		@include omega();
+	}
+
+	/* Secondary Sidebar
+	-------------------- */
+	.sidebar-secondary {
+		@include span-columns(2);
+	}
+
+	.content-sidebar-sidebar .sidebar-secondary {
+		float: right;
+		@include omega();
+	}
 }
 
 .layout-1c .sidebar,
@@ -73,83 +88,45 @@
 	display: none;
 }
 
-/* Secondary Sidebar
--------------------- */
-.sidebar-secondary {
-	@include span-columns(2);
-}
-
-.content-sidebar-sidebar .sidebar-secondary {
-	float: right;
-	@include omega();
-}
-
-@include media($medium-screen-up) {
-	.content,
-	.layout-2c-r .content,
-	.sidebar-primary,
-	.sidebar-secondary,
-	.layout-2c-l .sidebar {
-		float: none;
-		margin-right: 0;
-		width: 100%;
-	}
-}
-
 /* Column Classes
 --------------------------------------------- */
-.one-half,
-.three-sixths,
-.two-fourths {
-	@include span-columns(6);
-}
 
-.one-third,
-.two-sixths {
-	@include span-columns(4);
-}
+@include media($small-screen-up) {
 
-.four-sixths,
-.two-thirds {
-	@include span-columns(8);
-}
+	.one-half,
+	.three-sixths,
+	.two-fourths {
+		@include span-columns(6);
+	}
 
-.one-fourth {
-	@include span-columns(3);
-}
+	.one-third,
+	.two-sixths {
+		@include span-columns(4);
+	}
 
-.three-fourths {
-	@include span-columns(9);
-}
+	.four-sixths,
+	.two-thirds {
+		@include span-columns(8);
+	}
 
-.one-sixth {
-	@include span-columns(2);
-}
+	.one-fourth {
+		@include span-columns(3);
+	}
 
-.five-sixths {
-	@include span-columns(10);
-}
+	.three-fourths {
+		@include span-columns(9);
+	}
 
-.last {
-	clear: right;
-	@include omega();
-}
+	.one-sixth {
+		@include span-columns(2);
+	}
 
-.five-sixths,
-.four-sixths,
-.one-fourth,
-.one-half,
-.one-sixth,
-.one-third,
-.three-fourths,
-.three-sixths,
-.two-fourths,
-.two-sixths,
-.two-thirds {
-	float: left;
+	.five-sixths {
+		@include span-columns(10);
+	}
 
-	@include media($small-screen-up) {
-		margin: 0;
-		width: 100%;
+	.last {
+		clear: right;
+		@include omega();
 	}
 }

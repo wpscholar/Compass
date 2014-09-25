@@ -3,11 +3,11 @@
 
 .entry {
 	margin-bottom: 30px;
-	padding: 40px 40px 24px;
+	padding: 20px;
 	position: relative;
 
 	@include media($small-screen-up) {
-		padding: 20px;
+		padding: 40px 40px 24px;
 	}
 }
 
@@ -195,13 +195,13 @@ span.comments-link {
 .featured-media {
 	background: $featured-media-background-color;
 	display: block;
-	margin: -40px -40px 26px;
+	margin: -20px -20px 26px;
 	overflow: hidden;
 
 	@include media($small-screen-up) {
-		margin-left: -20px;
-		margin-right: -20px;
-		margin-top: -20px;
+		margin-left: -40px;
+		margin-right: -40px;
+		margin-top: -40px;
 	}
 
 	&.audio {

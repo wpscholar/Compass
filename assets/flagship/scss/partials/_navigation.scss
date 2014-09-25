@@ -13,11 +13,11 @@
 	li > a {
 		color: $nav-link-color;
 		display: block;
-		padding: 25px 20px;
+		padding: 25px 15px;
 
 		@include media($large-screen-up) {
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 
@@ -103,18 +103,19 @@
 --------------------------------------------- */
 
 .menu-header {
+	display: none;
 
 	@include media($medium-screen-up) {
-		display: none;
+		display: block;
 	}
 
 	li > a {
 		color: $menu-header-color;
-		padding: 33px 20px;
+		padding: 33px 15px;
 
 		@include media($large-screen-up) {
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 
@@ -148,9 +149,10 @@
 .menu-after-header {
 	background-color: $after-header-background-color;
 	border-bottom: 1px solid $after-header-border-color;
+	display: none;
 
 	@include media($medium-screen-up) {
-		display: none;
+		display: block;
 	}
 
 	li > a {
@@ -170,7 +172,7 @@
 --------------------------------------------- */
 
 .menu-button {
-	display: none;
+	display: block;
 	float: right;
 	margin: 1rem 0 0;
 	padding: 8px 12px 10px;
@@ -181,7 +183,7 @@
 	cursor: pointer;
 
 	@include media($medium-screen-up) {
-		display: block;
+		display: none;
 	}
 
 	&:hover {
@@ -265,8 +267,8 @@
 			}
 		}
 	}
-
 }
+
 
 /* Pagination
 --------------------------------------------- */

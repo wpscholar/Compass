@@ -24,10 +24,10 @@
 	.widget {
 		background-color: $widget-background-color;
 		border: 1px solid $base-border-color;
-		padding: 40px;
+		padding: 20px;
 
 		@include media($small-screen-up) {
-			padding: 20px;
+			padding: 40px;
 		}
 	}
 
