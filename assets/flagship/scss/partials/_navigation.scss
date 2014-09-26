@@ -1,12 +1,12 @@
 .nav-menu {
 	clear: both;
-	font-size: $nav-font-size;
+	font-size: .001px;
 	line-height: 1;
 	width: 100%;
 
-
 	.menu-item {
 		display: inline-block;
+		font-size: $nav-font-size;
 		text-align: left;
 	}
 
