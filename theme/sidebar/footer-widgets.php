@@ -1,6 +1,6 @@
 <?php
 /**
- * Default Sidebar Template
+ * Footer Widgets Sidebar Template
  *
  * @package     Compass
  * @subpackage  HybridCore
@@ -12,10 +12,10 @@
 
 <div <?php hybrid_attr( sprintf( 'footer-widgets-%d', $counter ) ); ?>>
 
-	<?php if ( is_active_sidebar( sprintf( 'footer-%d', $counter ) ) ) : // If the sidebar has widgets. ?>
+	<?php if ( is_active_sidebar( sprintf( 'footer-%d', $counter ) ) ) : ?>
 
-		<?php dynamic_sidebar( sprintf( 'footer-%d', $counter ) ); // Displays the primary sidebar. ?>
+		<?php dynamic_sidebar( sprintf( 'footer-%d', $counter ) ); ?>
 
-	<?php endif; // End widgets check. ?>
+	<?php endif; ?>
 
 </div><!-- #sidebar-primary -->
