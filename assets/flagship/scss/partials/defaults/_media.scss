@@ -29,28 +29,36 @@ a:focus img {
 --------------------------------------------- */
 
 .gallery {
-	display: block;
-	clear: both;
-	overflow: hidden;
-	margin: 0 auto;
-}
-
-.gallery-row {
-	display: block;
-	clear: both;
-	overflow: hidden;
-	margin: 0 0 2%;
+	@include outer-container;
 }
 
 .gallery-item {
-	overflow: hidden;
-	float: left;
-	margin: 0;
-	padding: 0;
-	text-align: center;
 	list-style: none;
-	border: 0;
-	background: transparent;
+	margin: 0 0 2.35765%;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	text-align: center;
+
+	.gallery-caption {
+		background: transparentize($gallery-caption-background-color, .5);
+		color: $gallery-caption-font-color;
+		font-size: $gallery-caption-font-size;
+		max-height: 50%;
+		opacity: 0;
+		overflow: hidden;
+		padding: 10px;
+		position: absolute;
+		@include transition(all, .2s ease-in-out);
+		visibility: hidden;
+		width: 100%;
+	}
+
+	&:hover .gallery-caption {
+		visibility: visible;
+		opacity: 1;
+		@include transform(translate(0, -100%));
+	}
 }
 
 .gallery-icon a {
@@ -59,136 +67,69 @@ a:focus img {
 }
 
 .gallery-icon img {
-	border: 1px solid $base-border-color;
-	max-width: 90%;
+	width: 100%;
 	margin: 0 auto;
-	padding: 2%;
 }
 
-.gallery-caption {
-	margin: 5px 0 0;
-	font-size: 14px;
+/* Gallery Items
+-------------------- */
+
+@include media($small-screen-up) {
+
+	.gallery-columns-0 .gallery-item,
+	.gallery-columns-1 .gallery-item,
+	.gallery-col-0 .gallery-item,
+	.gallery-col-1 .gallery-item {
+		@include fill-parent();
+	}
+
+	.gallery-columns-2 .gallery-item,
+	.gallery-col-2 .gallery-item {
+		@include span-columns(6);
+		@include omega(2n);
+	}
+
+	.gallery-columns-3 .gallery-item,
+	.gallery-col-3 .gallery-item {
+		@include span-columns(4);
+		@include omega(3n);
+	}
+
+	.gallery-columns-4 .gallery-item,
+	.gallery-col-4 .gallery-item {
+		@include span-columns(3);
+		@include omega(4n);
+	}
+
+	.gallery-columns-5 .gallery-item,
+	.gallery-col-5 .gallery-item {
+		@include span-columns(2.4);
+		@include omega(5n);
+	}
+
+	.gallery-columns-6 .gallery-item,
+	.gallery-col-6 .gallery-item {
+		@include span-columns(2);
+		@include omega(6n);
+	}
+
+	.gallery-columns-7 .gallery-item,
+	.gallery-col-7 .gallery-item {
+		@include span-columns(1.71);
+		@include omega(7n);
+	}
+
+	.gallery-columns-8 .gallery-item,
+	.gallery-col-8 .gallery-item {
+		@include span-columns(1.5);
+		@include omega(8n);
+	}
+
+	.gallery-columns-9 .gallery-item,
+	.gallery-col-9 .gallery-item {
+		@include span-columns(1.33);
+		@include omega(9n);
+	}
+
 }
 
-/* Gallery item sizes depending on the number of columns */
-.gallery-col-0 .gallery-item {
-	width: 100%;
-}
-
-.gallery-col-1 .gallery-item {
-	width: 100%;
-}
-
-.gallery-col-2 .gallery-item {
-	width: 50%;
-}
-
-.gallery-col-3 .gallery-item {
-	width: 33.33%;
-}
-
-.gallery-col-4 .gallery-item {
-	width: 25%;
-}
-
-.gallery-col-5 .gallery-item {
-	width: 20%;
-}
-
-.gallery-col-6 .gallery-item {
-	width: 16.66%;
-}
-
-.gallery-col-7 .gallery-item {
-	width: 14.28%;
-}
-
-.gallery-col-8 .gallery-item {
-	width: 12.5%;
-}
-
-.gallery-col-9 .gallery-item {
-	width: 11.11%;
-}
-
-.gallery-col-10 .gallery-item {
-	width: 10%;
-}
-
-.gallery-col-11 .gallery-item {
-	width: 9.09%;
-}
-
-.gallery-col-12 .gallery-item {
-	width: 8.33%;
-}
-
-.gallery-col-13 .gallery-item {
-	width: 7.69%;
-}
-
-.gallery-col-14 .gallery-item {
-	width: 7.14%;
-}
-
-.gallery-col-15 .gallery-item {
-	width: 6.66%;
-}
-
-.gallery-col-16 .gallery-item {
-	width: 6.25%;
-}
-
-.gallery-col-17 .gallery-item {
-	width: 5.88%;
-}
-
-.gallery-col-18 .gallery-item {
-	width: 5.55%;
-}
-
-.gallery-col-19 .gallery-item {
-	width: 5.26%;
-}
-
-.gallery-col-20 .gallery-item {
-	width: 5%;
-}
-
-.gallery-col-21 .gallery-item {
-	width: 4.76%;
-}
-
-.gallery-col-22 .gallery-item {
-	width: 4.54%;
-}
-
-.gallery-col-23 .gallery-item {
-	width: 4.34%;
-}
-
-.gallery-col-24 .gallery-item {
-	width: 4.16%;
-}
-
-.gallery-col-25 .gallery-item {
-	width: 4%;     }
-
-.gallery-col-26 .gallery-item {
-	width: 3.84%;
-}
-
-.gallery-col-27 .gallery-item {
-	width: 3.7%;   }
-
-.gallery-col-28 .gallery-item {
-	width: 3.57%;
-}
-
-.gallery-col-29 .gallery-item {
-	width: 3.44%;
-}
-
-.gallery-col-30 .gallery-item {
-	width: 3.33%;
-}
