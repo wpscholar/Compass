@@ -13,19 +13,27 @@
 
 <?php get_header(); ?>
 
-<?php tha_content_before(); ?>
+<div id="site-inner" class="site-inner">
 
-<main <?php hybrid_attr( 'content' ); ?>>
+	<?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
-	<?php tha_content_top(); ?>
+	<?php tha_content_before(); ?>
 
-	<?php get_template_part( 'content/error', '404' ); ?>
+	<main <?php hybrid_attr( 'content' ); ?>>
 
-	<?php tha_content_bottom(); ?>
+		<?php tha_content_top(); ?>
 
-</main><!-- #content -->
+		<?php get_template_part( 'content/error', '404' ); ?>
 
-<?php tha_content_after(); ?>
+		<?php tha_content_bottom(); ?>
+
+	</main><!-- #content -->
+
+	<?php tha_content_after(); ?>
+
+	<?php hybrid_get_sidebar( 'primary' ); ?>
+
+</div><!-- #site-inner -->
 
 <?php
 get_footer();

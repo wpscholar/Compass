@@ -56,7 +56,3 @@
 		<?php tha_header_after(); ?>
 
 		<?php hybrid_get_menu( 'after-header' ); ?>
-
-		<div id="site-inner" class="site-inner">
-
-			<?php hybrid_get_menu( 'breadcrumbs' ); ?>

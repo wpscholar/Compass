@@ -13,33 +13,41 @@
 
 <?php get_header(); ?>
 
-<?php tha_content_before(); ?>
+<div id="site-inner" class="site-inner">
 
-<main <?php hybrid_attr( 'content' ); ?>>
+	<?php hybrid_get_menu( 'breadcrumbs' ); ?>
 
-	<?php tha_content_top(); ?>
+	<?php tha_content_before(); ?>
 
-	<?php if ( have_posts() ) : ?>
+	<main <?php hybrid_attr( 'content' ); ?>>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php tha_content_top(); ?>
 
-			<?php hybrid_get_content_template(); ?>
+		<?php if ( have_posts() ) : ?>
 
-			<?php comments_template( '', true ); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php endwhile; ?>
+				<?php hybrid_get_content_template(); ?>
 
-	<?php else : ?>
+				<?php comments_template( '', true ); ?>
 
-		<?php get_template_part( 'content/error' ); ?>
+			<?php endwhile; ?>
 
-	<?php endif; ?>
+		<?php else : ?>
 
-	<?php tha_content_bottom(); ?>
+			<?php get_template_part( 'content/error' ); ?>
 
-</main><!-- #content -->
+		<?php endif; ?>
 
-<?php tha_content_after(); ?>
+		<?php tha_content_bottom(); ?>
+
+	</main><!-- #content -->
+
+	<?php tha_content_after(); ?>
+
+	<?php hybrid_get_sidebar( 'primary' ); ?>
+
+</div><!-- #site-inner -->
 
 <?php
 get_footer();
