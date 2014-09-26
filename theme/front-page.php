@@ -27,15 +27,7 @@
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php if ( is_home() ) : ?>
-
-						<?php hybrid_get_content_template(); ?>
-
-					<?php else : ?>
-
-						<?php get_template_part( 'content/singular/page' ); ?>
-
-					<?php endif; ?>
+				<?php hybrid_get_content_template(); ?>
 
 			<?php endwhile; ?>
 
