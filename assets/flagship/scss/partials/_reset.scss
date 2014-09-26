@@ -13,13 +13,11 @@ input[type="search"] {
 .clearfix:before,
 .entry:before,
 .entry-content:before,
+.footer:before,
 .footer-widgets:before,
-.nav-primary:before,
-.nav-secondary:before,
+.header:before,
 .pagination:before,
 .site-container:before,
-.footer:before,
-.header:before,
 .site-inner:before,
 .wrap:before {
 	content: ' ';
@@ -30,13 +28,11 @@ input[type="search"] {
 .clearfix:after,
 .entry:after,
 .entry-content:after,
+.footer:after,
 .footer-widgets:after,
-.nav-primary:after,
-.nav-secondary:after,
+.header:after,
 .pagination:after,
 .site-container:after,
-.footer:after,
-.header:after,
 .site-inner:after,
 .wrap:after {
 	clear: both;
