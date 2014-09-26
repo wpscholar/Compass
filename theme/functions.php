@@ -62,19 +62,19 @@ function compass_setup() {
 		'chat',
 	);
 
-	// Enable support for Post Formats.
+	// Add support for Post Formats.
 	add_theme_support( 'post-formats', $formats );
 
-	// Enable support for Post Thumbnails on posts and pages.
+	// Add support for Post Thumbnails on posts and pages.
 	add_theme_support( 'post-thumbnails' );
 
 	// Add support for easer image usage.
 	add_theme_support( 'get-the-image' );
 
-	// Nicer [gallery] shortcode implementation.
+	// Add a nicer [gallery] shortcode implementation.
 	add_theme_support( 'cleaner-gallery' );
 
-	// Better captions for themes to style.
+	// Add better captions for themes to style.
 	add_theme_support( 'cleaner-caption' );
 
 	// Add support for loop pagination.
