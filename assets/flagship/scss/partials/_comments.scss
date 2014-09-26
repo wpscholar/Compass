@@ -42,23 +42,33 @@
 
 .comment-meta {
 	padding-bottom: 15px;
-}
 
-.comment .avatar {
-	display: block;
-	float: none;
-	margin-left: auto;
-	margin-right: auto;
+	a {
+		border-bottom: 1px solid $comment-meta-link-border-color;
+		color: $comment-meta-link-color;
 
-	@include media($smaller-screen-up) {
-		float: left;
-		margin: 0 16px 24px 0;
+		&:hover,
+		&:focus {
+			color: $comment-meta-link-hover-color;
+		}
 	}
 }
 
 .comment {
 	background-color: $comment-background-color;
 	border: 1px solid $comment-border-color;
+
+	.avatar {
+		display: block;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include media($smaller-screen-up) {
+			float: left;
+			margin: 0 16px 24px 0;
+		}
+	}
 }
 
 .comment-content {
@@ -100,6 +110,7 @@
 	}
 
 	table {
+		background: $comment-table-background-color;
 		border-collapse: separate;
 		border: 1px solid $table-border-color;
 		border-left: 0;
@@ -157,13 +168,6 @@
 			}
 		}
 	}
-}
-
-.comment-reply-link {
-	border: 1px solid $comment-border-color;
-	border-radius: $base-border-radius;
-	display: inline-block;
-	padding: 5px 10px;
 }
 
 .comment-respond label {
