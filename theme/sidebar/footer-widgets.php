@@ -18,4 +18,4 @@
 
 	<?php endif; ?>
 
-</div><!-- #sidebar-primary -->
+</div><!-- .footer-widgets-<?php echo intval( $counter ); ?> -->
