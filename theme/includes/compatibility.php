@@ -10,15 +10,15 @@
  * @since       1.0.0
  */
 
-add_action( 'after_setup_theme', 'compass_jetpack_setup', 15 );
+add_action( 'after_setup_theme', 'compass_jetpack_setup', 12 );
 /**
  * Make adjustments to the theme when Jetpack is installed and activated.
  *
  * @since  1.0.0
- * @return null if Jetpack isn't active
+ * @return void
  */
 function compass_jetpack_setup() {
-	// Return early if Jetpack isn't enabled.
+	// Return early if Jetpack isn't activated.
 	if ( ! class_exists( 'Jetpack' ) ) {
 		return;
 	}
@@ -30,10 +30,16 @@ function compass_jetpack_setup() {
 	) );
 
 	// Get the active jetpack modules.
-	$modules = get_option( 'jetpack_active_modules' );
+	$modules   = get_option( 'jetpack_active_modules' );
 
-	// Remove cleaner gallery if either Tiled Galleries or Carousel is active.
-	if ( count( array_intersect( array( 'tiled-gallery', 'carousel' ), (array) $modules ) ) > 0 ) {
+	// List all modules which conflict with the Cleaner Gallery feature.
+	$conflicts = array(
+		'tiled-gallery',
+		'carousel',
+	);
+
+	// Remove Cleaner Gallery support if any conflicting modules are active.
+	if ( count( array_intersect( $conflicts, (array) $modules ) ) !== 0 ) {
 		remove_theme_support( 'cleaner-gallery' );
 	}
 }
