@@ -11,6 +11,9 @@ module.exports = {
 		]
 	},
 	php: {
+		options: {
+			livereload: true
+		},
 		files: [
 			'<%= files.php %>'
 		],
@@ -20,6 +23,9 @@ module.exports = {
 		]
 	},
 	js: {
+		options: {
+			livereload: true
+		},
 		files: [
 			'<%= files.js %>'
 		],
@@ -31,6 +37,9 @@ module.exports = {
 		]
 	},
 	scss: {
+		options: {
+			livereload: true
+		},
 		files: [
 			'<%= files.scss %>'
 		],
