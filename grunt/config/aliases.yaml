@@ -1,0 +1,87 @@
+# Grunt aliases
+---
+# Build everything
+build:
+  - clean
+  - 'build:css'
+  - 'build:font'
+  - 'build:images'
+  - 'build:js'
+  - 'build:i18n'
+# Build depdencies
+'build:dependencies':
+  - 'build:dependencies:css'
+  - 'build:dependencies:js'
+  - 'build:dependencies:php'
+'build:dependencies:css':
+  - 'bowercopy:css'
+  - 'newer:copy:vendorcss'
+'build:dependencies:js':
+  - 'bowercopy:js'
+'build:dependencies:php':
+  - 'composer:update'
+  - 'clean:hybridcore'
+  - 'newer:copy:hybridcore'
+  - 'clean:themehookalliance'
+  - 'newer:copy:themehookalliance'
+# Build CSS from Scss to production
+'build:css':
+  - 'build:dependencies'
+  - 'rename:normalize'
+  - 'newer:sass'
+  - 'newer:autoprefixer'
+  - 'newer:wpcss:css'
+  - 'newer:replace:stylecomments'
+  - 'newer:cssjanus'
+  - 'newer:cssmin'
+  - 'newer:replace:style'
+  - 'newer:copy:css'
+# Build Fonts from source to production
+'build:font':
+  - 'newer:copy:font'
+# Optimise images from source to production
+'build:images':
+  - 'newer:imagemin'
+  - 'newer:copy:images'
+  - 'newer:copy:screenshot'
+# Build JavaScript from assets to production
+'build:js':
+  - 'clean:js'
+  - 'newer:concat:js'
+  - 'newer:uglify'
+  - 'newer:jsvalidate:theme'
+# Build internationalisation features
+'build:i18n':
+  - 'addtextdomain'
+  - 'makepot'
+# Check health of the project
+check:
+  - 'newer:scsslint'
+  - 'newer:jshint'
+  - 'newer:jsonlint'
+  - 'newer:jsvalidate'
+  - 'newer:jscs'
+  - 'newer:phplint'
+  - 'newer:phpcs'
+  - 'newer:checktextdomain'
+# Pre-commit hook task
+commit:
+  - 'check'
+# Default task
+default:
+  - watch
+newtheme:
+  - 'replace:packagename'
+  - 'clean'
+  - 'build'
+# Package the distribution files into a zip
+package:
+  - build
+  - "compress:dist"
+# Package developer files into a zip
+'package:dev':
+  - build
+  - "compress:dev"
+# Update reports
+reports:
+  - plato

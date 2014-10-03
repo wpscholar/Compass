@@ -1,0 +1,180 @@
+/* Flagship
+--------------------------------------------- */
+
+.breadcrumbs {
+	margin-bottom: 15px;
+}
+
+.loop-meta,
+.author-box {
+	margin-bottom: 30px;
+}
+
+.author-box {
+	padding: 20px;
+
+	@include media($small-screen-up) {
+		padding: 40px;
+	}
+}
+
+.author-box-title {
+	font-size: $secondary-font-size;
+	margin-bottom: 4px;
+}
+
+.loop-meta p:last-child,
+.author-box p:last-child {
+	margin-bottom: 0;
+}
+
+.archive-title {
+	font-size: $archive-title-size;
+	font-weight: 600;
+}
+
+/* Search Form
+--------------------------------------------- */
+
+.search-form {
+	position: relative;
+	display: block;
+
+	input[type=search] {
+		@include appearance(none);
+		font-size: $base-font-size;
+		padding: 10px;
+		margin: 0;
+		width: 100%;
+	}
+
+	button[type=submit] {
+		@include position(absolute, 0 0 0 null);
+		border: 1px solid $base-button-background-color;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		outline: none;
+		padding: 0 20px;
+
+		&::before {
+			font-size: $base-font-size;
+			line-height: $base-line-height;
+		}
+	}
+}
+
+
+/* Post Password Form
+--------------------------------------------- */
+
+.post-password-form {
+
+	input {
+		display: block;
+		width: 100%;
+	}
+
+	input[type="password"] {
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+/* Avatar
+--------------------------------------------- */
+
+.avatar {
+	border-radius: 100%;
+	float: left;
+}
+
+.alignleft .avatar,
+.author-box .avatar {
+	margin-right: 24px;
+}
+
+.format-status .avatar {
+	margin-right: 20px;
+}
+
+/* WordPress
+--------------------------------------------- */
+
+.alignleft {
+	float: left;
+	text-align: left;
+}
+
+.alignright {
+	float: right;
+	text-align: right;
+
+	.avatar {
+		margin-left: 24px;
+	}
+}
+
+a.alignleft,
+a.alignright {
+	max-width: 100%;
+}
+
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto 26px;
+}
+
+img.alignnone,
+.alignnone {
+	margin-bottom: 26px;
+}
+
+a.alignleft,
+img.alignleft,
+.wp-caption.alignleft {
+	margin: 0 24px 26px 0;
+}
+
+a.alignright,
+img.alignright,
+.wp-caption.alignright {
+	margin: 0 0 26px 24px;
+}
+
+.wp-caption img {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/* Screen Readers
+--------------------------------------------- */
+
+.off-screen,
+.screen-reader-text {
+	position: absolute;
+	margin: -1px;
+	padding: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	border: 0;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+.skip-link .screen-reader-text:focus {
+	clip: auto;
+	height: auto;
+	margin: 20px;
+	padding: 15px;
+	width: auto;
+	z-index: $screen-reader-z-index;
+}

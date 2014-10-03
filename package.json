@@ -1,0 +1,88 @@
+{
+  "name": "compass",
+  "capitalname": "Compass",
+  "version": "1.0.0",
+  "copyright": "2014",
+  "license": "GPL-2.0+",
+  "private": true,
+  "bugs": {
+    "url": "http://flagshipwp.com/support",
+    "email": "support@flagshipwp.com"
+  },
+  "contributors": [
+    {
+      "name": "Flagship",
+      "url": "http://flagshipwp.com"
+    },
+    {
+      "name": "Robert Neu",
+      "url": "http://flagshipwp.com"
+    },
+    {
+      "name": "Gary Jones",
+      "url": "http://gamajo.com"
+    }
+  ],
+  "theme": {
+    "name": "Compass",
+    "uri": "http://flagshipwp.com/themes/compass/",
+    "description": "The most advanced WordPress Starter theme ever created. Built with Hybrid Core, Theme Hook Alliance, Bourbon, and Neat.",
+    "author": "Flagship",
+    "authoruri": "http://flagshipwp.com",
+    "tags": "white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, 'seo-friendly', microformats, post-formats, sticky-post, translation-ready",
+    "license": "GPL-2.0+",
+    "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
+    "textdomain": "compass",
+    "domainpath": "/languages"
+  },
+  "pot": {
+    "reportmsgidbugsto": "Robert Neu <translations@flagshipwp.com>",
+    "lasttranslator": "Robert Neu <translations@flagshipwp.com>",
+    "languageteam": "Robert Neu <translations@flagshipwp.com>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:flagshipwp/compass.git"
+  },
+  "devDependencies": {
+    "grunt": "",
+    "grunt-autoprefixer": "",
+    "grunt-bowercopy": "",
+    "grunt-bump": "",
+    "grunt-checktextdomain": "",
+    "grunt-composer": "",
+    "grunt-contrib-clean": "",
+    "grunt-contrib-compress": "",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-copy": "",
+    "grunt-contrib-cssmin": "",
+    "grunt-contrib-imagemin": "",
+    "grunt-contrib-jshint": "",
+    "grunt-contrib-rename": "",
+    "grunt-contrib-sass": "",
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-watch": "",
+    "grunt-cssjanus": "",
+    "grunt-githooks": "",
+    "grunt-jsbeautifier": "",
+    "grunt-jscs": "",
+    "grunt-jsonlint": "",
+    "grunt-jsvalidate": "",
+    "grunt-mkdir": "",
+    "grunt-newer": "",
+    "grunt-phpcpd": "",
+    "grunt-phpcs": "",
+    "grunt-phplint": "",
+    "grunt-phpmd": "",
+    "grunt-plato": "",
+    "grunt-replace": "",
+    "grunt-scss-lint": "",
+    "grunt-stylestats": "",
+    "grunt-wp-css": "cedaro/grunt-wp-css#develop",
+    "grunt-wp-i18n": "",
+    "load-grunt-config": "",
+    "load-grunt-tasks": "",
+    "semver": "",
+    "time-grunt": ""
+  }
+}

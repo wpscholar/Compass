@@ -1,0 +1,135 @@
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+	max-width: 100%;
+	height: auto;
+}
+
+img {
+	height: auto;
+	margin: 0;
+	max-width: 100%;
+}
+
+a:hover img,
+a:focus img {
+	@include transition (opacity .2s ease-in-out);
+	opacity: .9;
+}
+
+.featured-content img,
+.gallery img {
+	width: auto;
+}
+
+/* Gallery
+--------------------------------------------- */
+
+.gallery {
+	@include outer-container;
+}
+
+.gallery-item {
+	list-style: none;
+	margin: 0 0 2.35765%;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	text-align: center;
+
+	.gallery-caption {
+		background: transparentize($gallery-caption-background-color, .5);
+		color: $gallery-caption-font-color;
+		font-size: $gallery-caption-font-size;
+		max-height: 50%;
+		opacity: 0;
+		overflow: hidden;
+		padding: 10px;
+		position: absolute;
+		@include transition(all, .2s ease-in-out);
+		visibility: hidden;
+		width: 100%;
+	}
+
+	&:hover .gallery-caption {
+		visibility: visible;
+		opacity: 1;
+		@include transform(translate(0, -100%));
+	}
+}
+
+.gallery-icon a {
+	display: block;
+	line-height: 0;
+}
+
+.gallery-icon img {
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* Gallery Items
+-------------------- */
+
+@include media($small-screen-up) {
+
+	.gallery-columns-0 .gallery-item,
+	.gallery-columns-1 .gallery-item,
+	.gallery-col-0 .gallery-item,
+	.gallery-col-1 .gallery-item {
+		@include fill-parent();
+	}
+
+	.gallery-columns-2 .gallery-item,
+	.gallery-col-2 .gallery-item {
+		@include span-columns(6);
+		@include omega(2n);
+	}
+
+	.gallery-columns-3 .gallery-item,
+	.gallery-col-3 .gallery-item {
+		@include span-columns(4);
+		@include omega(3n);
+	}
+
+	.gallery-columns-4 .gallery-item,
+	.gallery-col-4 .gallery-item {
+		@include span-columns(3);
+		@include omega(4n);
+	}
+
+	.gallery-columns-5 .gallery-item,
+	.gallery-col-5 .gallery-item {
+		@include span-columns(2.4);
+		@include omega(5n);
+	}
+
+	.gallery-columns-6 .gallery-item,
+	.gallery-col-6 .gallery-item {
+		@include span-columns(2);
+		@include omega(6n);
+	}
+
+	.gallery-columns-7 .gallery-item,
+	.gallery-col-7 .gallery-item {
+		@include span-columns(1.71);
+		@include omega(7n);
+	}
+
+	.gallery-columns-8 .gallery-item,
+	.gallery-col-8 .gallery-item {
+		@include span-columns(1.5);
+		@include omega(8n);
+	}
+
+	.gallery-columns-9 .gallery-item,
+	.gallery-col-9 .gallery-item {
+		@include span-columns(1.33);
+		@include omega(9n);
+	}
+
+}
+

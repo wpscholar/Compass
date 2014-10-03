@@ -1,0 +1,40 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+	background-color: $base-button-background-color;
+	border: 0;
+	border-radius: $base-border-radius;
+	color: $base-button-font-color;
+	cursor: pointer;
+	font-size: $secondary-font-size;
+	font-weight: 400;
+	padding: 16px 24px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+button:hover,
+button:focus,
+input:hover[type="button"],
+input:focus[type="button"],
+input:hover[type="reset"],
+input:focus[type="reset"],
+input:hover[type="submit"],
+input:focus[type="submit"],
+.button:hover,
+.button:focus {
+	background-color: $base-button-background-hover-color;
+	color: $base-button-font-color;
+	display: inline-block;
+}
+
+.entry-content .button:hover,
+.entry-content .button:focus {
+	color: $base-button-font-hover-color;
+}
+
+.button {
+	display: inline-block;
+}
