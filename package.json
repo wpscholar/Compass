@@ -15,6 +15,10 @@
       "url": "http://flagshipwp.com"
     },
     {
+      "name": "Robert Neu",
+      "url": "http://flagshipwp.com"
+    },
+    {
       "name": "Gary Jones",
       "url": "http://gamajo.com"
     }
@@ -22,10 +26,10 @@
   "theme": {
     "name": "Compass",
     "uri": "http://flagshipwp.com/themes/compass/",
-    "description": "A Starter Theme built using Hybrid Core, Theme Hook Alliance, Bourbon, and Neat.",
+    "description": "The most advanced WordPress Starter theme ever created. Built with Hybrid Core, Theme Hook Alliance, Bourbon, and Neat.",
     "author": "Flagship",
     "authoruri": "http://flagshipwp.com",
-    "tags": "white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready",
+    "tags": "white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, 'seo-friendly', microformats, post-formats, sticky-post, translation-ready",
     "license": "GPL-2.0+",
     "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
     "textdomain": "compass",
