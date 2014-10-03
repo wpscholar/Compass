@@ -1,12 +1,18 @@
 # Flagship Compass
 
-The most advanced WordPress Starter theme ever created. Compass will revolutionize your theme development workflow by removing all the guesswork and letting you focus on the fun stuff. Built using the latest and  greatest web development tools like Grunt, Sass, Bourbon, and Hybrid Core.
+The most advanced WordPress Starter theme ever created. Compass will revolutionize your theme development workflow by removing all the guesswork and letting you focus on the fun stuff. Built using the latest and greatest web development tools like Grunt, Sass, Bourbon, and Hybrid Core.
+
+## Credits
+
+The non-dependency PHP and styles were mostly written by [Robert Neu](http://flagshipwp.com).
+
+The Grunt development was mostly written by [Gary Jones](http://gamajo.com).
 
 ## Project Development
 
 This documentation is by no means complete and will be expanded upon in the near future. In order to get up and running, you'll need to install a few key components. We've put together a screencast which will walk you through the setup process and we also have an entire pulic [forum dedicated to Compass](http://community.flagshipwp.com/category/themes/compass) where you can register and learn from other developers who are using it to build cool stuff.
 
-## Project Structure
+### Project Structure
 
     .
     ├── assets
@@ -241,8 +247,17 @@ Once the project is passing the `grunt check` without failures, you can run `gru
 
 ## Package (`grunt package`)
 
-(To be written)
+After a theme is built, you may wish to package it up as a zip file so it can be distributed. Compass includes a `package` task which does a complete build and then zips up the `theme/` directory into a zip file and places it into the `dist/` directory.
+
+There is also an optional `compress:dev` task, which does similar, but instead of just the theme directory, it takes the parent project root directory and zips that up. This is then suitable for further development work, for those who don't have access to the original repo.
 
 ## Reports
 
-(To be written - plato, stylestats, phpmd, phpcpd !phpdcd)
+As well as the checks, this project includes tools for performing static analysis of the code. 
+
+* `grunt stylestats` - displays a list of statistics for the style.css such as the number of rules, selectors, unique font-sizes, unique colours, ID selectors, float properties, important keywords and media queries.
+* `grunt plato` - this generates a collection of files in the `reports/plato` directory with subdirectories of assets and grunt. These files contain analysis of the JavaScript files in those groups. This data is historically tracked, so each run of this task adds a new set of data points so that code quality can be tracked over time.
+* `grunt phpmd` - PHP Mess Detector looks at the complexity of PHP code, and identifies areas of potential concern. It uses the configuration in `phpmd.xml` and saves the results to `logs/phpmd.log`.
+* `grunt phpcpd` - PHP Copy Paste Detector looks for blocks of duplicate code, so that they could potentially be refactored to keep the code DRY (_don't repeat yourself_). The results are saved as an XML file (a limitation on _phpcpd_ itself) in `logs/phpcpd.log`.
+
+One similar tool that is not used is PHPDCD (PHP Dead Code Detector). That looks for functions that are defined but never called. Due to event-driven approach taken by WordPress in calling many functions via action hooks and filters, this currently produces far too many false positives to be useful.
