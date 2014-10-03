@@ -14,6 +14,54 @@ Compass uses [Ruby](https://www.ruby-lang.org/en/) and Sass to build the `.scss`
 
 Compass also uses [Composer](https://getcomposer.org/) to manage PHP dependencies such as [Hybrid Core](https://github.com/justintadlock/hybrid-core) and [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) support. [Install Composer](https://getcomposer.org/doc/00-intro.md) to enable this functionality.
 
+Make sure you have `~/.composer/vendor/bin/` or `/usr/local/bin/` (if you moved it) in your path by running:
+
+~~~sh
+composer --version
+~~~
+
+If you don't get a version number, then you can add the path with:
+
+~~~sh
+export PATH="$PATH:~/path/to/your/composer/bin/"
+~~~
+
+After Composer is installed, you can optionally add some global (system-wide) packages that can be used across multiple projects for analyzng your PHP code. None of the following packages are used directly within this project, but you may wish to experiment with them later.
+
+Run the following commands in a command line terminal:
+
+~~~sh
+composer global require "phploc/phploc=*"
+composer global require "phpmd/phpmd=*"
+composer global require "phpunit/phpunit=*"
+composer global require "sebastian/phpcpd=*"
+composer global require "sebastian/phpdcd=*"
+composer global config -e # add ,"minimum-stability":"dev"
+composer global require 'halleck45/phpmetrics=@dev'
+~~~
+
+### PHP_CodeSniffer
+
+One tool that is used in this project is the [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) (PHPCS), along with the [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards) sniffs. 
+
+To install PHP_CodeSniffer and the WordPress standards:
+
+~~~sh
+cd ~/path/to/install/dir
+git clone https://github.com/squizlabs/PHP_CodeSniffer.git phpcs
+git clone https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git wpcs
+cd phpcs
+scripts/phpcs --config-set installed_paths ../wpcs
+~~~
+
+Then edit your `$PATH` environment variable to include the location of the phpcs script. For example, add the following to your `~/.bashrc` (or `~/.profile` or `~/.bash_profile`)
+
+~~~sh
+export PATH="$PATH:~/path/to/install/dir/phpcs/scripts/"
+~~~
+
+This tool can be used directly, thought the `grunt phpcs` is already configured to use the correct standard.
+
 ### Node, NPM and Grunt
 
 Finally, Compass requires Node.js to run the Grunt task runner, so [download Node.js](http://nodejs.org/download/) and install it.
@@ -33,8 +81,6 @@ npm install -g jshint
 After unzipping or cloning this repo, `cd` into it and run `npm install`. This will then install all of the project-specific tasks.
 
 To check everything appears to have installed, run `grunt check`. This will perform a series of checks on the project code to verify its health for syntax errors and code standards.
-
-You'll also need to [install Composer](https://getcomposer.org/doc/00-intro.md).
 
 ### Troubleshooting
 If, when running a task (`grunt ...`) you get an error about _Cannot find module 'rimraf'_, then do the following:
@@ -64,7 +110,7 @@ In this project, basic tasks are stored in individual JavaScript files inside th
 
 The list of virtual tasks is stored in [grunt/config/aliases.yaml](grunt/config/aliases.yaml).
 
-This approach is different to how most grunt configurations are setup, which usually have a single `Gruntfile.js` with all of the task configs inside. The `Gruntfile.js` that this project has is noticeably small, and just sets some variables for the project path structure and filesets. You should update this if your project directory structure changes, or you change the name of the author's assets directory. It then includes all task configs inside the `grunt/configs/` directory, so nothing there needs to be updated when a new task is added.
+This approach is different to how most Grunt configurations are setup, which usually have a single `Gruntfile.js` with all of the task configs inside. The `Gruntfile.js` that this project has is noticeably small, and just sets some variables for the project path structure and filesets. You should update this if your project directory structure changes, or you change the name of the author's assets directory. It then includes all task configs inside the `grunt/configs/` directory, so nothing there needs to be updated when a new task is added.
 
 The advantages of having the Grunt configs in separate modular files are:
 
@@ -102,7 +148,7 @@ The building of the CSS is made up of several small tasks that do incremental ch
 * Renaming `normalize.css` to `_normalize.scss` so it can be referenced as a Sass partial.
 * Building the Sass. This looks at the `style.scss` inside the `assets` author directory, and follows the chain of `@import`'s to pull in the dependencies, mixins, placeholders, variables and modular partials to generate a `style.css`. The banner with the style sheet file headers is also added at this point, and it takes values from the `package.json` file. The generated style sheet file is held in a temporary directory called `tmp/` since it then undergoes further changes.
 * Apply autoprefixing. Vendor prefixes may be needed for some CSS properties, but knowing which are needed for which browser and version, and having to manually update them if the minimum requirements change, is a pain. The autoprefixer task is configured with the browser requirements such as IE >= 8, the last two versions of all other browsers, and browsers with at least 1% market usage. See `grunt/config/autoprefixer.js` for this projects requirements. When the task is run, it updates the `style.css` by adding or removing vendor-prefixed properties as needed.
-* Tidy up `style.css` to match the WordPress Coding Standards. The `wpcss` grunt package is a wrapper for CSSComb. This fixes up the whitespace and linebreaks, checks for certain property values like colors using lowercase and short hexadecimal values, and re-orders properties. The default for this project is `alphabetical` ordering, but this can be changed in `grunt/config/wpcss` to `default` which provides a more pragmatic order.
+* Tidy up `style.css` to match the WordPress Coding Standards. The `wpcss` Grunt package is a wrapper for CSSComb. This fixes up the whitespace and linebreaks, checks for certain property values like colors using lowercase and short hexadecimal values, and re-orders properties. The default for this project is `alphabetical` ordering, but this can be changed in `grunt/config/wpcss` to `default` which provides a more pragmatic order.
 * A quick replacement of the _normalize.css_ headings format so it matches the rest of the file.
 * Generate the right-to-left (RTL) style sheet. At this point, the `style.css` is copied to `style-rtl.css` and this new file has certain values reversed for the benefit of languages using a RTL script such as Arabic or Hebrew. Values of `left` are switch to `right`, unsymmetrical padding, margin and borders are reversed, and percentage values are changed to their complement from `100%`, etc. Some PHP ensures that only the `style-rtl.css` version of the file is enqueued when the site is using an RTL language script.
 * The style sheets are minified to remove comments and whitespace. The two style sheet files now become four, as each is minified to save on bytes. The minified style sheets are used in production by default, to minimze the number of bytes being transferred to the end user. The un-minified versions are used when the WordPress constants of `WP_DEBUG` or `SCRIPT_DEBUG` are defined as true.
@@ -137,7 +183,20 @@ An i18n task that is _not_ run as part of the build is the `grunt addtextdomain`
 
 ## Check Task (`grunt check`)
 
-(To be written)
+To keep track of the health of the project, Grunt provides a series of individual checking tasks (e.g. `grunt phpcs`), but these can be run in one go with the `grunt check` call.
+
+The checks focus on code written by the theme author, and not third-party dependencies. Some of the JavaScript related tasks have two targets - one that covers the author assets directory, and one that covers the `Gruntfile.js` and Grunt config tasks. This means that the errors and code standards in the Grunt configurations can also be addressed.
+
+The individual checks are:
+
+* 'scsslint' - Lint the `.scss` source files in the author's assets directory for code standards. WordPress doesn't have any official code standards for SCSS, but if it did, then the lint config file at `.scss-lint.yml` would probably be pretty close to it.
+* 'jshint' - JSHint is concerned with JavaScript coding best practices (not standards). This task has two targets, as explained above. They use the `.jshintrc` and the `.gruntjshintrc` JSHint config files. The differences between the config files are to cover the fact that the theme JS files are used with jQuery in multiple browsers that may need to support EcmaScript 3, where as the Grunt scripts are used within a _NodeJS_ environment locally, which is a little more controlled.
+* 'jsonlint' - this checks that some of the root config files for the other tasks are written as valid JSON. JSON has a relatively strict structure, and an error would stop the other tasks from working correctly.
+* 'jsvalidate' - This validates general JavaScript. It has three targets - one for source author JavaScript files in the `assets/` directory, one for concatenated and minified files in `theme/` and one for Grunt config files.
+* 'jscs' - WordPress has coding standards for JavaScript and with the `.jscsrc` configuration, this task can check asset and Grunt files for those standards.
+* 'phplint' - this does a basic syntax check of PHP files in the `theme/` directory. 
+* 'phpcs' - WordPress also has fairly comprehensive coding standard for PHP, and this can be checked against with this task. The results are saved to `logs/phpcs.php`. Note that the sniffs are not yet perfect, and some false positives may appear in the log file. A custom `ruleset.xml` can be added to the project root to exclude these if desired.
+* 'checktextdomain' - this will check i18n functions to ensure that the correct textdomain is passed as the last argument for each instance.
 
 ### Pre-Commit Hook
 
