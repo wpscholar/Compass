@@ -61,12 +61,22 @@ a:focus img {
 	}
 
 	@include media($small-screen-up) {
+
 		.gallery-columns-0 &,
 		.gallery-columns-1 &,
 		.gallery-col-0 &,
 		.gallery-col-1 & {
 			@include fill-parent();
 		}
+
+		// Awaiting https://github.com/thoughtbot/neat/issues/244 to be fixed
+		// @for $i from 2 through 9 {
+		// 	.gallery-columns-#{$i} &,
+		// 	.gallery-col-#{$i} & {
+		// 		@include span-columns((12 / $i));
+		// 		@include omega(#{$i}n);
+		// 	}
+		// }
 
 		.gallery-columns-2 &,
 		.gallery-col-2 & {
