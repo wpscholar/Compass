@@ -26,6 +26,7 @@ build:
   - 'newer:copy:themehookalliance'
 # Build CSS from Scss to production
 'build:css':
+  - 'clean:style'
   - 'build:dependencies'
   - 'rename:normalize'
   - 'newer:sass'
