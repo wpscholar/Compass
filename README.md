@@ -1,12 +1,13 @@
 # Flagship Compass
 
-The most advanced WordPress Starter theme ever created. Compass will revolutionize your theme development workflow by removing all the guesswork and letting you focus on the fun stuff. Built using the latest and greatest web development tools like Grunt, Sass, Bourbon, and Hybrid Core.
+The most advanced WordPress Starter theme ever created.
 
-## Credits
+__Contributors:__ [Robert Neu](https://github.com/robneu), [Gary Jones](https://github.com/GaryJones)  
+__Requires:__ WordPress 4.0  
+__Tested up to:__ WordPress 4.0  
+__License:__ [GPL-2.0+](http://www.gnu.org/licenses/gpl-2.0.html)  
 
-The non-dependency PHP and styles were mostly written by [Robert Neu](http://flagshipwp.com).
-
-The Grunt development was mostly written by [Gary Jones](http://gamajo.com).
+Compass will revolutionize your theme development workflow by removing all the guesswork and letting you focus on the fun stuff. Built using the latest and greatest web development tools like Grunt, Sass, Bourbon, and Hybrid Core.
 
 ## Project Development
 
