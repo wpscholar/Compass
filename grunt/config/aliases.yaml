@@ -26,6 +26,7 @@ build:
   - 'newer:copy:themehookalliance'
 # Build CSS from Scss to production
 'build:css':
+  - 'clean:style'
   - 'build:dependencies'
   - 'rename:normalize'
   - 'newer:sass'
@@ -52,18 +53,18 @@ build:
   - 'newer:jsvalidate:theme'
 # Build internationalisation features
 'build:i18n':
-  - 'addtextdomain'
+  # - 'addtextdomain'
   - 'makepot'
 # Check health of the project
 check:
-  - 'newer:scsslint'
-  - 'newer:jshint'
-  - 'newer:jsonlint'
-  - 'newer:jsvalidate'
-  - 'newer:jscs'
-  - 'newer:phplint'
-  - 'newer:phpcs'
-  - 'newer:checktextdomain'
+  - 'scsslint'
+  - 'jshint'
+  - 'jsonlint'
+  - 'jsvalidate'
+  - 'jscs'
+  - 'phplint'
+  - 'phpcs'
+  - 'checktextdomain'
 # Pre-commit hook task
 commit:
   - 'check'
@@ -72,7 +73,6 @@ default:
   - watch
 newtheme:
   - 'replace:packagename'
-  - 'clean'
   - 'build'
 # Package the distribution files into a zip
 package:

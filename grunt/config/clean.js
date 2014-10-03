@@ -66,7 +66,8 @@ module.exports = {
 	},
 	style: {
 		src: [
-			'<%= paths.theme %>style*.*'
+			'<%= paths.theme %>style*.*',
+			'<%= paths.tmp %>style*.*'
 		]
 	},
 	screenshot: {

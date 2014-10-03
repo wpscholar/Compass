@@ -5,7 +5,7 @@ module.exports = {
 				cwd: '<%= paths.tmp %>',
 				expand: true,
 				flatten: true,
-				src: ['style*.css'],
+				src: ['style*.css', 'style*.map'],
 				dest: '<%= paths.theme %>',
 				filter: 'isFile'
 			}
