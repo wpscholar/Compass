@@ -26,7 +26,7 @@
 	.current-menu-item > a,
 	.current-menu-ancestor > a,
 	.current-menu-parent > a,
-	.sub-menu .current-menu-item > a:hover
+	.sub-menu .current-menu-item > a:hover,
 	.sub-menu .current-menu-item > a:focus {
 		color: $nav-link-hover-color;
 	}
