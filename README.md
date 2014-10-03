@@ -1,20 +1,22 @@
 # Flagship Compass
 
-A WordPress Starter Theme Using Hybrid Core, Bourbon, Neat, and the Theme Hook Alliance.
+The most advanced WordPress Starter theme ever created. Compass will revolutionize your theme development workflow by removing all the guesswork and letting you focus on the fun stuff. Built using the latest and  greatest web development tools like Grunt, Sass, Bourbon, and Hybrid Core.
 
 ## Project Development
 
+This documentation is by no means complete and will be expanded upon in the near future. In order to get up and running, you'll need to install a few key components. We've put together a screencast which will walk you through the setup process and we also have an entire pulic [forum dedicated to Compass](http://community.flagshipwp.com/category/themes/compass) where you can register and learn from other developers who are using it to build cool stuff.
+
 ### Ruby and Sass
 
-This project uses [Ruby](https://www.ruby-lang.org/en/) and Sass to build the `.scss` files into a CSS file. [Install Ruby](https://www.ruby-lang.org/en/installation/) and then run `gem install sass` to install Sass. You may need to use sudo (for OSX, *nix, BSD etc) or run your command shell as Administrator (for Windows) to do this
+Compass uses [Ruby](https://www.ruby-lang.org/en/) and Sass to build the `.scss` files into a CSS file. [Install Ruby](https://www.ruby-lang.org/en/installation/) and then run `gem install sass` to install Sass. You may need to use sudo (for OSX, *nix, BSD etc) or run your command shell as Administrator (for Windows) to do this
 
 ### Composer
 
-This project uses [Composer](https://getcomposer.org/) to manage PHP dependencies such as [Hybrid Core](https://github.com/justintadlock/hybrid-core) and [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) support. [Install Composer](https://getcomposer.org/doc/00-intro.md) to enable this functionality.
+Compass also uses [Composer](https://getcomposer.org/) to manage PHP dependencies such as [Hybrid Core](https://github.com/justintadlock/hybrid-core) and [Theme Hook Alliance](https://github.com/zamoose/themehookalliance) support. [Install Composer](https://getcomposer.org/doc/00-intro.md) to enable this functionality.
 
 ### Node, NPM and Grunt
 
-This project also uses Node.js to run the Grunt task runner, so [download Node.js](http://nodejs.org/download/) and install it.
+Finally, Compass requires Node.js to run the Grunt task runner, so [download Node.js](http://nodejs.org/download/) and install it.
 
 Some Grunt tasks use external command-line applications, so you'll need them installed as global (not specific to this project) Node.js packages. Open up a terminal and run the following. You may need to use sudo (for OSX, *nix, BSD etc) or run your command shell as Administrator (for Windows) to do this.
 
@@ -49,7 +51,7 @@ There's apparently a package dependency issue that means the _grunt-phplint_ pac
 1. Clone or manually copy this repo to a new directory. 
 - Update `name` and `capitalname` in `package.json`.
 - On the command line, `cd` into the new project directory and run `npm install`.
-- Run `grunt newtheme`. This will replace instances of `incipio` and `Incipio` for function names, class names, text domains, enqueued script and style handles, README, and so on. It will then run a build process to generate everything needed for the theme.
+- Run `grunt newtheme`. This will replace instances of `compass` and `Compass` for function names, class names, text domains, enqueued script and style handles, README, and so on. It will then run a build process to generate everything needed for the theme.
 
 It doesn't change filenames, so avoid theme-specific filenames in the original project.
 
