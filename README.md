@@ -8,40 +8,40 @@ This documentation is by no means complete and will be expanded upon in the near
 
 ## Project Structure
 
-~~~
-├── assets
-│   ├── bower (added by build task)
-│   ├── composer (added by build task)
-│   ├── flagship
-│   │   ├── images
-│   │   ├── js
-│   │   └── scss
-│   └── genericons
-│       ├── css
-│       └── font
-├── dist (added by package task)
-├── grunt
-│   ├── config
-│   └── tasks
-├── logs (added by build/check tasks)
-├── reports (added by plato task)
-├── theme
-│   ├── comment
-│   ├── content
-│   │   ├── archive
-│   │   └── singular
-│   ├── font (added by build task)
-│   ├── hybrid-core (pulled in as dependency)
-│   ├── includes
-│   │   ├── library
-│   │   └── vendor (added by build task)
-│   ├── js (added by build task)
-│   ├── languages (added by build task)
-│   ├── menu
-│   ├── misc-templates
-│   └── sidebar
-└── tmp (added by build task)
-~~~
+    .
+    ├── assets
+    │   ├── bower (added by build task)
+    │   ├── composer (added by build task)
+    │   ├── flagship
+    │   │   ├── images
+    │   │   ├── js
+    │   │   └── scss
+    │   └── genericons
+    │       ├── css
+    │       └── font
+    ├── dist (added by package task)
+    ├── grunt
+    │   ├── config
+    │   └── tasks
+    ├── logs (added by build/check tasks)
+    ├── reports (added by plato task)
+    ├── theme
+    │   ├── comment
+    │   ├── content
+    │   │   ├── archive
+    │   │   └── singular
+    │   ├── font (added by build task)
+    │   ├── hybrid-core (pulled in as dependency)
+    │   ├── includes
+    │   │   ├── library
+    │   │   └── vendor (added by build task)
+    │   ├── js (added by build task)
+    │   ├── languages (added by build task)
+    │   ├── menu
+    │   ├── misc-templates
+    │   └── sidebar
+    └── tmp (added by build task)
+
 
 ### Ruby and Sass
 
@@ -232,7 +232,7 @@ The individual checks are:
 * 'jsvalidate' - This validates general JavaScript. It has three targets - one for source author JavaScript files in the `assets/` directory, one for concatenated and minified files in `theme/` and one for Grunt config files.
 * 'jscs' - WordPress has coding standards for JavaScript and with the `.jscsrc` configuration, this task can check asset and Grunt files for those standards.
 * 'phplint' - this does a basic syntax check of PHP files in the `theme/` directory.
-* 'phpcs' - WordPress also has fairly comprehensive coding standard for PHP, and this can be checked against with this task. The results are saved to `logs/phpcs.php`. Note that the sniffs are not yet perfect, and some false positives may appear in the log file. A custom `ruleset.xml` can be added to the project root to exclude these if desired. Because of the false positives, this task is configured by default to always ignore failures, so check the log file for the potential issues.
+* 'phpcs' - WordPress also has fairly comprehensive coding standard for PHP, and this can be checked against with this task. The results are saved to `logs/phpcs.log`. Note that the sniffs are not yet perfect, and some false positives may appear in the log file. A custom `ruleset.xml` can be added to the project root to exclude these if desired. Because of the false positives, this task is configured by default to always ignore failures, so check the log file for the potential issues.
 * 'checktextdomain' - this will check i18n functions to ensure that the correct textdomain is passed as the last argument for each instance.
 
 ### Pre-Commit Hook
