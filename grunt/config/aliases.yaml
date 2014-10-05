@@ -19,7 +19,7 @@ build:
 'build:dependencies:js':
   - 'bowercopy:js'
 'build:dependencies:php':
-  - 'composer:update'
+  - 'composer:install'
   - 'clean:hybridcore'
   - 'newer:copy:hybridcore'
   - 'clean:themehookalliance'
