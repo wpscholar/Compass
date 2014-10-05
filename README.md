@@ -116,7 +116,6 @@ Some Grunt tasks use external command-line applications, so you'll need them ins
 npm install -g bower
 npm install -g csscomb
 npm install -g cssjanus
-npm install -g cssjanus
 npm install -g grunt-cli
 npm install -g jscs
 npm install -g jshint
