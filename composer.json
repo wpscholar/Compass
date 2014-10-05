@@ -1,4 +1,6 @@
 {
+	"name": "flagshipwp/compass",
+	"description": "The most advanced WordPress Starter theme ever created.",
 	"config": {
 		"vendor-dir": "assets/composer"
 	},
